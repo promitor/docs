@@ -1,4 +1,4 @@
-# Home 🚀🚀🚀🎉
+# Home
 
 <img src="https://static.scarf.sh/a.png?x-pxid=3d288d64-88d8-4196-b377-f55dc7ce7269" />
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tomkerkhove/promitor/blob/master/LICENSE)
