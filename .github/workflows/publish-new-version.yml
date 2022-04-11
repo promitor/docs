@@ -1,0 +1,27 @@
+name: Publish Official Docs
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Setup doc deploy
+        run: |
+          git config --global user.name Promitor Bot
+          git config --global user.email promitor.automation@gmail.com
+      - name: Publish new doc version
+        run:  mike deploy --push --branch live-docs --update-aliases ${{ github.event.release.tag_name }} latest
+      - name: Change default latest version
+        run:  mike set-default --push --branch live-docs latest
