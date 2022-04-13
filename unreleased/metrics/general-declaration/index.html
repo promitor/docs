@@ -1260,10 +1260,12 @@ values are <code>v1</code>. <em>(Required)</em></p>
 <p>Additionally, the following fields are optional:</p>
 <ul>
 <li><code>azureMetricConfiguration.dimension.name</code> - The name of the dimension that should
-   be used to scrape a multi-dimensional metric in Azure Monitor.</li>
+   be used to scrape a multi-dimensional metric in Azure Monitor.<ul>
 <li>☝ <em>Promitor simply acts as a proxy and will not validate if it's supported or
-     not, we recommend verifying that the dimension is supported in the
-     <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported">official documentation</a></em></li>
+ not, we recommend verifying that the dimension is supported in the
+ <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported">official documentation</a></em></li>
+</ul>
+</li>
 <li><code>labels</code> - Defines a set of custom labels to include for a given metric.</li>
 <li><code>scraping.schedule</code> - A scraping schedule for the individual metric; overrides
   the the one specified in <code>metricDefaults</code></li>

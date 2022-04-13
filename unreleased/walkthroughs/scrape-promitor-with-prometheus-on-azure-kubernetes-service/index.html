@@ -1544,25 +1544,35 @@ and explain how each of these services connects and how to see output.</p>
 we're monitoring.</p>
 <h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><a href="#deploy-azure-infrastructure">Deploy Azure Infrastructure</a></strong></li>
+<li><strong><a href="#deploy-azure-infrastructure">Deploy Azure Infrastructure</a></strong><ul>
 <li><a href="#create-a-resource-group">Create a Resource Group</a></li>
 <li><a href="#create-a-service-principal">Create a Service Principal</a></li>
 <li><a href="#create-a-service-bus-namespace-and-queue">Create a Service Bus Namespace and Queue</a></li>
 <li><a href="#create-an-aks-cluster">Create an AKS Cluster</a></li>
-<li><strong><a href="#cluster-setup">Cluster Setup</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#cluster-setup">Cluster Setup</a></strong><ul>
 <li><a href="#get-credentials">Get credentials</a></li>
-<li><strong><a href="#deploy-promitor-and-prometheus">Deploy Promitor and Prometheus</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#deploy-promitor-and-prometheus">Deploy Promitor and Prometheus</a></strong><ul>
 <li><a href="#create-a-metrics-declaration-for-promitor">Create a metrics declaration for Promitor</a></li>
 <li><a href="#deploy-promitor-to-your-cluster-using-helm">Deploy Promitor to your cluster using Helm</a></li>
 <li><a href="#install-prometheus">Install Prometheus</a></li>
-<li><strong><a href="#test-and-check-output">Test and check output</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#test-and-check-output">Test and check output</a></strong><ul>
 <li><a href="#add-load-to-the-queue">Add load to the queue</a></li>
 <li><a href="#see-promitor-prometheus-output-via-port-forwarding">See Promitor &amp; Prometheus output via port-forwarding</a></li>
-<li><strong><a href="#visualization">Visualization</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#visualization">Visualization</a></strong><ul>
 <li><a href="#install-grafana">Install Grafana</a></li>
 <li><a href="#add-prometheus-as-a-data-source">Add Prometheus as a data source</a></li>
 <li><a href="#create-a-grafana-dashboard-for-queue-metrics">Create a Grafana dashboard for queue metrics</a></li>
 <li><a href="#creating-a-kubernetes-dashboard">Creating a Kubernetes dashboard</a></li>
+</ul>
+</li>
 <li><strong><a href="#delete-resources">Delete resources</a></strong></li>
 </ul>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>

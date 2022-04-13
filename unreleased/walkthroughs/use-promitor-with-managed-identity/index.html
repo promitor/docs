@@ -1521,24 +1521,32 @@ in the official Microsoft documentation.</p>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#deploying-the-azure-infrastructure">Deploying the Azure Infrastructure</a></li>
+<li><a href="#deploying-the-azure-infrastructure">Deploying the Azure Infrastructure</a><ul>
 <li><a href="#preparing-script">Preparing script</a></li>
 <li><a href="#creating-an-azure-resource-group">Creating an Azure Resource Group</a></li>
 <li><a href="#creating-an-azure-service-bus-namespace-queue">Creating an Azure Service Bus Namespace &amp; Queue</a></li>
 <li><a href="#creating-an-azure-kubernetes-service-cluster">Creating an Azure Kubernetes Service Cluster</a></li>
-<li><a href="#setting-up-our-cluster">Setting up our cluster</a></li>
+</ul>
+</li>
+<li><a href="#setting-up-our-cluster">Setting up our cluster</a><ul>
 <li><a href="#getting-the-cluster-credentials">Getting The Cluster Credentials</a></li>
 <li><a href="#get-azure-kubernetes-service-managed-identity-cluster-resource-group">Get Azure Kubernetes Service managed identity &amp; cluster resource group</a></li>
-<li><a href="#getting-our-cluster-ready-to-use-aad-pod-identity">Getting our cluster ready to use AAD Pod Identity</a></li>
+</ul>
+</li>
+<li><a href="#getting-our-cluster-ready-to-use-aad-pod-identity">Getting our cluster ready to use AAD Pod Identity</a><ul>
 <li><a href="#granting-our-clusters-managed-identity-required-permissions-in-azure">Granting our cluster's managed identity required permissions in Azure</a></li>
 <li><a href="#installing-aad-pod-identity">Installing AAD Pod Identity</a></li>
 <li><a href="#creating-a-user-assigned-managed-identity-for-promitor">Creating a user-assigned managed identity for Promitor</a></li>
 <li><a href="#bind-your-managed-identity-to-our-pods-through-aad-pod-identity">Bind your Managed Identity to our Pods, through AAD Pod Identity</a></li>
 <li><a href="#verifying-the-aad-pod-identity-installation">Verifying the AAD Pod Identity installation</a></li>
-<li><a href="#deploying-promitor-with-managed-identity">Deploying Promitor with Managed Identity</a></li>
+</ul>
+</li>
+<li><a href="#deploying-promitor-with-managed-identity">Deploying Promitor with Managed Identity</a><ul>
 <li><a href="#create-a-metrics-declaration-for-promitor">Create a metrics declaration for Promitor</a></li>
 <li><a href="#deploy-promitor-to-your-cluster-using-helm">Deploy Promitor to your cluster using Helm</a></li>
 <li><a href="#verifying-the-scraped-output-in-promitor">Verifying the scraped output in Promitor</a></li>
+</ul>
+</li>
 <li><a href="#cleaning-up">Cleaning up</a></li>
 </ul>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>

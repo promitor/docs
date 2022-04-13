@@ -1519,9 +1519,11 @@ by providing the metric information to the configured sinks.</p>
 <ul>
 <li><code>atlassianStatuspage.pageId</code> - Defines the id of the Atlassian Statuspage to report to.</li>
 <li><code>atlassianStatuspage.systemMetricMapping</code> - Defines a mapping of the scraped metric by Promitor and to which
- Atlassian Statuspage system metric it should be reported to. Here's what we expect:</li>
+ Atlassian Statuspage system metric it should be reported to. Here's what we expect:<ul>
 <li><code>id</code> - Id of the Atlassian Statuspage system metric</li>
 <li><code>promitorMetricName</code> - Name of the Promitor metric which needs to be reported</li>
+</ul>
+</li>
 </ul>
 <p>Next to that, <code>PROMITOR_ATLASSIAN_STATUSPAGE_APIKEY</code> environment variable is required which contains the API Key
  for Atlassian Statuspage.</p>
