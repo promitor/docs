@@ -46,7 +46,7 @@ Every metric that is being declared needs to define the following fields:
   or filters.
 - `resourceDiscoveryGroups` An array of one or more resource discovery groups that will be used to automatically
  discover all resources through Promitor Resource Discovery. For every found resource, it will get the metrics and
-  report them. Learn more on resource discovery, in [our documentation](https://promitor.io/concepts/how-it-works#using-resource-discovery)
+  report them. Learn more on resource discovery, in [our documentation](https://promitor.io/concepts#using-resource-discovery)
 
 All resources provide the capability to override the default Azure metadata:
 
@@ -111,7 +111,7 @@ metrics:
       - namespace: promitor-messaging-dev
         resourceGroupName: promitor-dev
         subscriptionId: ABC
-    resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+    resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts#using-resource-discovery)
     - name: service-bus-landscape
 ```
 

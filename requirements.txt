@@ -1,3 +1,4 @@
 mkdocs-material
+mkdocs-htmlproofer-plugin
 mike
 openpyxl

@@ -29,7 +29,7 @@ we're monitoring.
   - [Install Prometheus](#install-prometheus)
 - **[Test and check output](#test-and-check-output)**
   - [Add load to the queue](#add-load-to-the-queue)
-  - [See Promitor & Prometheus output via port-forwarding](#see-promitor-&-prometheus-output-via-port-forwarding)
+  - [See Promitor & Prometheus output via port-forwarding](#see-promitor-prometheus-output-via-port-forwarding)
 - **[Visualization](#visualization)**
   - [Install Grafana](#install-grafana)
   - [Add Prometheus as a data source](#add-prometheus-as-a-data-source)
