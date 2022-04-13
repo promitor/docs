@@ -36,7 +36,7 @@ You can easily install our Resource Discovery Agent as following:
                --values /path/to/helm-configuration.yaml
 ```
 
-Next to Azure authentication, a [resource discovery declaration](https://promitor.io/configuration/v2.x/resource-discovery)
+Next to Azure authentication, a [resource discovery declaration](https://docs.promitor.io/configuration/v2.x/resource-discovery)
  must be provided through `--values`.
 
 Here is an example of resource discovery declaration which you can pass:

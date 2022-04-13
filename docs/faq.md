@@ -6,7 +6,7 @@ Here are a list of questions you may have:
 - [How does Promitor handle deleted resources?](#how-does-promitor-handle-deleted-resources)
 - [Is scraping multiple subscriptions supported?](#is-scraping-multiple-subscriptions-supported)
 - [What Azure clouds are supported?](#what-azure-clouds-are-supported)
-- [Why does Azure Blob & File Storage only report account-level information?](#why-does-azure-blob--file-storage-only-report-account-level-information)
+- [Why does Azure Blob & File Storage only report account-level information?](#why-does-azure-blob-file-storage-only-report-account-level-information)
 - [Why does my multi-dimensional metric report label value `unknown` with Prometheus?](#why-does-my-multi-dimensional-metric-report-label-value-unknown-with-prometheus)
 - [What Helm version is supported?](#what-helm-version-is-supported)
 - [What operating systems are supported?](#what-operating-systems-are-supported)
