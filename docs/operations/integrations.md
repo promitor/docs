@@ -10,15 +10,15 @@ Azure Resource Manager API:
 
 - `promitor_ratelimit_arm` - Indication how many calls are still available before
   Azure Resource Manager is going to throttle us. Metric provides following labels:
-  - `tenant_id` - _Id of the tenant that is being interacted with_
-  - `subscription_id` - _Id of the subscription that is being interacted with_
-  - `app_id` - _Id of the application that is being used to interact with API_
+    - `tenant_id` - _Id of the tenant that is being interacted with_
+    - `subscription_id` - _Id of the subscription that is being interacted with_
+    - `app_id` - _Id of the application that is being used to interact with API_
 
 - `promitor_ratelimit_arm_throttled` - Indication whether or not we are being throttled by Azure Resource Manager
  (ARM). Metric provides following labels:
-  - `tenant_id` - _Id of the tenant that is being interacted with_
-  - `subscription_id` - _Id of the subscription that is being interacted with_
-  - `app_id` - _Id of the application that is being used to interact with API_
+    - `tenant_id` - _Id of the tenant that is being interacted with_
+    - `subscription_id` - _Id of the subscription that is being interacted with_
+    - `app_id` - _Id of the application that is being used to interact with API_
 
 ```text
 # HELP promitor_ratelimit_arm Indication how many calls are still available before Azure Resource Manager (ARM) is going to throttle us.
@@ -43,17 +43,17 @@ Azure Resource Graph:
 
 - `promitor_ratelimit_resource_graph_remaining` - Indication how many calls are still available before
   Azure Resource Manager is going to throttle us. Metric provides following labels:
-  - `tenant_id` - _Id of the tenant that is being interacted with_
-  - `cloud` - _Name of the cloud_
-  - `auth_mode` - _Authentication mode to authenticate with_
-  - `app_id` - _Id of the application that is being used to interact with_
+    - `tenant_id` - _Id of the tenant that is being interacted with_
+    - `cloud` - _Name of the cloud_
+    - `auth_mode` - _Authentication mode to authenticate with_
+    - `app_id` - _Id of the application that is being used to interact with_
 
 - `promitor_ratelimit_resource_graph_throttled` - Indication whether or not we are being throttled by Azure Resource
  Graph. Metric provides following labels:
-  - `tenant_id` - _Id of the tenant that is being interacted with_
-  - `cloud` - _Name of the cloud_
-  - `auth_mode` - _Authentication mode to authenticate with_
-  - `app_id` - _Id of the application that is being used to interact with_
+    - `tenant_id` - _Id of the tenant that is being interacted with_
+    - `cloud` - _Name of the cloud_
+    - `auth_mode` - _Authentication mode to authenticate with_
+    - `app_id` - _Id of the application that is being used to interact with_
 
 ```text
 # HELP promitor_ratelimit_resource_graph_remaining Indication how many calls are still available before Azure Resource Graph is going to throttle us.
