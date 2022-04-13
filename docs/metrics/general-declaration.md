@@ -57,7 +57,7 @@ Additionally, the following fields are optional:
 
 - `azureMetricConfiguration.dimension.name` - The name of the dimension that should
    be used to scrape a multi-dimensional metric in Azure Monitor.
-  - ☝ *Promitor simply acts as a proxy and will not validate if it's supported or
+    - ☝ *Promitor simply acts as a proxy and will not validate if it's supported or
      not, we recommend verifying that the dimension is supported in the
      [official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)*
 - `labels` - Defines a set of custom labels to include for a given metric.

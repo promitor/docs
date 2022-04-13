@@ -104,8 +104,8 @@ In order to expose an Atlassian Statuspage endpoint, you'll need to configure th
 - `atlassianStatuspage.pageId` - Defines the id of the Atlassian Statuspage to report to.
 - `atlassianStatuspage.systemMetricMapping` - Defines a mapping of the scraped metric by Promitor and to which
  Atlassian Statuspage system metric it should be reported to. Here's what we expect:
-  - `id` - Id of the Atlassian Statuspage system metric
-  - `promitorMetricName` - Name of the Promitor metric which needs to be reported
+    - `id` - Id of the Atlassian Statuspage system metric
+    - `promitorMetricName` - Name of the Promitor metric which needs to be reported
 
 Next to that, `PROMITOR_ATLASSIAN_STATUSPAGE_APIKEY` environment variable is required which contains the API Key
  for Atlassian Statuspage.
