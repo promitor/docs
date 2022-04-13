@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://promitor.io/unreleased/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/faq/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/how-it-works/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/configuration/v2.x/runtime/resource-discovery/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/configuration/v2.x/runtime/scraper/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/docker/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/kubernetes/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/docker/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/kubernetes/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/metrics/general-declaration/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/metrics/labels/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/metrics/supported-providers/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/discovery/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/health/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/integrations/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/performance/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/system/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/runtime/resource-discovery/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/runtime/scraper/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/security/azure-authentication/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/migrate-from-1.x-to-2.x/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/use-promitor-with-managed-identity/</loc>
-         <lastmod>2022-04-11</lastmod>
+         <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
