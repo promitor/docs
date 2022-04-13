@@ -1207,67 +1207,67 @@
 Kubernetes cluster.</p>
 <h3 id="getting-the-helm-chart">Getting the Helm Chart<a class="headerlink" href="#getting-the-helm-chart" title="Permanent link">&para;</a></h3>
 <p>Install the Promitor Chart repository:</p>
-<pre><code class="language-shell">❯ helm repo add promitor https://charts.promitor.io/
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>❯ helm repo add promitor https://charts.promitor.io/
+</code></pre></div>
 <p>Refresh your local Chart repositories:</p>
-<pre><code class="language-shell">❯ helm repo update
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>❯ helm repo update
+</code></pre></div>
 <p>If all goes well you should be able to list all Promitor charts:</p>
-<pre><code class="language-shell">❯ helm search hub promitor
-URL                                                     CHART VERSION   APP VERSION     DESCRIPTION
-https://hub.helm.sh/charts/promitor/promitor-ag...      1.6.0           1.6.1           A Helm chart to deploy Promitor, an Azure Monit...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>❯ helm search hub promitor
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>URL                                                     CHART VERSION   APP VERSION     DESCRIPTION
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>https://hub.helm.sh/charts/promitor/promitor-ag...      <span class="m">1</span>.6.0           <span class="m">1</span>.6.1           A Helm chart to deploy Promitor, an Azure Monit...
+</code></pre></div>
 <h3 id="using-our-helm-chart">Using our Helm Chart<a class="headerlink" href="#using-our-helm-chart" title="Permanent link">&para;</a></h3>
 <p>To use this, you will need to provide parameters <a href="https://helm.sh/docs/using_helm/#customizing-the-chart-before-installing">via <code>--set</code> or <code>--values</code></a>.
 Included here are the values that correspond with the local environment variables.
 In addition to these, you will need a metric declaration file as described in
 <a href="/configuration/metrics">Metric Declaration</a>.</p>
-<pre><code class="language-yaml">azureMetadata:
-  tenantId: &quot;&lt;azure-tenant-id&gt;&quot;
-  subscriptionId: &quot;&lt;azure-subscription-id&gt;&quot;
-
-runtime:
-  metricSinks:
-    atlassianStatuspage:
-      enabled: true
-      pageId: &quot;ABC&quot;
-      systemMetricMapping:
-      - id: nfkgnrwpn545
-        promitorMetricName: promitor_demo_appplan_percentage_cpu
-    prometheusScrapingEndpoint:
-      enabled: true
-      baseUriPath: /metrics
-      enableMetricTimestamps: True
-    statsd:
-      enabled: true
-      host: graphite
-      port: 8125
-      metricPrefix: poc.promitor.
-  telemetry:
-    applicationInsights:
-      enabled: True
-      key: &quot;&lt;azure-app-insights-key&gt;&quot;
-
-metrics:
-  - name: promitor_demo_servicebusqueue_queue_size
-    description: &quot;Amount of active messages of the 'orders' queue (determined with ServiceBusQueue provider)&quot;
-    resourceType: ServiceBusQueue
-    namespace: promitor-messaging
-    queueName: orders
-    azureMetricConfiguration:
-      metricName: ActiveMessages
-      aggregation:
-        type: Average
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">azureMetadata</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;azure-tenant-id&gt;&quot;</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;azure-subscription-id&gt;&quot;</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">runtime</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">metricSinks</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">atlassianStatuspage</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nt">pageId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ABC&quot;</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nt">systemMetricMapping</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nfkgnrwpn545</span><span class="w"></span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nt">promitorMetricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor_demo_appplan_percentage_cpu</span><span class="w"></span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">prometheusScrapingEndpoint</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nt">baseUriPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/metrics</span><span class="w"></span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="nt">enableMetricTimestamps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nt">statsd</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">graphite</span><span class="w"></span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8125</span><span class="w"></span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">      </span><span class="nt">metricPrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">poc.promitor.</span><span class="w"></span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="nt">telemetry</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="nt">applicationInsights</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;azure-app-insights-key&gt;&quot;</span><span class="w"></span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor_demo_servicebusqueue_queue_size</span><span class="w"></span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">messages</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&#39;orders&#39;</span><span class="nv"> </span><span class="s">queue</span><span class="nv"> </span><span class="s">(determined</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">ServiceBusQueue</span><span class="nv"> </span><span class="s">provider)&quot;</span><span class="w"></span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusQueue</span><span class="w"></span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-messaging</span><span class="w"></span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="nt">queueName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orders</span><span class="w"></span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">      </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActiveMessages</span><span class="w"></span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">      </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Average</span><span class="w"></span>
+</code></pre></div>
 <p>Check the <a href="https://github.com/promitor/charts/blob/main/promitor-agent-scraper/values.yaml">full values file</a>
 to see all configurable values.</p>
 <p>If you have a <code>metric-declaration.yaml</code> file, you can create a basic deployment
 with this command:</p>
-<pre><code class="language-shell">❯ helm install promitor-agent-scraper promitor/promitor-agent-scraper \
-               --set azureAuthentication.appId='&lt;azure-ad-app-id&gt;' \
-               --set azureAuthentication.appKey='&lt;azure-ad-app-key&gt;' \
-               --values /path/to/helm-configuration.yaml
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>❯ helm install promitor-agent-scraper promitor/promitor-agent-scraper <span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>               --set azureAuthentication.appId<span class="o">=</span><span class="s1">&#39;&lt;azure-ad-app-id&gt;&#39;</span> <span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>               --set azureAuthentication.appKey<span class="o">=</span><span class="s1">&#39;&lt;azure-ad-app-key&gt;&#39;</span> <span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>               --values /path/to/helm-configuration.yaml
+</code></pre></div>
 <p><a href="/">&larr; back</a></p>
 
               

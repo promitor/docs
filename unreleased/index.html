@@ -1245,13 +1245,13 @@ for metric systems such as Atlassian Statuspage, Prometheus and StatsD.</p>
 <p><img alt="Promitor" class="center" src="media/logos/promitor.png" /></p>
 <h2 id="running-promitor-scraper">Running Promitor Scraper<a class="headerlink" href="#running-promitor-scraper" title="Permanent link">&para;</a></h2>
 <p>Running Promitor Scraper is super easy:</p>
-<pre><code class="language-shell">docker run -d -p 8999:80 --name promitor-agent-scraper \
-                         --env PROMITOR_AUTH_APPID='&lt;azure-ad-app-id&gt;'   \
-                         --env-file C:/Promitor/az-mon-auth.creds \
-                         --volume C:/Promitor/metrics-declaration.yaml:/config/metrics-declaration.yaml \
-                         --volume C:/Promitor/runtime.yaml:/config/runtime.yaml \
-                         ghcr.io/tomkerkhove/promitor-agent-scraper:2.5.0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker run -d -p <span class="m">8999</span>:80 --name promitor-agent-scraper <span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                         --env <span class="nv">PROMITOR_AUTH_APPID</span><span class="o">=</span><span class="s1">&#39;&lt;azure-ad-app-id&gt;&#39;</span>   <span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                         --env-file C:/Promitor/az-mon-auth.creds <span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                         --volume C:/Promitor/metrics-declaration.yaml:/config/metrics-declaration.yaml <span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                         --volume C:/Promitor/runtime.yaml:/config/runtime.yaml <span class="se">\</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                         ghcr.io/tomkerkhove/promitor-agent-scraper:2.5.0
+</code></pre></div>
 <p>Docker image is available on <a href="https://github.com/tomkerkhove/promitor/pkgs/container/promitor-agent-scraper">GitHub Container Registry</a>.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>

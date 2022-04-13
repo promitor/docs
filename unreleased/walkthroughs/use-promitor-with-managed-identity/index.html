@@ -1564,45 +1564,45 @@ to be able to deploy resources through the command line.</li>
 <p>Since we are going to use a lot of bash scripts with different variables values,
 it can be a good idea to parameterize everything.</p>
 <p>Let's start by <strong>exporting</strong> all the values we need:</p>
-<pre><code class="language-bash"># SUBSCRIPTION_ID represents the Azure subscription id you will use to access your Azure resources
-export SUBSCRIPTION_ID=&lt;subscription-id&gt;
-
-# RG_NAME represents the resource group name where your cluster will be deployed
-export RG_NAME=PromitorWithManagedIdentityRG
-
-# LOCATION represents the Azure region where your cluster will be deployed
-export LOCATION=northeurope
-
-# CLUSTER_NAME represents the name of your Azure Kubernetes Service Cluster
-export CLUSTER_NAME=PromitorCluster
-
-# AD_POD_IDENTITY_NAME represents the name of the Azure AD identity that will be assigned to Promitor.
-# Be careful, should be lower case alphanumeric characters, '-' or '.'
-export AD_POD_IDENTITY_NAME=promitor-identity
-
-# As an example, we are going to use a service bus from where we want to grab some metrics, through Promitor
-# SERVICE_BUS_NAMESPACE represents the name of your Azure Service Bus namespace.
-# Be careful as Azure Service Bus Namespaces need to be globally unique.
-export SERVICE_BUS_NAMESPACE=PromitorUniqueNameServiceBus
-
-# SERVICE_BUS_QUEUE represents the name of you Azure Service Bus queue.
-export SERVICE_BUS_QUEUE=demo_queue
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># SUBSCRIPTION_ID represents the Azure subscription id you will use to access your Azure resources</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span> <span class="nv">SUBSCRIPTION_ID</span><span class="o">=</span>&lt;subscription-id&gt;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># RG_NAME represents the resource group name where your cluster will be deployed</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">export</span> <span class="nv">RG_NAME</span><span class="o">=</span>PromitorWithManagedIdentityRG
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># LOCATION represents the Azure region where your cluster will be deployed</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">export</span> <span class="nv">LOCATION</span><span class="o">=</span>northeurope
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># CLUSTER_NAME represents the name of your Azure Kubernetes Service Cluster</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">export</span> <span class="nv">CLUSTER_NAME</span><span class="o">=</span>PromitorCluster
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># AD_POD_IDENTITY_NAME represents the name of the Azure AD identity that will be assigned to Promitor.</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Be careful, should be lower case alphanumeric characters, &#39;-&#39; or &#39;.&#39;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_NAME</span><span class="o">=</span>promitor-identity
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># As an example, we are going to use a service bus from where we want to grab some metrics, through Promitor</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># SERVICE_BUS_NAMESPACE represents the name of your Azure Service Bus namespace.</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># Be careful as Azure Service Bus Namespaces need to be globally unique.</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">export</span> <span class="nv">SERVICE_BUS_NAMESPACE</span><span class="o">=</span>PromitorUniqueNameServiceBus
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># SERVICE_BUS_QUEUE represents the name of you Azure Service Bus queue.</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">export</span> <span class="nv">SERVICE_BUS_QUEUE</span><span class="o">=</span>demo_queue
+</code></pre></div>
 <h3 id="creating-an-azure-resource-group">Creating an Azure Resource Group<a class="headerlink" href="#creating-an-azure-resource-group" title="Permanent link">&para;</a></h3>
 <p>First, let's create an Azure resource group in which we'll group all our resources:</p>
-<pre><code class="language-bash">$ az group create --name $RG_NAME --location $LOCATION
-{
-  &quot;id&quot;: &quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;,
-  &quot;location&quot;: &quot;&lt;location-id&gt;&quot;,
-  &quot;managedBy&quot;: null,
-  &quot;name&quot;: &quot;&lt;resource-group-name&gt;&quot;,
-  &quot;properties&quot;: {
-    &quot;provisioningState&quot;: &quot;Succeeded&quot;
-  },
-  &quot;tags&quot;: null,
-  &quot;type&quot;: &quot;Microsoft.Resources/resourceGroups&quot;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ az group create --name <span class="nv">$RG_NAME</span> --location <span class="nv">$LOCATION</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;&lt;location-id&gt;&quot;</span>,
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="s2">&quot;managedBy&quot;</span>: null,
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="s2">&quot;properties&quot;</span>: <span class="o">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="s2">&quot;provisioningState&quot;</span>: <span class="s2">&quot;Succeeded&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  <span class="o">}</span>,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  <span class="s2">&quot;tags&quot;</span>: null,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;Microsoft.Resources/resourceGroups&quot;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="o">}</span>
+</code></pre></div>
 <h3 id="creating-an-azure-service-bus-namespace-queue">Creating an Azure Service Bus Namespace &amp; Queue<a class="headerlink" href="#creating-an-azure-service-bus-namespace-queue" title="Permanent link">&para;</a></h3>
 <p>First we'll need to create an Azure Service Bus namespace that provides metrics in Azure Monitor.</p>
 <p>These metrics will be scraped by Promitor and made available to the configured metric sinks.</p>
@@ -1610,59 +1610,59 @@ export SERVICE_BUS_QUEUE=demo_queue
 <p>💡 Consider this to be an example of metrics that you'd want to use in Prometheus, StatsD, ...</p>
 </blockquote>
 <p>Let's create the Azure Service Bus namespace:</p>
-<pre><code class="language-bash">$ az servicebus namespace create \
-  --resource-group $RG_NAME \
-  --name $SERVICE_BUS_NAMESPACE \
-  --location $LOCATION
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ az servicebus namespace create <span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  --name <span class="nv">$SERVICE_BUS_NAMESPACE</span> <span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  --location <span class="nv">$LOCATION</span>
+</code></pre></div>
 <p>After that, we'll create a queue in that namespace:</p>
-<pre><code class="language-bash">$ az servicebus queue create \
-  --resource-group $RG_NAME \
-  --namespace-name $SERVICE_BUS_NAMESPACE \
-  --name $SERVICE_BUS_QUEUE
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ az servicebus queue create <span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  --namespace-name <span class="nv">$SERVICE_BUS_NAMESPACE</span> <span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  --name <span class="nv">$SERVICE_BUS_QUEUE</span>
+</code></pre></div>
 <h3 id="creating-an-azure-kubernetes-service-cluster">Creating an Azure Kubernetes Service Cluster<a class="headerlink" href="#creating-an-azure-kubernetes-service-cluster" title="Permanent link">&para;</a></h3>
 <p>Create an Azure Kubernetes Service cluster that uses a system-assigned managed identity:</p>
-<pre><code class="language-bash">$ az aks create --resource-group $RG_NAME \
-    --name $CLUSTER_NAME \
-    --generate-ssh-keys \
-    --node-count 1 \
-    --enable-managed-identity
-
-...
-&quot;servicePrincipalProfile&quot;: {
-    &quot;clientId&quot;: &quot;msi&quot;
-  }
-...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ az aks create --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    --name <span class="nv">$CLUSTER_NAME</span> <span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    --generate-ssh-keys <span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    --node-count <span class="m">1</span> <span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    --enable-managed-identity
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>...
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s2">&quot;servicePrincipalProfile&quot;</span>: <span class="o">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="s2">&quot;clientId&quot;</span>: <span class="s2">&quot;msi&quot;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  <span class="o">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>...
+</code></pre></div>
 <p>Once created, the output will indicate that it is using managed identity.</p>
 <h2 id="setting-up-our-cluster">Setting up our cluster<a class="headerlink" href="#setting-up-our-cluster" title="Permanent link">&para;</a></h2>
 <h3 id="getting-the-cluster-credentials">Getting The Cluster Credentials<a class="headerlink" href="#getting-the-cluster-credentials" title="Permanent link">&para;</a></h3>
 <p>In order to interact with the cluster by using <code>kubectl</code>, we need to be able to authenticate to it.</p>
 <p>You can get the credentials for your Kubernetes cluster using this command:</p>
-<pre><code class="language-bash">$ az aks get-credentials --name $CLUSTER_NAME --resource-group $RG_NAME
-Merged &quot;&lt;cluster-name&gt;&quot; as current context in /home/tom/.kube/config
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ az aks get-credentials --name <span class="nv">$CLUSTER_NAME</span> --resource-group <span class="nv">$RG_NAME</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Merged <span class="s2">&quot;&lt;cluster-name&gt;&quot;</span> as current context <span class="k">in</span> /home/tom/.kube/config
+</code></pre></div>
 <p>This saves the credentials in your kubeconfig file and uses it as your current context for all <code>kubectl</code> commands.</p>
 <p>Verify that you can connect and your cluster is up and running :</p>
-<pre><code class="language-bash">$ kubectl get nodes
-NAME                                STATUS   ROLES   AGE   VERSION
-aks-agentpool-34594731-vmss000000   Ready    agent   15d   v1.19.7
-aks-agentpool-34594731-vmss000001   Ready    agent   15d   v1.19.7
-aks-agentpool-34594731-vmss000002   Ready    agent   15d   v1.19.7
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ kubectl get nodes
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>NAME                                STATUS   ROLES   AGE   VERSION
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>aks-agentpool-34594731-vmss000000   Ready    agent   15d   v1.19.7
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>aks-agentpool-34594731-vmss000001   Ready    agent   15d   v1.19.7
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>aks-agentpool-34594731-vmss000002   Ready    agent   15d   v1.19.7
+</code></pre></div>
 <h3 id="get-azure-kubernetes-service-managed-identity-cluster-resource-group">Get Azure Kubernetes Service managed identity &amp; cluster resource group<a class="headerlink" href="#get-azure-kubernetes-service-managed-identity-cluster-resource-group" title="Permanent link">&para;</a></h3>
 <p>To be able to configure AAD Pod Identity component, we need information from our new Azure Kubernetes Service cluster:</p>
 <p>First, we need to get the <strong>name of the cluster resource group</strong> where the AKS internal resources have been deployed.</p>
-<pre><code class="language-bash">echo &quot;Retrieving cluster resource group&quot;
-export aks_rg_name=$(az aks show -g $RG_NAME -n $CLUSTER_NAME --query nodeResourceGroup -otsv)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span> <span class="s2">&quot;Retrieving cluster resource group&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span> <span class="nv">aks_rg_name</span><span class="o">=</span><span class="k">$(</span>az aks show -g <span class="nv">$RG_NAME</span> -n <span class="nv">$CLUSTER_NAME</span> --query nodeResourceGroup -otsv<span class="k">)</span>
+</code></pre></div>
 <p>This is a generated resource group that typically uses <code>MC_{resource-group}_{cluster-name}_{region}</code>, for example <code>MC_promitor-landscape_promitor_westeurope</code>.</p>
 <p>Second, we need the <strong>identity of our cluster</strong>. This is the system-assigned identity of our cluster that is used to
  access Azure resources.</p>
-<pre><code class="language-bash">echo &quot;Retrieving cluster identity ID, which will be used for role assignment&quot;
-export aks_mi_identity=&quot;$(az aks show -g ${RG_NAME} -n ${CLUSTER_NAME} --query identityProfile.kubeletidentity.clientId -otsv)&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span> <span class="s2">&quot;Retrieving cluster identity ID, which will be used for role assignment&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span> <span class="nv">aks_mi_identity</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>az aks show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span> --query identityProfile.kubeletidentity.clientId -otsv<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
 <p>This identity is managed by Azure, since we have used the <code>--enable-managed-identity</code> option during cluster creation.</p>
 <h2 id="getting-our-cluster-ready-to-use-aad-pod-identity">Getting our cluster ready to use AAD Pod Identity<a class="headerlink" href="#getting-our-cluster-ready-to-use-aad-pod-identity" title="Permanent link">&para;</a></h2>
 <h3 id="granting-our-clusters-managed-identity-required-permissions-in-azure">Granting our cluster's managed identity required permissions in Azure<a class="headerlink" href="#granting-our-clusters-managed-identity-required-permissions-in-azure" title="Permanent link">&para;</a></h3>
@@ -1678,29 +1678,29 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 <li>Manage the virtual machines that are part of the cluster, to use the assigned identity</li>
 </ul>
 <p>You can easily do this as following:</p>
-<pre><code class="language-bash">echo &quot;Assigning 'Managed Identity Operator' role to ${aks_mi_identity} on resource group ${aks_rg_name}&quot;
-az role assignment create --role &quot;Managed Identity Operator&quot; --assignee &quot;${aks_mi_identity}&quot; --scope &quot;/subscriptions/${SUBSCRIPTION_ID}/resourcegroups/${aks_rg_name}&quot;
-
-echo &quot;Assigning 'Virtual Machine Contributor' role to ${aks_mi_identity} on resource group ${aks_rg_name}&quot;
-az role assignment create --role &quot;Virtual Machine Contributor&quot; --assignee &quot;${aks_mi_identity}&quot; --scope &quot;/subscriptions/${SUBSCRIPTION_ID}/resourcegroups/${aks_rg_name}&quot;
-
-echo &quot;Assigning 'Managed Identity Operator' role to ${aks_mi_identity} on resource group ${RG_NAME}&quot;
-az role assignment create --role &quot;Managed Identity Operator&quot; --assignee &quot;${aks_mi_identity}&quot; --scope &quot;/subscriptions/${SUBSCRIPTION_ID}/resourcegroups/${RG_NAME}&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>az role assignment create --role <span class="s2">&quot;Managed Identity Operator&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Virtual Machine Contributor&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>az role assignment create --role <span class="s2">&quot;Virtual Machine Contributor&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>az role assignment create --role <span class="s2">&quot;Managed Identity Operator&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
 <h3 id="installing-aad-pod-identity">Installing AAD Pod Identity<a class="headerlink" href="#installing-aad-pod-identity" title="Permanent link">&para;</a></h3>
 <p>To deploy AAD Pod Identity, we need to add the Helm chart repository:</p>
-<pre><code class="language-bash">$ helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
-&quot;aad-pod-identity&quot; has been added to your repositories
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="s2">&quot;aad-pod-identity&quot;</span> has been added to your repositories
+</code></pre></div>
 <p>Update all your Helm repositories to use the latest and greatest:</p>
-<pre><code class="language-bash">$ helm repo update
-Hang tight while we grab the latest from your chart repositories...
-...Successfully got an update from the &quot;aad-pod-identity&quot; chart repository
-Update Complete. ⎈Happy Helming!⎈
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$ helm repo update
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Hang tight <span class="k">while</span> we grab the latest from your chart repositories...
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>...Successfully got an update from the <span class="s2">&quot;aad-pod-identity&quot;</span> chart repository
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Update Complete. ⎈Happy Helming!⎈
+</code></pre></div>
 <p>Lastly, install the Helm chart into your cluster:</p>
-<pre><code class="language-bash">helm install aad-pod-identity aad-pod-identity/aad-pod-identity --set nmi.allowNetworkPluginKubenet=true
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>helm install aad-pod-identity aad-pod-identity/aad-pod-identity --set nmi.allowNetworkPluginKubenet<span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
 <h3 id="creating-a-user-assigned-managed-identity-for-promitor">Creating a user-assigned managed identity for Promitor<a class="headerlink" href="#creating-a-user-assigned-managed-identity-for-promitor" title="Permanent link">&para;</a></h3>
 <p>In order to let Promitor to authenticate to Azure, we have two options:</p>
 <ol>
@@ -1709,35 +1709,35 @@ Update Complete. ⎈Happy Helming!⎈
 </ol>
 <p>In order to <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separate our concerns</a>, we will create a new
  identity for it:</p>
-<pre><code class="language-bash">echo &quot;Create identity $AD_POD_IDENTITY_NAME in resource group $RG_NAME&quot;
-az identity create -g ${RG_NAME} -n ${AD_POD_IDENTITY_NAME}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span> <span class="s2">&quot;Create identity </span><span class="nv">$AD_POD_IDENTITY_NAME</span><span class="s2"> in resource group </span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>az identity create -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span>
+</code></pre></div>
 <p>Our new identity will be used by <strong>Promitor</strong> to access <strong>Azure Monitor</strong> to get metrics by using its assigned
  <strong>RBAC roles assignements</strong>:</p>
 <p>First, we will get the client &amp; resource id of our identity:</p>
-<pre><code class="language-bash">export AD_POD_IDENTITY_CLIENT_ID=$(az identity show -g ${RG_NAME} -n ${AD_POD_IDENTITY_NAME} --query &quot;clientId&quot; -o tsv)
-export AD_POD_IDENTITY_RESOURCE_ID=$(az identity show -g ${RG_NAME} -n ${AD_POD_IDENTITY_NAME} --query &quot;id&quot; -o tsv)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="o">=</span><span class="k">$(</span>az identity show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span> --query <span class="s2">&quot;clientId&quot;</span> -o tsv<span class="k">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_RESOURCE_ID</span><span class="o">=</span><span class="k">$(</span>az identity show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span> --query <span class="s2">&quot;id&quot;</span> -o tsv<span class="k">)</span>
+</code></pre></div>
 <p>Next, we will assign the <code>Monitoring Reader</code> role to our identity on our resource group to scrape our Azure Service Bus namespace:</p>
-<pre><code class="language-bash">$ az role assignment create --role &quot;Monitoring Reader&quot; --scope &quot;/subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RG_NAME&quot; --assignee &quot;${AD_POD_IDENTITY_CLIENT_ID}&quot;
-{
-  &quot;canDelegate&quot;: null,
-  &quot;condition&quot;: null,
-  &quot;conditionVersion&quot;: null,
-  &quot;description&quot;: null,
-  &quot;id&quot;: &quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.Authorization/roleAssignments/92b1566a-2346-43f7-a093-1fd5871d4de8&quot;,
-  &quot;name&quot;: &quot;92b1566a-2346-43f7-a093-1fd5871d4de8&quot;,
-  &quot;principalId&quot;: &quot;&lt;promitor-identity-id&gt;&quot;,
-  &quot;principalType&quot;: &quot;ServicePrincipal&quot;,
-  &quot;resourceGroup&quot;: &quot;&lt;resource-group-name&gt;&quot;,
-  &quot;roleDefinitionId&quot;: &quot;/subscriptions/&lt;subscription-id&gt;/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05&quot;,
-  &quot;scope&quot;: &quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;,
-  &quot;type&quot;: &quot;Microsoft.Authorization/roleAssignments&quot;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ az role assignment create --role <span class="s2">&quot;Monitoring Reader&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="nv">$SUBSCRIPTION_ID</span><span class="s2">/resourceGroups/</span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  <span class="s2">&quot;canDelegate&quot;</span>: null,
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  <span class="s2">&quot;condition&quot;</span>: null,
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  <span class="s2">&quot;conditionVersion&quot;</span>: null,
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  <span class="s2">&quot;description&quot;</span>: null,
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.Authorization/roleAssignments/92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  <span class="s2">&quot;principalId&quot;</span>: <span class="s2">&quot;&lt;promitor-identity-id&gt;&quot;</span>,
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  <span class="s2">&quot;principalType&quot;</span>: <span class="s2">&quot;ServicePrincipal&quot;</span>,
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  <span class="s2">&quot;resourceGroup&quot;</span>: <span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  <span class="s2">&quot;roleDefinitionId&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05&quot;</span>,
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  <span class="s2">&quot;scope&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;Microsoft.Authorization/roleAssignments&quot;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="o">}</span>
+</code></pre></div>
 <p>In order to verify our role assignement, you can use this command:</p>
-<pre><code class="language-bash">az role assignment list --assignee $AD_POD_IDENTITY_CLIENT_ID -g $RG_NAME | jq -r '.[].roleDefinitionName'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>az role assignment list --assignee <span class="nv">$AD_POD_IDENTITY_CLIENT_ID</span> -g <span class="nv">$RG_NAME</span> <span class="p">|</span> jq -r <span class="s1">&#39;.[].roleDefinitionName&#39;</span>
+</code></pre></div>
 <blockquote>
 <p>💡 <em>It can take some times before the identity is correctly propagated in Azure Active Directory.</em>
 <em>So far if you encountered an error where the identity is not found, please wait 60 sec and retry</em></p>
@@ -1745,37 +1745,37 @@ export AD_POD_IDENTITY_RESOURCE_ID=$(az identity show -g ${RG_NAME} -n ${AD_POD_
 <h3 id="bind-your-managed-identity-to-our-pods-through-aad-pod-identity">Bind your Managed Identity to our Pods, through AAD Pod Identity<a class="headerlink" href="#bind-your-managed-identity-to-our-pods-through-aad-pod-identity" title="Permanent link">&para;</a></h3>
 <p>Now that our identity is created, we can tell AAD Pod Identity that we want to bind our Azure AD identity to our pods:</p>
 <p>First, we will define the identity that we want to assign:</p>
-<pre><code class="language-bash">cat &lt;&lt;EOF | kubectl apply -f -
-apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;
-kind: AzureIdentity
-metadata:
-  name: ${AD_POD_IDENTITY_NAME}
-spec:
-  type: 0 # 0 - user assigned MSI, 1 - service principal
-  resourceID: ${AD_POD_IDENTITY_RESOURCE_ID}
-  clientID: ${AD_POD_IDENTITY_CLIENT_ID}
-EOF
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>cat <span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="s">apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="s">kind: AzureIdentity</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s">metadata:</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s">  name: ${AD_POD_IDENTITY_NAME}</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="s">spec:</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="s">  type: 0 # 0 - user assigned MSI, 1 - service principal</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="s">  resourceID: ${AD_POD_IDENTITY_RESOURCE_ID}</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="s">  clientID: ${AD_POD_IDENTITY_CLIENT_ID}</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="s">EOF</span>
+</code></pre></div>
 <p>Next, we want to define to what pods we want to link it:</p>
-<pre><code class="language-bash">cat &lt;&lt;EOF | kubectl apply -f -
-apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;
-kind: AzureIdentityBinding
-metadata:
-  name: ${AD_POD_IDENTITY_NAME}-binding
-spec:
-  azureIdentity: ${AD_POD_IDENTITY_NAME}
-  selector: ${AD_POD_IDENTITY_NAME}
-EOF
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cat <span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="s">apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="s">kind: AzureIdentityBinding</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="s">metadata:</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="s">  name: ${AD_POD_IDENTITY_NAME}-binding</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="s">spec:</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="s">  azureIdentity: ${AD_POD_IDENTITY_NAME}</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="s">  selector: ${AD_POD_IDENTITY_NAME}</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="s">EOF</span>
+</code></pre></div>
 <p>You can verify that the resources were created successfully as following:</p>
-<pre><code class="language-bash">kubectl get azureidentity
-kubectl get azureidentitybinding
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl get azureidentity
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>kubectl get azureidentitybinding
+</code></pre></div>
 <h3 id="verifying-the-aad-pod-identity-installation">Verifying the AAD Pod Identity installation<a class="headerlink" href="#verifying-the-aad-pod-identity-installation" title="Permanent link">&para;</a></h3>
 <p>Before going further, we will check if our AAD Pod Identity is deployed &amp; configured correctly.</p>
 <p>We will spin up a pod and use the Azure CLI to authenticate:</p>
-<pre><code class="language-bash">kubectl run azure-cli -it --image=mcr.microsoft.com/azure-cli --labels=aadpodidbinding=$AD_POD_IDENTITY_NAME /bin/bash
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl run azure-cli -it --image<span class="o">=</span>mcr.microsoft.com/azure-cli --labels<span class="o">=</span><span class="nv">aadpodidbinding</span><span class="o">=</span><span class="nv">$AD_POD_IDENTITY_NAME</span> /bin/bash
+</code></pre></div>
 <p>Note that we are adding <code>aadpodidbinding</code> as a label, which is linking the pod to the AAD Pod Identity binding
  that we have just created.</p>
 <blockquote>
@@ -1783,96 +1783,96 @@ kubectl get azureidentitybinding
 If you encountered an error, relaunch the <code>az login -i --debug</code> command after 60 sec.</p>
 </blockquote>
 <p>Next, we will run <code>az login -i --debug</code> to see the different steps it takes:</p>
-<pre><code class="language-bash"># Once you are log in the container, and have the bash command line available, try to login using the Managed Identity:
-# If you don't see a command prompt, try pressing enter.
-$ bash-5.0# az login -i --debug
-msrestazure.azure_active_directory: MSI: Retrieving a token from http://169.254.169.254/metadata/identity/oauth2/token, with payload {'resource': 'https://management.core.windows.net/', 'api-version': '2018-02-01'}
-msrestazure.azure_active_directory: MSI: Token retrieved
-cli.azure.cli.core._profile: MSI: token was retrieved. Now trying to initialize local accounts...
-...
-[
-  {
-    &quot;environmentName&quot;: &quot;AzureCloud&quot;,
-    &quot;homeTenantId&quot;: &quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,
-    &quot;id&quot;: &quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,
-    &quot;isDefault&quot;: true,
-    &quot;managedByTenants&quot;: [
-      {
-        &quot;tenantId&quot;: &quot;2f4a9838-26b7-47ee-be60-ccc1fdec5953&quot;
-      }
-    ],
-    &quot;name&quot;: &quot;Visual Studio Enterprise&quot;,
-    &quot;state&quot;: &quot;Enabled&quot;,
-    &quot;tenantId&quot;: &quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,
-    &quot;user&quot;: {
-      &quot;assignedIdentityInfo&quot;: &quot;MSI&quot;,
-      &quot;name&quot;: &quot;systemAssignedIdentity&quot;,
-      &quot;type&quot;: &quot;servicePrincipal&quot;
-    }
-  }
-]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Once you are log in the container, and have the bash command line available, try to login using the Managed Identity:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1"># If you don&#39;t see a command prompt, try pressing enter.</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>$ bash-5.0# az login -i --debug
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>msrestazure.azure_active_directory: MSI: Retrieving a token from http://169.254.169.254/metadata/identity/oauth2/token, with payload <span class="o">{</span><span class="s1">&#39;resource&#39;</span>: <span class="s1">&#39;https://management.core.windows.net/&#39;</span>, <span class="s1">&#39;api-version&#39;</span>: <span class="s1">&#39;2018-02-01&#39;</span><span class="o">}</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>msrestazure.azure_active_directory: MSI: Token retrieved
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>cli.azure.cli.core._profile: MSI: token was retrieved. Now trying to initialize <span class="nb">local</span> accounts...
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>...
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="o">[</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  <span class="o">{</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="s2">&quot;environmentName&quot;</span>: <span class="s2">&quot;AzureCloud&quot;</span>,
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="s2">&quot;homeTenantId&quot;</span>: <span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;</span>,
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    <span class="s2">&quot;isDefault&quot;</span>: true,
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="s2">&quot;managedByTenants&quot;</span>: <span class="o">[</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>      <span class="o">{</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;2f4a9838-26b7-47ee-be60-ccc1fdec5953&quot;</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>      <span class="o">}</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    <span class="o">]</span>,
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visual Studio Enterprise&quot;</span>,
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>    <span class="s2">&quot;state&quot;</span>: <span class="s2">&quot;Enabled&quot;</span>,
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>    <span class="s2">&quot;user&quot;</span>: <span class="o">{</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>      <span class="s2">&quot;assignedIdentityInfo&quot;</span>: <span class="s2">&quot;MSI&quot;</span>,
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;systemAssignedIdentity&quot;</span>,
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>      <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;servicePrincipal&quot;</span>
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>    <span class="o">}</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>  <span class="o">}</span>
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a><span class="o">]</span>
+</code></pre></div>
 <p>If your Azure CLI container is able to retrieve some information from Azure
 without having to log in with your credentials,
 it means the CLI is using your Managed Identity, through the Pod Identity Binding.</p>
 <p>You may have a result indicating you are log in, using a <strong>System Assigned Identity</strong></p>
-<pre><code class="language-json">&quot;user&quot;: {
-    &quot;assignedIdentityInfo&quot;: &quot;MSI&quot;,
-    &quot;name&quot;: &quot;systemAssignedIdentity&quot;,
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="nt">&quot;assignedIdentityInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MSI&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemAssignedIdentity&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <h2 id="deploying-promitor-with-managed-identity">Deploying Promitor with Managed Identity<a class="headerlink" href="#deploying-promitor-with-managed-identity" title="Permanent link">&para;</a></h2>
 <h3 id="create-a-metrics-declaration-for-promitor">Create a metrics declaration for Promitor<a class="headerlink" href="#create-a-metrics-declaration-for-promitor" title="Permanent link">&para;</a></h3>
 <p>Before deploying Promitor, we will create a values file for our Helm deployment.</p>
 <p>In the configuration, we define what Azure resource that we want to scrape and that we want to use managed identity.</p>
 <p>Here is an example:</p>
-<pre><code class="language-yaml">azureAuthentication:
-  mode: SystemAssignedManagedIdentity
-  identity:
-    binding: &lt;aad-pod-identity-name&gt;              # &lt;- This is the value of AD_POD_IDENTITY_NAME environment variable
-azureMetadata:
-  tenantId: &lt;tenant-id&gt;
-  subscriptionId: &lt;subscription-id&gt;               # &lt;- This is the value of SUBSCRIPTION_ID environment variable
-  resourceGroupName: &lt;promitor-resource-group-id&gt; # &lt;- This is the value of RG_NAME environment variable
-metricDefaults:
-  aggregation:
-    interval: 00:05:00
-  scraping:
-    schedule: &quot;* * * * *&quot;
-metrics:
-  - name: demo_queue_size
-    description: &quot;Amount of active messages of the 'demo_queue' queue&quot;
-    resourceType: ServiceBusNamespace
-    azureMetricConfiguration:
-      metricName: ActiveMessages
-      aggregation:
-        type: Total
-    resources:
-      - namespace: &lt;service-bus-namespace&gt;        # &lt;- This is the value of SERVICE_BUS_NAMESPACE environment variable
-        queueName: &lt;service-bus-queue&gt;            # &lt;- This is the value of SERVICE_BUS_QUEUE_NAME environment variable
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">azureAuthentication</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssignedManagedIdentity</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="nt">binding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;aad-pod-identity-name&gt;</span><span class="w">              </span><span class="c1"># &lt;- This is the value of AD_POD_IDENTITY_NAME environment variable</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nt">azureMetadata</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;tenant-id&gt;</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;subscription-id&gt;</span><span class="w">               </span><span class="c1"># &lt;- This is the value of SUBSCRIPTION_ID environment variable</span><span class="w"></span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;promitor-resource-group-id&gt;</span><span class="w"> </span><span class="c1"># &lt;- This is the value of RG_NAME environment variable</span><span class="w"></span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="nt">metricDefaults</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00:05:00</span><span class="w"></span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">  </span><span class="nt">scraping</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">demo_queue_size</span><span class="w"></span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">messages</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&#39;demo_queue&#39;</span><span class="nv"> </span><span class="s">queue&quot;</span><span class="w"></span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">    </span><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusNamespace</span><span class="w"></span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">    </span><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">      </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActiveMessages</span><span class="w"></span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">      </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total</span><span class="w"></span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-namespace&gt;</span><span class="w">        </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_NAMESPACE environment variable</span><span class="w"></span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">        </span><span class="nt">queueName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-queue&gt;</span><span class="w">            </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_QUEUE_NAME environment variable</span><span class="w"></span>
+</code></pre></div>
 <h3 id="deploy-promitor-to-your-cluster-using-helm">Deploy Promitor to your cluster using Helm<a class="headerlink" href="#deploy-promitor-to-your-cluster-using-helm" title="Permanent link">&para;</a></h3>
 <p>To deploy, we'll first add the Promitor chart repository to helm:</p>
-<pre><code class="language-bash">helm repo add promitor https://charts.promitor.io/
-helm repo update
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>helm repo add promitor https://charts.promitor.io/
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>helm repo update
+</code></pre></div>
 <p>With this repository added, we can deploy Promitor:</p>
-<pre><code class="language-bash">helm install promitor-agent-scraper promitor/promitor-agent-scraper --values your/path/to/metric-declaration.yaml
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>helm install promitor-agent-scraper promitor/promitor-agent-scraper --values your/path/to/metric-declaration.yaml
+</code></pre></div>
 <h3 id="verifying-the-scraped-output-in-promitor">Verifying the scraped output in Promitor<a class="headerlink" href="#verifying-the-scraped-output-in-promitor" title="Permanent link">&para;</a></h3>
 <p>You can check that Promitor is getting insights from you Azure Service Bus queue, using the managed identity, with this commands.</p>
 <p>First, we get the name of the Promitor Scraper pod:</p>
-<pre><code class="language-bash"># Get promitor pod
-export POD_NAME=$(kubectl get pods --namespace default -l &quot;app.kubernetes.io/instance=promitor-agent-scraper&quot; -o jsonpath=&quot;{.items[0].metadata.name}&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Get promitor pod</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nb">export</span> <span class="nv">POD_NAME</span><span class="o">=</span><span class="k">$(</span>kubectl get pods --namespace default -l <span class="s2">&quot;app.kubernetes.io/instance=promitor-agent-scraper&quot;</span> -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="k">)</span>
+</code></pre></div>
 <p>Next, we add port forwarding from our pod to our local machine:</p>
-<pre><code class="language-bash">kubectl port-forward --namespace default $POD_NAME 8080:88
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl port-forward --namespace default <span class="nv">$POD_NAME</span> <span class="m">8080</span>:88
+</code></pre></div>
 <p>Now browse to the address <a href="http://127.0.0.1:8080/metrics">http://127.0.0.1:8080/metrics</a> and check your metrics are scrapped:</p>
-<pre><code class="language-html"># HELP demo_queue_size Amount of active messages of the 'demo_queue' queue
-# TYPE demo_queue_size gauge
-demo_queue_size{resource_group=&quot;ammdocs&quot;,subscription_id=&quot;xxxxx-xxxxx-xxxxx-xxxxxx-xxxxx&quot;,resource_uri=&quot;subscriptions/xxxxx-xxxxx-xxxxx-xxxxxx-xxxxx/resourceGroups/YOUR_RESOURCE_GROUP_NAME/providers/Microsoft.ServiceBus/namespaces/YOUR_SERVICE_BUS_NAMESPACE&quot;,instance_name=&quot;INSTANCE_NAME&quot;,entity_name=&quot;YOUR_SERVICE_BUS_QUEUE&quot;} 0 1612952581417
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a># HELP demo_queue_size Amount of active messages of the &#39;demo_queue&#39; queue
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a># TYPE demo_queue_size gauge
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>demo_queue_size{resource_group=&quot;ammdocs&quot;,subscription_id=&quot;xxxxx-xxxxx-xxxxx-xxxxxx-xxxxx&quot;,resource_uri=&quot;subscriptions/xxxxx-xxxxx-xxxxx-xxxxxx-xxxxx/resourceGroups/YOUR_RESOURCE_GROUP_NAME/providers/Microsoft.ServiceBus/namespaces/YOUR_SERVICE_BUS_NAMESPACE&quot;,instance_name=&quot;INSTANCE_NAME&quot;,entity_name=&quot;YOUR_SERVICE_BUS_QUEUE&quot;} 0 1612952581417
+</code></pre></div>
 <h2 id="cleaning-up">Cleaning up<a class="headerlink" href="#cleaning-up" title="Permanent link">&para;</a></h2>
 <p>To delete all the resources used in this tutorial, run <code>az group delete --name $RG_NAME</code>.</p>
 <p><a href="/">&larr; back</a></p>

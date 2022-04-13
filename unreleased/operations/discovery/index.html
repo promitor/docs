@@ -1196,11 +1196,11 @@
 <li><code>quota_id</code> - Id of the Azure subscription used to manage quotas</li>
 <li><code>authorization</code> - Type of authorization that is being used</li>
 </ul>
-<pre><code class="language-prometheus"># HELP promitor_azure_landscape_subscription_info Provides information concerning the Azure subscriptions in the landscape that Promitor has access to.
-# TYPE promitor_azure_landscape_subscription_info gauge
-promitor_azure_landscape_subscription_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_name=&quot;Windows Azure MSDN - Visual Studio Ultimate&quot;,subscription_id=&quot;0329dd2a-59dc-4493-aa54-cb01cb027dc2&quot;,state=&quot;Enabled&quot;,spending_limit=&quot;On&quot;,quota_id=&quot;MSDN_2014-09-01&quot;,authorization=&quot;RoleBased&quot;} 1 1628779903451
-promitor_azure_landscape_subscription_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_name=&quot;Visual Studio Enterprise&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,state=&quot;Enabled&quot;,spending_limit=&quot;Off&quot;,quota_id=&quot;Sponsored_2016-01-01&quot;,authorization=&quot;RoleBased&quot;} 1 1628779903451
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># HELP promitor_azure_landscape_subscription_info Provides information concerning the Azure subscriptions in the landscape that Promitor has access to.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># TYPE promitor_azure_landscape_subscription_info gauge
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>promitor_azure_landscape_subscription_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_name=&quot;Windows Azure MSDN - Visual Studio Ultimate&quot;,subscription_id=&quot;0329dd2a-59dc-4493-aa54-cb01cb027dc2&quot;,state=&quot;Enabled&quot;,spending_limit=&quot;On&quot;,quota_id=&quot;MSDN_2014-09-01&quot;,authorization=&quot;RoleBased&quot;} 1 1628779903451
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>promitor_azure_landscape_subscription_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_name=&quot;Visual Studio Enterprise&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,state=&quot;Enabled&quot;,spending_limit=&quot;Off&quot;,quota_id=&quot;Sponsored_2016-01-01&quot;,authorization=&quot;RoleBased&quot;} 1 1628779903451
+</code></pre></div>
 <h2 id="resource-groups">Resource Groups<a class="headerlink" href="#resource-groups" title="Permanent link">&para;</a></h2>
 <p>Our <code>promitor_azure_landscape_resource_group_info</code> metrics provides an overview of all the Azure resource groups that
  Promitor is able to discover in your Azure Landscape across all your subscriptions.</p>
@@ -1213,12 +1213,12 @@ promitor_azure_landscape_subscription_info{tenant_id=&quot;e0372f7f-a362-47fb-96
 <li><code>provisioning_state</code> - State of the resource group</li>
 <li><code>managed_by</code> - Id of the Azure resource managing this resource group, for example an Azure Kubernetes Service cluster.</li>
 </ul>
-<pre><code class="language-prometheus"># HELP promitor_azure_landscape_resource_group_info Provides information concerning the Azure resource groups in the landscape that Promitor has access to.
-# TYPE promitor_azure_landscape_resource_group_info gauge
-promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;NetworkWatcherRG&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;n/a&quot;} 1 1628779903423
-promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;promitor-testing-resource-discovery-eu&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;n/a&quot;} 1 1628779903423
-promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;MC_keda-demos_keda-demos_westeurope&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;/subscriptions/0f9d7fea-99e8-4768-8672-06a28514f77e/resourcegroups/keda-demos/providers/Microsoft.ContainerService/managedClusters/keda-demos&quot;} 1 1628779903423
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># HELP promitor_azure_landscape_resource_group_info Provides information concerning the Azure resource groups in the landscape that Promitor has access to.
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># TYPE promitor_azure_landscape_resource_group_info gauge
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;NetworkWatcherRG&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;n/a&quot;} 1 1628779903423
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;promitor-testing-resource-discovery-eu&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;n/a&quot;} 1 1628779903423
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>promitor_azure_landscape_resource_group_info{tenant_id=&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;,subscription_id=&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;,resource_group_name=&quot;MC_keda-demos_keda-demos_westeurope&quot;,region=&quot;westeurope&quot;,provisioning_state=&quot;Succeeded&quot;,managed_by=&quot;/subscriptions/0f9d7fea-99e8-4768-8672-06a28514f77e/resourcegroups/keda-demos/providers/Microsoft.ContainerService/managedClusters/keda-demos&quot;} 1 1628779903423
+</code></pre></div>
 
               
             </article>

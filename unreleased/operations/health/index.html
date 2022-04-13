@@ -1172,8 +1172,8 @@
 after deployments or use it for sending liveness / health probes.</p>
 <h2 id="consuming-the-health-endpoint">Consuming the health endpoint<a class="headerlink" href="#consuming-the-health-endpoint" title="Permanent link">&para;</a></h2>
 <p>You can check the status with a simple <code>GET</code>:</p>
-<pre><code class="language-shell">❯ curl -i -X GET &quot;http://&lt;uri&gt;/api/v1/health&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>❯ curl -i -X GET <span class="s2">&quot;http://&lt;uri&gt;/api/v1/health&quot;</span>
+</code></pre></div>
 <p>Health is currently indicated via the HTTP response status:</p>
 <ul>
 <li><code>200 OK</code> - The scraper is healthy</li>

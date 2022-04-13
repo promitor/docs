@@ -1211,74 +1211,74 @@
 Kubernetes cluster.</p>
 <h2 id="getting-the-helm-chart">Getting the Helm Chart<a class="headerlink" href="#getting-the-helm-chart" title="Permanent link">&para;</a></h2>
 <p>Install the Promitor Chart repository:</p>
-<pre><code class="language-shell">❯ helm repo add promitor https://charts.promitor.io/
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>❯ helm repo add promitor https://charts.promitor.io/
+</code></pre></div>
 <p>Refresh your local Chart repositories:</p>
-<pre><code class="language-shell">❯ helm repo update
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>❯ helm repo update
+</code></pre></div>
 <p>If all goes well you should be able to list all Promitor charts:</p>
-<pre><code class="language-shell">❯ helm search hub promitor
-URL                                                     CHART VERSION           APP VERSION     DESCRIPTION
-https://hub.helm.sh/charts/promitor/promitor-ag...      2.0.0-preview-3         2.0.0-preview-3 Promitor, bringing Azure Monitor metrics where ...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>❯ helm search hub promitor
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>URL                                                     CHART VERSION           APP VERSION     DESCRIPTION
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>https://hub.helm.sh/charts/promitor/promitor-ag...      <span class="m">2</span>.0.0-preview-3         <span class="m">2</span>.0.0-preview-3 Promitor, bringing Azure Monitor metrics where ...
+</code></pre></div>
 <h2 id="using-our-helm-chart">Using our Helm Chart<a class="headerlink" href="#using-our-helm-chart" title="Permanent link">&para;</a></h2>
 <p>You can easily install our Resource Discovery Agent as following:</p>
-<pre><code class="language-shell">❯ helm install promitor-agent-resource-discovery promitor/promitor-agent-resource-discovery \
-               --set azureAuthentication.appId='&lt;azure-ad-app-id&gt;' \
-               --set azureAuthentication.appKey='&lt;azure-ad-app-key&gt;' \
-               --values /path/to/helm-configuration.yaml
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>❯ helm install promitor-agent-resource-discovery promitor/promitor-agent-resource-discovery <span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>               --set azureAuthentication.appId<span class="o">=</span><span class="s1">&#39;&lt;azure-ad-app-id&gt;&#39;</span> <span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>               --set azureAuthentication.appKey<span class="o">=</span><span class="s1">&#39;&lt;azure-ad-app-key&gt;&#39;</span> <span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>               --values /path/to/helm-configuration.yaml
+</code></pre></div>
 <p>Next to Azure authentication, a <a href="https://docs.promitor.io/configuration/v2.x/resource-discovery">resource discovery declaration</a>
  must be provided through <code>--values</code>.</p>
 <p>Here is an example of resource discovery declaration which you can pass:</p>
-<pre><code class="language-yaml">azureLandscape:
-  cloud: Global
-  tenantId: e0372f7f-a362-47fb-9631-74a5c4ba8bbf
-  subscriptionIds:
-  - 0329dd2a-59dc-4493-aa54-cb01cb027dc2
-resourceDiscoveryGroups:
-- name: api-gateways
-  type: ApiManagement
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">azureLandscape</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">cloud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Global</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e0372f7f-a362-47fb-9631-74a5c4ba8bbf</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">subscriptionIds</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0329dd2a-59dc-4493-aa54-cb01cb027dc2</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-gateways</span><span class="w"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ApiManagement</span><span class="w"></span>
+</code></pre></div>
 <p>Our Helm chart provides a variety of configuration options which you can explore in
  our <a href="https://github.com/promitor/charts/blob/main/promitor-agent-resource-discovery/values.yaml">full values file</a>.
 to see all configurable values.</p>
 <h3 id="sample-configuration">Sample configuration<a class="headerlink" href="#sample-configuration" title="Permanent link">&para;</a></h3>
 <p>Want to get started easily? Here's a sample configuration to spin up the Resource Discovery agent which will be publicly
  exposed outside of the cluster on promitor-resource-discovery-sample.westeurope.cloudapp.azure.com:8889/api/docs/index.html.</p>
-<pre><code class="language-yaml">azureAuthentication:
-  appId: 67882a00-21d3-4ee7-b32a-430ea0768cd3
-  appKey: &lt;hidden&gt;
-azureLandscape:
-  cloud: Global
-  tenantId: e0372f7f-a362-47fb-9631-74a5c4ba8bbf
-  subscriptionIds:
-  - 0329dd2a-59dc-4493-aa54-cb01cb027dc2
-  - 0f9d7fea-99e8-4768-8672-06a28514f77e
-resourceDiscoveryGroups:
-- name: service-bus-landscape
-  type: ServiceBusQueue
-- name: api-gateways
-  type: ApiManagement
-- name: app-plan-landscape
-  type: AppPlan
-- name: container-instances
-  type: ContainerInstance
-- name: container-registry-landscape
-  type: ContainerRegistry
-- name: cosmos-accounts
-  type: CosmosDb
-- name: dps
-  type: DeviceProvisioningService
-- name: event-hubs-landscape
-  type: EventHubs
-service:
-  loadBalancer:
-    dnsPrefix: promitor-resource-discovery-sample
-    enabled: true
-telemetry:
-  defaultLogLevel: information
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">azureAuthentication</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">appId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">67882a00-21d3-4ee7-b32a-430ea0768cd3</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">appKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;hidden&gt;</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">azureLandscape</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">cloud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Global</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e0372f7f-a362-47fb-9631-74a5c4ba8bbf</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nt">subscriptionIds</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0329dd2a-59dc-4493-aa54-cb01cb027dc2</span><span class="w"></span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0f9d7fea-99e8-4768-8672-06a28514f77e</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-bus-landscape</span><span class="w"></span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusQueue</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-gateways</span><span class="w"></span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ApiManagement</span><span class="w"></span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-plan-landscape</span><span class="w"></span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AppPlan</span><span class="w"></span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container-instances</span><span class="w"></span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContainerInstance</span><span class="w"></span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container-registry-landscape</span><span class="w"></span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContainerRegistry</span><span class="w"></span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cosmos-accounts</span><span class="w"></span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CosmosDb</span><span class="w"></span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dps</span><span class="w"></span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeviceProvisioningService</span><span class="w"></span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event-hubs-landscape</span><span class="w"></span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EventHubs</span><span class="w"></span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="nt">service</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">  </span><span class="nt">loadBalancer</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="nt">dnsPrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-resource-discovery-sample</span><span class="w"></span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="nt">telemetry</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">  </span><span class="nt">defaultLogLevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">information</span><span class="w"></span>
+</code></pre></div>
 <p>You can easily deploy it by passing the file through <code>--values</code> during installation.</p>
 <p><a href="/">&larr; back</a></p>
 

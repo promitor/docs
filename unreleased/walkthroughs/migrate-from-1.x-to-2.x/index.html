@@ -1200,19 +1200,19 @@
  allowing you to emit scraped Azure Monitor metrics to multiple systems.</p>
 <p>With Promitor v2.0, we are removing support for our legacy Prometheus configuration.</p>
 <p>When using the following configuration:</p>
-<pre><code class="language-yaml">prometheus:
-  metricUnavailableValue: NaN
-  enableMetricTimestamps: false
-  scrapeEndpoint:
-    baseUriPath: /metrics
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">prometheus</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">metricUnavailableValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NaN</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">enableMetricTimestamps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">scrapeEndpoint</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">baseUriPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/metrics</span><span class="w"></span>
+</code></pre></div>
 <p>You can easily migrate it to our Prometheus Scraping endpoint sink as following:</p>
-<pre><code class="language-yaml">metricSinks:
-  prometheusScrapingEndpoint:
-    metricUnavailableValue: NaN
-    enableMetricTimestamps: false
-    baseUriPath: /metrics
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">metricSinks</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">prometheusScrapingEndpoint</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">metricUnavailableValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NaN</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">enableMetricTimestamps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">baseUriPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/metrics</span><span class="w"></span>
+</code></pre></div>
 <p>For more information, we recommend reading our
  <a href="https://docs.promitor.io/configuration/v2.x/runtime/scraper#prometheus-scraping-endpoint">documentation</a> concerning our Prometheus
   Scraping endpoint.</p>
@@ -1220,20 +1220,20 @@
 <p>Since Azure Service Bus Queue scraper allows you to report metrics for all entities we decided to change the resource
  type from <code>ServiceBusQueue</code> to <code>ServiceBusNamespace</code> since it will also report metrics for topics, and not only queues.</p>
 <p>For example:</p>
-<pre><code class="language-yaml">name: azure_service_bus_queue_active_messages
-description: &quot;The number of active messages on a service bus queue&quot;
-resourceType: ServiceBusNamespace
-azureMetricConfiguration:
-  metricName: ActiveMessages
-  aggregation:
-    type: Total
-resources:
-- namespace: promitor-messaging
-  # queueName: orders &lt;-- Optionally specify the queue name to filter on
-  # topicName: sales &lt;-- Optionally specify the queue name to filter on
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
-- name: service-bus-landscape
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure_service_bus_queue_active_messages</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">messages</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">bus</span><span class="nv"> </span><span class="s">queue&quot;</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusNamespace</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActiveMessages</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-messaging</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="c1"># queueName: orders &lt;-- Optionally specify the queue name to filter on</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="c1"># topicName: sales &lt;-- Optionally specify the queue name to filter on</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-bus-landscape</span><span class="w"></span>
+</code></pre></div>
 <p>For more information, we recommend reading our
  <a href="https://docs.promitor.io/configuration/v2.x/metrics/service-bus-namespace">documentation</a>
   concerning our Azure Service Bus Namespace scraper.</p>
