@@ -67,6 +67,13 @@ theme:
 plugins:
   - mike:
       version_selector: true   # set to false to leave out the version selector
+  - search
+  - htmlproofer:
+      enabled: True
+      raise_error: True
+      validate_external_urls: True
+      raise_error_excludes:
+        405: ['*']
 
 # Customization
 extra:
