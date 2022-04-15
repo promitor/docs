@@ -6,11 +6,11 @@ file which is referred to as the metric declaration.
 This declaration defines the overall Azure metadata and all the metrics you want to expose.
 
 Every metric describes the Azure Monitor metric that it represents and what Azure resources that should be scraped.
- It allows you to statically declaring the resources to scrape and/or use [automatic resource discovery](./../../../concepts/how-it-works.md#using-resource-discovery).
+ It allows you to statically declaring the resources to scrape and/or use [automatic resource discovery](https://promitor.io/concepts/#using-resource-discovery).
 
 ## Supported Azure Services
 
-[Generic Azure Resource](generic-azure-resource) allows you to scrape every Azure
+[Generic Azure Resource](providers/generic-azure-resource) allows you to scrape every Azure
 service supported by Azure Monitor.
 
 We also provide a simplified way to scrape the following Azure resources:
@@ -109,7 +109,7 @@ Every metric that is being declared needs to define the following fields:
   or filters.
 - `resourceDiscoveryGroups` An array of one or more resource discovery groups that will be used to automatically
  discover all resources through Promitor Resource Discovery. For every found resource, it will get the metrics and
-  report them. Learn more on resource discovery, in [our documentation](https://promitor.io/concepts/how-it-works#using-resource-discovery)
+  report them. Learn more on resource discovery, in [our documentation](https://promitor.io/concepts#using-resource-discovery)
 
 All resources provide the capability to override the default Azure metadata:
 
