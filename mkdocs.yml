@@ -129,9 +129,11 @@ nav:
   - Home: index.md
   - How It Works: how-it-works.md
   - Metrics:
-    - General Declaration: metrics/general-declaration.md
-    - Supported Providers: metrics/supported-providers.md
     - What labels do we provide: metrics/labels.md
+  - Scraping:
+    - Overview: scraping/index.md
+    - Available Providers:
+      - scraping/providers/generic-azure-resource.md
   - Deployment:
     - Overview: deployment/index.md
     - Scraper: 
