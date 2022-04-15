@@ -6,4 +6,5 @@
                            --env-file C:/Promitor/az-mon-auth.creds \
                            --volume C:/Promitor/metrics-declaration.yaml:/config/metrics-declaration.yaml \
                            --volume C:/Promitor/runtime.yaml:/config/runtime.yaml \
-                           ghcr.io/tomkerkhove/promitor-agent-scraper:2.0.0-rc
+                           ghcr.io/tomkerkhove/promitor-agent-scraper
+```
