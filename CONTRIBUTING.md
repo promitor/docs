@@ -16,12 +16,15 @@ For every new Promitor version, a new Git tag is created which [automatically bu
 
 ### Documenting a new scraper
 
-1. Create a new document in `docs\scraping\providers`.
+Documenting a new scraper is fairly simple and only requires a few steps in the `docs\` folder:
+
+1. Create a new document in `scraping\providers` based on `scraping\scraper.md.template`.
 2. Add the new scraper to the navigation in `mkdocs.yml`.
     - Ensure that the scraper is listed alphabetically in the `Scraping` section of the navigation.
 3. Add the new scraper to the supported scrapers list for resource discovery in `mkdocs.yml`, when applicable.
     - The `Supported Providers` section of `Resource Discovery` in the navigation
     - Ensure that the scraper is listed alphabetically.
+4. If the scraper provides scraper-specific labels, they should be documented in `scraping/labels.md` under "Scraper-specific labels".
 
 ## Creating a PR with live preview
 
