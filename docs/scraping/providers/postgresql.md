@@ -17,6 +17,11 @@ All supported metrics are documented in the official Azure Monitor documentation
 - [Flexible servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlflexibleservers)
 - [Hyperscale servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlservergroupsv2)
 
+## Limitations
+
+- Resource discovery will discover all types of servers and thus the used metrics should match all of the types.
+  - You can use tags to define which resources to include, if you need filtering capabilities.
+
 ## Example
 
 Here is an example configuration:
@@ -39,8 +44,3 @@ resources: # Optional, required when no resource discovery is configured
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: postgres-database-landscape
 ```
-
-## Limitations
-
-- Resource discovery will discover all types of servers and thus the used metrics should match all of the types.
-  - You can use tags to define which resources to include, if you need filtering capabilities.

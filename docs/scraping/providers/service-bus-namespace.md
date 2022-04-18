@@ -17,16 +17,18 @@ The following scraper-specific metric label will be added:
 
 - `entity_name` - Name of the queue
 
-> :warning: **As of today, there are some limitations:**
->
-> - No support for `queueName` & `topicName` for the same resource, for example:
->
->        resources:
->        - namespace: promitor-messaging
->          queueName: orders
->          topicName: sales
->
-> - No support for combining the `queueName` & `EntityPath` dimensions
+## Limitations
+
+- No support for `queueName` & `topicName` for the same resource, for example:
+
+```yaml
+resources:
+- namespace: promitor-messaging
+  queueName: orders
+  topicName: sales
+```
+
+- No support for combining the `queueName` & `EntityPath` dimensions
 
 ## Example
 

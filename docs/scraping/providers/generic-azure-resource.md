@@ -18,7 +18,9 @@ Optional fields :
 - `filter` - The filter to use to have fine-grained metrics. Example: `EntityName eq 'orders'`.
    See [Azure Monitor REST API Filter Syntax](https://docs.microsoft.com/en-us/rest/api/monitor/filter-syntax).
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: azure_service_bus_active_messages

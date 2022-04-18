@@ -16,7 +16,9 @@ The following scraper-specific metric label will be added:
 
 - `entity_name` - Name of the topic
 
-> :warning: **As of today, it is not supported to combine `topicName` with `EntityPath` as a dimension.**
+## Limitations
+
+- As of today, it is not supported to combine `topicName` with `EntityPath` as a dimension.
 
 ## Example
 

@@ -12,7 +12,7 @@ When using declared resources, the following fields need to be provided:
 
 All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftapimanagementservice).
 
-### Multi-region support
+## Multi-region support
 
 Azure API Management instances can be deployed to multiple regions across the world.
 
