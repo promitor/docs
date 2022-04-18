@@ -74,6 +74,7 @@ plugins:
       validate_external_urls: True
       raise_error_excludes:
         405: ['*']
+        520: ['*']
 
 # Customization
 extra:
@@ -128,10 +129,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - How It Works: how-it-works.md
-  - Metrics:
-    - What labels do we provide: metrics/labels.md
   - Scraping:
-    - "Overview": scraping/index.md
+    - Overview: scraping/overview.md
+    - Metric Labelling: scraping/labels.md
     - Available Providers:
       - Generic: scraping/providers/generic-azure-resource.md
       - Azure Database for PostgreSQL: scraping/providers/postgresql.md
@@ -152,7 +152,7 @@ nav:
       - Azure Virtual Network: scraping/providers/virtual-network.md
       - Azure Web App: scraping/providers/web-app.md
   - Resource Discovery:
-    - Overview: resource-discovery/index.md
+    - Overview: resource-discovery/overview.md
     - Supported Providers:
       - Azure Database for PostgreSQL: scraping/providers/postgresql.md
       - Azure Cache for Redis: scraping/providers/redis-cache.md

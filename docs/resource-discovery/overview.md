@@ -1,4 +1,4 @@
-# Resource Discovery
+# Overview
 
 Resource discovery allows you to define criteria to automatically discover resources in your Azure tenant and scrape metrics for all of the Azure resources that are found.
 
