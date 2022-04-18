@@ -16,7 +16,9 @@ The following scraper-specific metric labels will be added:
 - `workspace_name` - The name of the Azure Synapse workspace.
 - `pool_name` - The name of the SQL pool.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 - name: promitor_demo_synapse_sql_pool_dwu_limit

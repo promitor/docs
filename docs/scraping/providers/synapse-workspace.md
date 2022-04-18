@@ -14,7 +14,9 @@ The following scraper-specific metric labels will be added:
 
 - `workspace_name` - The name of the Azure Synapse workspace.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 - name: promitor_demo_synapse_workspace_builtin_sql_processed_bytes

@@ -34,9 +34,10 @@ theme:
     - navigation.sections
     - navigation.tabs.sticky
     - navigation.tabs
+    - navigation.indexes
     - navigation.top
+    - navigation.tracking
     - toc.follow
-    - toc.integrate
     - content.code.annotate
     - content.tabs.link
     - search.highlight
@@ -130,9 +131,19 @@ nav:
   - Metrics:
     - What labels do we provide: metrics/labels.md
   - Scraping:
-    - Overview: scraping/index.md
+    - "Overview": scraping/index.md
     - Available Providers:
       - Generic: scraping/providers/generic-azure-resource.md
+      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Cache for Redis: scraping/providers/redis-cache.md
+      - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+      - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
+      - Azure SQL Database: scraping/providers/sql-database.md
+      - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
+      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+      - Azure SQL Server: scraping/providers/sql-server.md
+      - Azure Storage Account: scraping/providers/storage-account.md
+      - Azure Storage Queue: scraping/providers/storage-queue.md
       - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
       - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
       - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
@@ -143,6 +154,15 @@ nav:
   - Resource Discovery:
     - Overview: resource-discovery/index.md
     - Supported Providers:
+      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Cache for Redis: scraping/providers/redis-cache.md
+      - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+      - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
+      - Azure SQL Database: scraping/providers/sql-database.md
+      - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
+      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+      - Azure Storage Account: scraping/providers/storage-account.md
       - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
       - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
       - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md

@@ -11,7 +11,9 @@ When using declared resources, the following fields need to be provided:
 
 All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftcomputevirtualmachines).
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: azure_virtual_machine_percentage_cpu
