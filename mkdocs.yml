@@ -134,6 +134,23 @@ nav:
     - Overview: scraping/index.md
     - Available Providers:
       - scraping/providers/generic-azure-resource.md
+      - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
+      - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
+      - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+      - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
+      - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
+      - Azure Virtual Network: scraping/providers/virtual-network.md
+      - Azure Web App: scraping/providers/web-app.md
+  - Resource Discovery:
+    - Overview: resource-discovery/index.md
+    - Supported Providers:
+      - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
+      - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
+      - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+      - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
+      - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
+      - Azure Virtual Network: scraping/providers/virtual-network.md
+      - Azure Web App: scraping/providers/web-app.md
   - Deployment:
     - Overview: deployment/index.md
     - Scraper: 
