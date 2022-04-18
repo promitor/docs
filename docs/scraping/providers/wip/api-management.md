@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure API Management Declaration
----
-
-## Azure API Management
+# Azure API Management
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.3-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -31,7 +26,9 @@ The following scraper-specific metric label will be added for scenario 2 & 3:
 
 - `location` - Name of the location
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: promitor_demo_azureapimanagement_capacity
@@ -45,9 +42,4 @@ resources: # Optional, required when no resource discovery is configured
 - instanceName: promitor-api-gateway
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: api-management-landscape
-```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->
+``

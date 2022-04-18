@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Load Balancer Declaration
----
-
-## Azure Load Balancer
+# Azure Load Balancer
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.6-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -16,7 +11,9 @@ When using declared resources, the following fields need to be provided:
 
 All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftnetworkloadbalancers).
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: azure_load_balancer_traffic_bytes
@@ -32,8 +29,3 @@ resources: # Optional, required when no resource discovery is configured
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: load-balancer-landscape
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->

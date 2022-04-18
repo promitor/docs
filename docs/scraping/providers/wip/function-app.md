@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Function App Declaration
----
-
-## Azure Function App
+# Azure Function App
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.2-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -21,7 +16,9 @@ The following scraper-specific metric label will be added:
 
 - `slot_name` - Name of the deployment slot. If none is specified, `production` will be used.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: azure_function_requests
@@ -36,8 +33,3 @@ resources: # Optional, required when no resource discovery is configured
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: function-app-landscape
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->

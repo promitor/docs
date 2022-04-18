@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Data Factory Declaration
----
-
-## Azure Data Factory
+# Azure Data Factory
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.5-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -21,7 +16,9 @@ The following scraper-specific metric label will be added:
 
 - `pipeline_name` - Name of the data pipeline.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 - name: azure_data_factory_pipeline_run_successful
@@ -37,8 +34,3 @@ Example:
   resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
   - name: data-factory-landscape
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->

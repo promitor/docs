@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Data Share Declaration
----
-
-## Azure Data Share
+# Azure Data Share
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.5-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -21,7 +16,9 @@ The following scraper-specific metric label will be added:
 
 - `share_name` - Name of the share.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 - name: promitor_demo_data_share_received
@@ -37,8 +34,3 @@ Example:
   resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
   - name: data-share-landscape
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->

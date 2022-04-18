@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Automation Account Declaration
----
-
-## Azure Automation account
+# Azure Automation account
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.1-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -21,7 +16,9 @@ The following scraper-specific metric label will be added :
 
 - `runbook_name` - Name of the runbook
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: promitor_demo_automation_job_count
@@ -38,8 +35,3 @@ resources: # Optional, required when no resource discovery is configured
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: automation-accounts
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->

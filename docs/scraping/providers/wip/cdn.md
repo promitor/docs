@@ -1,9 +1,4 @@
----
-layout: default
-title: Azure Content Delivery Network (CDN) Declaration
----
-
-## Azure Content Delivery Network (CDN)
+# Azure Content Delivery Network (CDN)
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.6-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
@@ -18,7 +13,9 @@ All supported metrics are documented in the official [Azure Monitor documentatio
 
 > 🚨 The availability of metrics depends on the SKU of the Azure CDN resource.
 
-Example:
+## Example
+
+Here is an example configuration:
 
 ```yaml
 name: azure_cdn_requests
@@ -34,8 +31,3 @@ resources: # Optional, required when no resource discovery is configured
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: cdn-landscape
 ```
-
-<!-- markdownlint-disable MD033 -->
-[&larr; back to metrics declarations](/configuration/v2.x/metrics)<br />
-[&larr; back to introduction](/)
-<!-- markdownlint-enable -->
