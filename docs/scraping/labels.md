@@ -1,4 +1,4 @@
-## What labels do we provide?
+# Metric Labelling
 
 Here is an overview of how we label metrics.
 
