@@ -134,9 +134,36 @@ nav:
     - Metric Labelling: scraping/labels.md
     - Available Providers:
       - Generic: scraping/providers/generic-azure-resource.md
-      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure API Management: scraping/providers/api-management.md
+      - Azure App Plan: scraping/providers/app-plan.md
+      - Azure Application Gateway: scraping/providers/application-gateway.md
+      - Azure Application Insights: scraping/providers/application-insights.md
+      - Azure Automation account: scraping/providers/automation-account.md
+      - Azure Blob Storage: scraping/providers/blob-storage.md
       - Azure Cache for Redis: scraping/providers/redis-cache.md
       - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+      - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
+      - Azure Container Instances: scraping/providers/container-instances.md
+      - Azure Container Registry: scraping/providers/container-registry.md
+      - Azure Cosmos DB: scraping/providers/cosmos-db.md
+      - Azure Database for MariaDB: scraping/providers/maria-db.md
+      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Data Factory: scraping/providers/data-factory.md
+      - Azure Data Share: scraping/providers/data-share.md
+      - Azure Event Hubs: scraping/providers/event-hubs.md
+      - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
+      - Azure File Storage: scraping/providers/file-storage.md
+      - Azure Front Door: scraping/providers/front-door.md
+      - Azure Function App: scraping/providers/function-app.md
+      - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
+      - Azure IoT Hub: scraping/providers/iot-hub.md
+      - Azure Key Vault: scraping/providers/key-vault.md
+      - Azure Kubernetes Service: scraping/providers/kubernetes.md
+      - Azure Load Balancer: scraping/providers/load-balancer.md
+      - Azure Logic Apps: scraping/providers/logic-apps.md
+      - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+      - Azure Network Gateway: scraping/providers/network-gateway.md
+      - Azure Network Interface: scraping/providers/network-interface.md
       - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
       - Azure SQL Database: scraping/providers/sql-database.md
       - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
@@ -154,9 +181,35 @@ nav:
   - Resource Discovery:
     - Overview: resource-discovery/overview.md
     - Supported Providers:
-      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure API Management: scraping/providers/api-management.md
+      - Azure App Plan: scraping/providers/app-plan.md
+      - Azure Application Gateway: scraping/providers/application-gateway.md
+      - Azure Application Insights: scraping/providers/application-insights.md
+      - Azure Automation account: scraping/providers/automation-account.md
       - Azure Cache for Redis: scraping/providers/redis-cache.md
       - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+      - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
+      - Azure Container Instances: scraping/providers/container-instances.md
+      - Azure Container Registry: scraping/providers/container-registry.md
+      - Azure Cosmos DB: scraping/providers/cosmos-db.md
+      - Azure Database for MariaDB: scraping/providers/maria-db.md
+      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Data Factory: scraping/providers/data-factory.md
+      - Azure Data Share: scraping/providers/data-share.md
+      - Azure Event Hubs: scraping/providers/event-hubs.md
+      - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
+      - Azure File Storage: scraping/providers/file-storage.md
+      - Azure Front Door: scraping/providers/front-door.md
+      - Azure Function App: scraping/providers/function-app.md
+      - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
+      - Azure IoT Hub: scraping/providers/iot-hub.md
+      - Azure Key Vault: scraping/providers/key-vault.md
+      - Azure Kubernetes Service: scraping/providers/kubernetes.md
+      - Azure Load Balancer: scraping/providers/load-balancer.md
+      - Azure Logic Apps: scraping/providers/logic-apps.md
+      - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+      - Azure Network Gateway: scraping/providers/network-gateway.md
+      - Azure Network Interface: scraping/providers/network-interface.md
       - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
       - Azure SQL Database: scraping/providers/sql-database.md
       - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
