@@ -1,4 +1,4 @@
-# Resource Discovery Runtime Configuration
+# Runtime Configuration
 
 This article covers an overview of all the knobs that you can tweak to align the
 Resource Discovery runtime with your needs.

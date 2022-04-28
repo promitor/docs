@@ -132,6 +132,7 @@ nav:
   - Scraping:
     - Overview: scraping/overview.md
     - Metric Labelling: scraping/labels.md
+    - Runtime Configuration: scraping/runtime-configuration.md
     - Available Providers:
       - Generic: scraping/providers/generic-azure-resource.md
       - Azure API Management: scraping/providers/api-management.md
@@ -180,6 +181,7 @@ nav:
       - Azure Web App: scraping/providers/web-app.md
   - Resource Discovery:
     - Overview: resource-discovery/overview.md
+    - Runtime Configuration: resource-discovery/runtime-configuration.md
     - Supported Providers:
       - Azure API Management: scraping/providers/api-management.md
       - Azure App Plan: scraping/providers/app-plan.md

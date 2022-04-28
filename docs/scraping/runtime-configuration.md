@@ -1,4 +1,4 @@
-# Scraper Runtime Configuration
+# Runtime Configuration
 
 This article covers an overview of all the knobs that you can tweak to align the Scraper
 runtime with your needs.
