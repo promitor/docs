@@ -181,6 +181,7 @@ nav:
       - Azure Web App: scraping/providers/web-app.md
   - Resource Discovery:
     - Overview: resource-discovery/overview.md
+    - Declaring resource discovery groups: resource-discovery/declaring-resource-discovery-groups.md
     - Runtime Configuration: resource-discovery/runtime-configuration.md
     - Supported Providers:
       - Azure API Management: scraping/providers/api-management.md
