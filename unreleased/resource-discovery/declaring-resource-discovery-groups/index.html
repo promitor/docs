@@ -12,21 +12,21 @@
         <meta name="author" content="Tom Kerkhove">
       
       
-        <link rel="canonical" href="https://promitor.io/unreleased/scraping/providers/web-app/">
+        <link rel="canonical" href="https://promitor.io/unreleased/resource-discovery/declaring-resource-discovery-groups/">
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
-        <title>Azure Web App - Promitor - Documentation</title>
+        <title>Declaring resource discovery groups - Promitor - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
         
       
     
@@ -41,9 +41,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#azure-web-app" class="md-skip">
+        <a href="#declaring-resource-discovery-groups" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Promitor - Documentation" class="md-header__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
+    <a href="../.." title="Promitor - Documentation" class="md-header__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
       
-  <img src="../../../media/logos/promitor-logo.svg" alt="logo">
+  <img src="../../media/logos/promitor-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure Web App
+              Declaring resource discovery groups
             
           </span>
         </div>
@@ -218,7 +218,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -230,7 +230,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../how-it-works/" class="md-tabs__link">
+    <a href="../../how-it-works/" class="md-tabs__link">
       How It Works
     </a>
   </li>
@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../../scraping/overview/" class="md-tabs__link">
         Scraping
       </a>
     </li>
@@ -263,7 +263,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../resource-discovery/overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
         Resource Discovery
       </a>
     </li>
@@ -279,7 +279,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../deployment/" class="md-tabs__link">
+      <a href="../../deployment/" class="md-tabs__link">
         Deployment
       </a>
     </li>
@@ -295,7 +295,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../configuration/v2.x/runtime/scraper/" class="md-tabs__link">
+      <a href="../../configuration/v2.x/runtime/scraper/" class="md-tabs__link">
         Configuration
       </a>
     </li>
@@ -311,7 +311,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../security/azure-authentication/" class="md-tabs__link">
+      <a href="../../security/azure-authentication/" class="md-tabs__link">
         Security
       </a>
     </li>
@@ -327,7 +327,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../operations/" class="md-tabs__link">
+      <a href="../../operations/" class="md-tabs__link">
         Operations
       </a>
     </li>
@@ -343,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-tabs__link">
+      <a href="../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-tabs__link">
         Walkthroughs
       </a>
     </li>
@@ -356,7 +356,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../faq/" class="md-tabs__link">
+    <a href="../../faq/" class="md-tabs__link">
       FAQ
     </a>
   </li>
@@ -389,9 +389,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Promitor - Documentation" class="md-nav__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
+    <a href="../.." title="Promitor - Documentation" class="md-nav__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
       
-  <img src="../../../media/logos/promitor-logo.svg" alt="logo">
+  <img src="../../media/logos/promitor-logo.svg" alt="logo">
 
     </a>
     Promitor - Documentation
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -434,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-it-works/" class="md-nav__link">
+      <a href="../../how-it-works/" class="md-nav__link">
         How It Works
       </a>
     </li>
@@ -485,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../scraping/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -499,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labels/" class="md-nav__link">
+      <a href="../../scraping/labels/" class="md-nav__link">
         Metric Labelling
       </a>
     </li>
@@ -513,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../runtime-configuration/" class="md-nav__link">
+      <a href="../../scraping/runtime-configuration/" class="md-nav__link">
         Runtime Configuration
       </a>
     </li>
@@ -647,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generic-azure-resource/" class="md-nav__link">
+      <a href="../../scraping/providers/generic-azure-resource/" class="md-nav__link">
         Generic
       </a>
     </li>
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-management/" class="md-nav__link">
+      <a href="../../scraping/providers/api-management/" class="md-nav__link">
         Azure API Management
       </a>
     </li>
@@ -675,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-plan/" class="md-nav__link">
+      <a href="../../scraping/providers/app-plan/" class="md-nav__link">
         Azure App Plan
       </a>
     </li>
@@ -689,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-gateway/" class="md-nav__link">
+      <a href="../../scraping/providers/application-gateway/" class="md-nav__link">
         Azure Application Gateway
       </a>
     </li>
@@ -703,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-insights/" class="md-nav__link">
+      <a href="../../scraping/providers/application-insights/" class="md-nav__link">
         Azure Application Insights
       </a>
     </li>
@@ -717,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation-account/" class="md-nav__link">
+      <a href="../../scraping/providers/automation-account/" class="md-nav__link">
         Azure Automation account
       </a>
     </li>
@@ -731,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blob-storage/" class="md-nav__link">
+      <a href="../../scraping/providers/blob-storage/" class="md-nav__link">
         Azure Blob Storage
       </a>
     </li>
@@ -745,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-cache/" class="md-nav__link">
+      <a href="../../scraping/providers/redis-cache/" class="md-nav__link">
         Azure Cache for Redis
       </a>
     </li>
@@ -759,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-enterprise-cache/" class="md-nav__link">
+      <a href="../../scraping/providers/redis-enterprise-cache/" class="md-nav__link">
         Azure Cache for Redis Enterprise
       </a>
     </li>
@@ -773,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cdn/" class="md-nav__link">
+      <a href="../../scraping/providers/cdn/" class="md-nav__link">
         Azure Content Delivery Network (CDN)
       </a>
     </li>
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-instances/" class="md-nav__link">
+      <a href="../../scraping/providers/container-instances/" class="md-nav__link">
         Azure Container Instances
       </a>
     </li>
@@ -801,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-registry/" class="md-nav__link">
+      <a href="../../scraping/providers/container-registry/" class="md-nav__link">
         Azure Container Registry
       </a>
     </li>
@@ -815,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cosmos-db/" class="md-nav__link">
+      <a href="../../scraping/providers/cosmos-db/" class="md-nav__link">
         Azure Cosmos DB
       </a>
     </li>
@@ -829,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maria-db/" class="md-nav__link">
+      <a href="../../scraping/providers/maria-db/" class="md-nav__link">
         Azure Database for MariaDB
       </a>
     </li>
@@ -843,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgresql/" class="md-nav__link">
+      <a href="../../scraping/providers/postgresql/" class="md-nav__link">
         Azure Database for PostgreSQL
       </a>
     </li>
@@ -857,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-factory/" class="md-nav__link">
+      <a href="../../scraping/providers/data-factory/" class="md-nav__link">
         Azure Data Factory
       </a>
     </li>
@@ -871,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-share/" class="md-nav__link">
+      <a href="../../scraping/providers/data-share/" class="md-nav__link">
         Azure Data Share
       </a>
     </li>
@@ -885,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../event-hubs/" class="md-nav__link">
+      <a href="../../scraping/providers/event-hubs/" class="md-nav__link">
         Azure Event Hubs
       </a>
     </li>
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../express-route-circuit/" class="md-nav__link">
+      <a href="../../scraping/providers/express-route-circuit/" class="md-nav__link">
         Azure Express Route Circuit
       </a>
     </li>
@@ -913,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-storage/" class="md-nav__link">
+      <a href="../../scraping/providers/file-storage/" class="md-nav__link">
         Azure File Storage
       </a>
     </li>
@@ -927,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../front-door/" class="md-nav__link">
+      <a href="../../scraping/providers/front-door/" class="md-nav__link">
         Azure Front Door
       </a>
     </li>
@@ -941,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function-app/" class="md-nav__link">
+      <a href="../../scraping/providers/function-app/" class="md-nav__link">
         Azure Function App
       </a>
     </li>
@@ -955,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub-device-provisioning-service/" class="md-nav__link">
+      <a href="../../scraping/providers/iot-hub-device-provisioning-service/" class="md-nav__link">
         Azure IoT Hub Device Provisioning Service (DPS)
       </a>
     </li>
@@ -969,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub/" class="md-nav__link">
+      <a href="../../scraping/providers/iot-hub/" class="md-nav__link">
         Azure IoT Hub
       </a>
     </li>
@@ -983,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../key-vault/" class="md-nav__link">
+      <a href="../../scraping/providers/key-vault/" class="md-nav__link">
         Azure Key Vault
       </a>
     </li>
@@ -997,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../scraping/providers/kubernetes/" class="md-nav__link">
         Azure Kubernetes Service
       </a>
     </li>
@@ -1011,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../load-balancer/" class="md-nav__link">
+      <a href="../../scraping/providers/load-balancer/" class="md-nav__link">
         Azure Load Balancer
       </a>
     </li>
@@ -1025,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic-apps/" class="md-nav__link">
+      <a href="../../scraping/providers/logic-apps/" class="md-nav__link">
         Azure Logic Apps
       </a>
     </li>
@@ -1039,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitor-autoscale/" class="md-nav__link">
+      <a href="../../scraping/providers/monitor-autoscale/" class="md-nav__link">
         Azure Monitor Autoscale
       </a>
     </li>
@@ -1053,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-gateway/" class="md-nav__link">
+      <a href="../../scraping/providers/network-gateway/" class="md-nav__link">
         Azure Network Gateway
       </a>
     </li>
@@ -1067,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-interface/" class="md-nav__link">
+      <a href="../../scraping/providers/network-interface/" class="md-nav__link">
         Azure Network Interface
       </a>
     </li>
@@ -1081,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../service-bus-namespace/" class="md-nav__link">
+      <a href="../../scraping/providers/service-bus-namespace/" class="md-nav__link">
         Azure Service Bus Namespace
       </a>
     </li>
@@ -1095,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-database/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-database/" class="md-nav__link">
         Azure SQL Database
       </a>
     </li>
@@ -1109,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-elastic-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-elastic-pool/" class="md-nav__link">
         Azure SQL Elastic Pool
       </a>
     </li>
@@ -1123,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-managed-instance/" class="md-nav__link">
         Azure SQL Managed Instance
       </a>
     </li>
@@ -1137,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-server/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-server/" class="md-nav__link">
         Azure SQL Server
       </a>
     </li>
@@ -1151,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-account/" class="md-nav__link">
+      <a href="../../scraping/providers/storage-account/" class="md-nav__link">
         Azure Storage Account
       </a>
     </li>
@@ -1165,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-queue/" class="md-nav__link">
+      <a href="../../scraping/providers/storage-queue/" class="md-nav__link">
         Azure Storage Queue
       </a>
     </li>
@@ -1179,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-apache-spark-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-apache-spark-pool/" class="md-nav__link">
         Azure Synapse (Apache Spark pool)
       </a>
     </li>
@@ -1193,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-sql-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-sql-pool/" class="md-nav__link">
         Azure Synapse (SQL pool)
       </a>
     </li>
@@ -1207,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-workspace/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-workspace/" class="md-nav__link">
         Azure Synapse (Workspace)
       </a>
     </li>
@@ -1221,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine-scale-set/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-machine-scale-set/" class="md-nav__link">
         Azure Virtual Machine Scale Set (VMSS)
       </a>
     </li>
@@ -1235,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-machine/" class="md-nav__link">
         Azure Virtual Machine (VM)
       </a>
     </li>
@@ -1249,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-network/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-network/" class="md-nav__link">
         Azure Virtual Network
       </a>
     </li>
@@ -1263,17 +1263,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../scraping/providers/web-app/" class="md-nav__link">
         Azure Web App
       </a>
-      
     </li>
   
 
@@ -1338,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resource-discovery/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1350,11 +1342,85 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../resource-discovery/declaring-resource-discovery-groups/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Declaring resource discovery groups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Declaring resource discovery groups
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    Specification
+  </a>
+  
+    <nav class="md-nav" aria-label="Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-landscape" class="md-nav__link">
+    Azure Landscape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-discovery-groups" class="md-nav__link">
+    Resource Discovery Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Discovery Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criteria" class="md-nav__link">
+    Criteria
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1366,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resource-discovery/runtime-configuration/" class="md-nav__link">
+      <a href="../runtime-configuration/" class="md-nav__link">
         Runtime Configuration
       </a>
     </li>
@@ -1378,16 +1444,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
       
       
       
@@ -1496,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-management/" class="md-nav__link">
+      <a href="../../scraping/providers/api-management/" class="md-nav__link">
         Azure API Management
       </a>
     </li>
@@ -1510,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-plan/" class="md-nav__link">
+      <a href="../../scraping/providers/app-plan/" class="md-nav__link">
         Azure App Plan
       </a>
     </li>
@@ -1524,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-gateway/" class="md-nav__link">
+      <a href="../../scraping/providers/application-gateway/" class="md-nav__link">
         Azure Application Gateway
       </a>
     </li>
@@ -1538,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-insights/" class="md-nav__link">
+      <a href="../../scraping/providers/application-insights/" class="md-nav__link">
         Azure Application Insights
       </a>
     </li>
@@ -1552,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation-account/" class="md-nav__link">
+      <a href="../../scraping/providers/automation-account/" class="md-nav__link">
         Azure Automation account
       </a>
     </li>
@@ -1566,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-cache/" class="md-nav__link">
+      <a href="../../scraping/providers/redis-cache/" class="md-nav__link">
         Azure Cache for Redis
       </a>
     </li>
@@ -1580,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-enterprise-cache/" class="md-nav__link">
+      <a href="../../scraping/providers/redis-enterprise-cache/" class="md-nav__link">
         Azure Cache for Redis Enterprise
       </a>
     </li>
@@ -1594,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cdn/" class="md-nav__link">
+      <a href="../../scraping/providers/cdn/" class="md-nav__link">
         Azure Content Delivery Network (CDN)
       </a>
     </li>
@@ -1608,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-instances/" class="md-nav__link">
+      <a href="../../scraping/providers/container-instances/" class="md-nav__link">
         Azure Container Instances
       </a>
     </li>
@@ -1622,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-registry/" class="md-nav__link">
+      <a href="../../scraping/providers/container-registry/" class="md-nav__link">
         Azure Container Registry
       </a>
     </li>
@@ -1636,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cosmos-db/" class="md-nav__link">
+      <a href="../../scraping/providers/cosmos-db/" class="md-nav__link">
         Azure Cosmos DB
       </a>
     </li>
@@ -1650,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maria-db/" class="md-nav__link">
+      <a href="../../scraping/providers/maria-db/" class="md-nav__link">
         Azure Database for MariaDB
       </a>
     </li>
@@ -1664,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgresql/" class="md-nav__link">
+      <a href="../../scraping/providers/postgresql/" class="md-nav__link">
         Azure Database for PostgreSQL
       </a>
     </li>
@@ -1678,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-factory/" class="md-nav__link">
+      <a href="../../scraping/providers/data-factory/" class="md-nav__link">
         Azure Data Factory
       </a>
     </li>
@@ -1692,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-share/" class="md-nav__link">
+      <a href="../../scraping/providers/data-share/" class="md-nav__link">
         Azure Data Share
       </a>
     </li>
@@ -1706,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../event-hubs/" class="md-nav__link">
+      <a href="../../scraping/providers/event-hubs/" class="md-nav__link">
         Azure Event Hubs
       </a>
     </li>
@@ -1720,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../express-route-circuit/" class="md-nav__link">
+      <a href="../../scraping/providers/express-route-circuit/" class="md-nav__link">
         Azure Express Route Circuit
       </a>
     </li>
@@ -1734,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-storage/" class="md-nav__link">
+      <a href="../../scraping/providers/file-storage/" class="md-nav__link">
         Azure File Storage
       </a>
     </li>
@@ -1748,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../front-door/" class="md-nav__link">
+      <a href="../../scraping/providers/front-door/" class="md-nav__link">
         Azure Front Door
       </a>
     </li>
@@ -1762,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function-app/" class="md-nav__link">
+      <a href="../../scraping/providers/function-app/" class="md-nav__link">
         Azure Function App
       </a>
     </li>
@@ -1776,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub-device-provisioning-service/" class="md-nav__link">
+      <a href="../../scraping/providers/iot-hub-device-provisioning-service/" class="md-nav__link">
         Azure IoT Hub Device Provisioning Service (DPS)
       </a>
     </li>
@@ -1790,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub/" class="md-nav__link">
+      <a href="../../scraping/providers/iot-hub/" class="md-nav__link">
         Azure IoT Hub
       </a>
     </li>
@@ -1804,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../key-vault/" class="md-nav__link">
+      <a href="../../scraping/providers/key-vault/" class="md-nav__link">
         Azure Key Vault
       </a>
     </li>
@@ -1818,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../scraping/providers/kubernetes/" class="md-nav__link">
         Azure Kubernetes Service
       </a>
     </li>
@@ -1832,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../load-balancer/" class="md-nav__link">
+      <a href="../../scraping/providers/load-balancer/" class="md-nav__link">
         Azure Load Balancer
       </a>
     </li>
@@ -1846,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic-apps/" class="md-nav__link">
+      <a href="../../scraping/providers/logic-apps/" class="md-nav__link">
         Azure Logic Apps
       </a>
     </li>
@@ -1860,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitor-autoscale/" class="md-nav__link">
+      <a href="../../scraping/providers/monitor-autoscale/" class="md-nav__link">
         Azure Monitor Autoscale
       </a>
     </li>
@@ -1874,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-gateway/" class="md-nav__link">
+      <a href="../../scraping/providers/network-gateway/" class="md-nav__link">
         Azure Network Gateway
       </a>
     </li>
@@ -1888,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-interface/" class="md-nav__link">
+      <a href="../../scraping/providers/network-interface/" class="md-nav__link">
         Azure Network Interface
       </a>
     </li>
@@ -1902,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../service-bus-namespace/" class="md-nav__link">
+      <a href="../../scraping/providers/service-bus-namespace/" class="md-nav__link">
         Azure Service Bus Namespace
       </a>
     </li>
@@ -1916,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-database/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-database/" class="md-nav__link">
         Azure SQL Database
       </a>
     </li>
@@ -1930,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-elastic-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-elastic-pool/" class="md-nav__link">
         Azure SQL Elastic Pool
       </a>
     </li>
@@ -1944,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-managed-instance/" class="md-nav__link">
         Azure SQL Managed Instance
       </a>
     </li>
@@ -1958,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../../scraping/providers/sql-managed-instance/" class="md-nav__link">
         Azure SQL Managed Instance
       </a>
     </li>
@@ -1972,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-account/" class="md-nav__link">
+      <a href="../../scraping/providers/storage-account/" class="md-nav__link">
         Azure Storage Account
       </a>
     </li>
@@ -1986,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-apache-spark-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-apache-spark-pool/" class="md-nav__link">
         Azure Synapse (Apache Spark pool)
       </a>
     </li>
@@ -2000,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-sql-pool/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-sql-pool/" class="md-nav__link">
         Azure Synapse (SQL pool)
       </a>
     </li>
@@ -2014,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-workspace/" class="md-nav__link">
+      <a href="../../scraping/providers/synapse-workspace/" class="md-nav__link">
         Azure Synapse (Workspace)
       </a>
     </li>
@@ -2028,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine-scale-set/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-machine-scale-set/" class="md-nav__link">
         Azure Virtual Machine Scale Set (VMSS)
       </a>
     </li>
@@ -2042,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-machine/" class="md-nav__link">
         Azure Virtual Machine (VM)
       </a>
     </li>
@@ -2056,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-network/" class="md-nav__link">
+      <a href="../../scraping/providers/virtual-network/" class="md-nav__link">
         Azure Virtual Network
       </a>
     </li>
@@ -2068,21 +2132,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scraping/providers/web-app/" class="md-nav__link">
         Azure Web App
       </a>
-      
     </li>
   
 
@@ -2130,7 +2184,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../deployment/">Deployment</a>
+          <a href="../../deployment/">Deployment</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2176,7 +2230,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../deployment/scraper/">Scraper</a>
+          <a href="../../deployment/scraper/">Scraper</a>
           
             <label for="__nav_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2199,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/scraper/docker/" class="md-nav__link">
+      <a href="../../deployment/scraper/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2213,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/scraper/kubernetes/" class="md-nav__link">
+      <a href="../../deployment/scraper/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -2257,7 +2311,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../deployment/resource-discovery/">Resource Discovery</a>
+          <a href="../../deployment/resource-discovery/">Resource Discovery</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2280,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/resource-discovery/docker/" class="md-nav__link">
+      <a href="../../deployment/resource-discovery/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2294,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/resource-discovery/kubernetes/" class="md-nav__link">
+      <a href="../../deployment/resource-discovery/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -2355,7 +2409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/v2.x/runtime/scraper/" class="md-nav__link">
+      <a href="../../configuration/v2.x/runtime/scraper/" class="md-nav__link">
         scraper
       </a>
     </li>
@@ -2369,7 +2423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/v2.x/runtime/resource-discovery/" class="md-nav__link">
+      <a href="../../configuration/v2.x/runtime/resource-discovery/" class="md-nav__link">
         resource-discovery
       </a>
     </li>
@@ -2421,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../security/azure-authentication/" class="md-nav__link">
+      <a href="../../security/azure-authentication/" class="md-nav__link">
         Authentication with Microsoft Azure
       </a>
     </li>
@@ -2470,7 +2524,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../operations/">Operations</a>
+          <a href="../../operations/">Operations</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -2493,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/health/" class="md-nav__link">
+      <a href="../../operations/health/" class="md-nav__link">
         Health
       </a>
     </li>
@@ -2507,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/discovery/" class="md-nav__link">
+      <a href="../../operations/discovery/" class="md-nav__link">
         Discovery
       </a>
     </li>
@@ -2521,7 +2575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/performance/" class="md-nav__link">
+      <a href="../../operations/performance/" class="md-nav__link">
         Performance
       </a>
     </li>
@@ -2535,7 +2589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/system/" class="md-nav__link">
+      <a href="../../operations/system/" class="md-nav__link">
         System
       </a>
     </li>
@@ -2549,7 +2603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/integrations/" class="md-nav__link">
+      <a href="../../operations/integrations/" class="md-nav__link">
         Integrations
       </a>
     </li>
@@ -2605,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-nav__link">
+      <a href="../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-nav__link">
         Deploying Promitor, Prometheus, and Grafana on an AKS Cluster
       </a>
     </li>
@@ -2619,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/use-promitor-with-managed-identity/" class="md-nav__link">
+      <a href="../../walkthroughs/use-promitor-with-managed-identity/" class="md-nav__link">
         Using Managed Identity with Promitor on an AKS Cluster
       </a>
     </li>
@@ -2633,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/migrate-from-1.x-to-2.x/" class="md-nav__link">
+      <a href="../../walkthroughs/migrate-from-1.x-to-2.x/" class="md-nav__link">
         Migrate from Promitor Scraper 1.x to 2.x
       </a>
     </li>
@@ -2655,7 +2709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -2682,6 +2736,54 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    Specification
+  </a>
+  
+    <nav class="md-nav" aria-label="Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-landscape" class="md-nav__link">
+    Azure Landscape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-discovery-groups" class="md-nav__link">
+    Resource Discovery Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Discovery Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criteria" class="md-nav__link">
+    Criteria
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2692,42 +2794,82 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/promitor/docs/edit/main/docs/scraping/providers/web-app.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/promitor/docs/edit/main/docs/resource-discovery/declaring-resource-discovery-groups.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="azure-web-app">Azure Web App<a class="headerlink" href="#azure-web-app" title="Permanent link">&para;</a></h1>
-<p><img alt="Availability Badge" src="https://img.shields.io/badge/Available%20Starting-v1.2-green.svg" /><img alt="Resource Discovery Support Badge" src="https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg" /></p>
-<p>You can declare to scrape an Azure Web App via the <code>WebApp</code> resource
-type.</p>
-<p>When using declared resources, the following fields need to be provided:</p>
+<h1 id="declaring-resource-discovery-groups">Declaring resource discovery groups<a class="headerlink" href="#declaring-resource-discovery-groups" title="Permanent link">&para;</a></h1>
+<p>Promitor Resource Discovery allows you to declare the Azure landscape to explore and define resource discovery groups
+ in YAML.</p>
+<p>Resource discovery groups represent a group of Azure resources of a given type that can be scraped by Promitor Scraper
+ and supports an extensive list of supported services.</p>
+<p>As part of the resource discovery group declaration, you can choose to filter resources by adding inclusion criteria
+ that resources must comply with based on:</p>
 <ul>
-<li><code>webAppName</code> - The name of the Azure Web App</li>
-<li><code>slotName</code> - The name of the deployment slot <em>(optional)</em></li>
+<li><strong>Subscription</strong> - Defines a subset of subscriptions defined in the Azure landscape</li>
+<li><strong>Resource Group</strong> - Defines a list of resource groups which contains the resources.</li>
+<li><strong>Tags</strong> - Defines a list of <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources">Azure tags</a>
+ with which the resources have to be annotated.</li>
+<li><strong>Regions</strong> - Defines a list of Azure regions in which the regions the resources are located.</li>
 </ul>
-<p>All supported metrics are documented in the official <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftwebsites-excluding-functions">Azure Monitor documentation</a>.</p>
-<p>The following scraper-specific metric label will be added:</p>
-<ul>
-<li><code>slot_name</code> - Name of the deployment slot. If none is specified, <code>production</code> will be used.</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure_web_app_requests</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Web</span><span class="nv"> </span><span class="s">App&quot;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WebApp</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Requests</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, required when no resource discovery is configured</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">webAppName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-web-app</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">webAppName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-web-app</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web-app-landscape</span><span class="w"></span>
+<p>Here is an example of a full declaration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">azureLandscape</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e0372f7f-a362-47fb-9631-74a5c4ba8bbf</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">subscriptions</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTON-ID-ABC</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTON-ID-DEF</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTON-ID-GHI</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">cloud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">China</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container-registry-landscape</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContainerRegistry</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">filtered-logic-apps-landscape</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LogicApp</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">criteria</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">include</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">subscriptions</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTON-ID-ABC</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTON-ID-GHI</span><span class="w"></span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">resourceGroups</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-resource-group-1</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-resource-group-2</span><span class="w"></span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-1|promitor-2</span><span class="w"></span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="nt">region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">europe</span><span class="w"></span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="nt">regions</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">northeurope</span><span class="w"></span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">westeurope</span><span class="w"></span>
 </code></pre></div>
+<h2 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<p>As Promitor evolves we need to change the structure of our resource discovery declaration.</p>
+<p><code>version: {version}</code> - Version of declaration that is used. Allowed
+values are <code>v1</code>. <em>(Required)</em></p>
+<h3 id="azure-landscape">Azure Landscape<a class="headerlink" href="#azure-landscape" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>azureLandscape.tenantId</code> - The id of the Azure tenant that will be queried. <em>(Required)</em></li>
+<li><code>azureLandscape.subscriptions</code> - List of Azure subscriptions in the Azure tenant to discover resources in. <em>(Required)</em></li>
+<li><code>azureLandscape.cloud</code> - The name of the Azure cloud to use. Options are <code>Global</code> (default), <code>China</code>, <code>UsGov</code> &amp; <code>Germany</code>.</li>
+</ul>
+<h3 id="resource-discovery-groups">Resource Discovery Groups<a class="headerlink" href="#resource-discovery-groups" title="Permanent link">&para;</a></h3>
+<p>Every resource discovery group that is being declared needs to define the following fields:</p>
+<ul>
+<li><code>name</code> - Name of the resource discovery group which will be used in metrics declaration of Promitor Scraper. <em>(Required)</em></li>
+<li><code>type</code> - Type of Azure resources that must be discovered, see "Supported Azure Services" for a full list of supported types. <em>(Required)</em></li>
+<li><code>criteria</code> - Criteria to fine-tune discovered resource.</li>
+</ul>
+<h4 id="criteria">Criteria<a class="headerlink" href="#criteria" title="Permanent link">&para;</a></h4>
+<p>As of now, we only allow to define criteria that resources have to meet before they are included in the resource
+ discovery group:</p>
+<ul>
+<li><code>subscriptions</code> - A list of subscription(s) in which the resource is allowed to be located.</li>
+<li><code>resourceGroups</code> - A list of resource group(s) in which the resource is allowed to be located.</li>
+<li><code>tags</code> - A list of <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources">Azure tags</a>
+ and the expected values (exact or regular expression) with which the resources have to be annotated. (Uses <code>or</code>)</li>
+<li><code>regions</code> - A list of Azure region(s) in which the resource is allowed to be located.</li>
+</ul>
 
               
             </article>
@@ -2746,7 +2888,7 @@ type.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../virtual-network/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Azure Virtual Network" rel="prev">
+        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2755,20 +2897,20 @@ type.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Azure Virtual Network
+              Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../../deployment/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+        <a href="../runtime-configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Runtime Configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Overview
+              Runtime Configuration
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2825,10 +2967,10 @@ type.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
       
     
   </body>
