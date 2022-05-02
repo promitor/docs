@@ -68,6 +68,8 @@ plugins:
   - mike:
       version_selector: true   # set to false to leave out the version selector
   - search
+  - tags:
+      tags_file: tags.md
   - htmlproofer:
       enabled: True
       raise_error: True
@@ -236,15 +238,12 @@ nav:
       - Overview: deployment/resource-discovery/index.md
       - Docker: deployment/resource-discovery/docker.md
       - Kubernetes: deployment/resource-discovery/kubernetes.md
-  - Configuration:
-    - scraper: configuration/v2.x/runtime/scraper.md
-    - resource-discovery: configuration/v2.x/runtime/resource-discovery.md
   - Security:
     - Authentication with Microsoft Azure: security/azure-authentication.md
   - Operations:
     - Overview: operations/index.md
     - Health: operations/health.md
-    - Discovery: operations/discovery.md
+    - Resource Discovery: operations/discovery.md
     - Performance: operations/performance.md
     - System: operations/system.md
     - Integrations: operations/integrations.md

@@ -1,3 +1,10 @@
+---
+tags:
+  - Scraper
+  - Resource Discovery
+  - PaaS
+---
+
 # Azure Web App
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.2-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)

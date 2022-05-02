@@ -1,3 +1,12 @@
+---
+tags:
+  - Scraper
+  - Resource Discovery
+  - SQL
+  - Data
+  - Open Source
+---
+
 # Azure Database for PostgreSQL
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
