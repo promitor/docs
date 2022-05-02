@@ -1,3 +1,11 @@
+---
+tags:
+  - Scraper
+  - Resource Discovery
+  - Data
+  - Storage
+---
+
 # Azure File Storage
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-No-red.svg)
