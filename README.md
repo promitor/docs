@@ -1,6 +1,6 @@
 # Promitor - Documentation
 
-This repository contains all the documentation for the new docs.promitor.io which is available in alpha on [docs-v2.promitor.io](https://docs-v2.promitor.io)
+This repository contains all the documentation [docs.promitor.io](https://docs.promitor.io)
 
 ![Logo](https://raw.githubusercontent.com/promitor/governance/main/logos/promitor-small.png)
 
