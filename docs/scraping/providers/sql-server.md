@@ -1,3 +1,11 @@
+---
+tags:
+  - Scraper
+  - Resource Discovery
+  - SQL
+  - Data
+---
+
 # Azure SQL Server
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.3-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-No-red.svg)

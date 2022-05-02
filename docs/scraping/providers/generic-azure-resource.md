@@ -1,3 +1,8 @@
+---
+tags:
+  - Scraper
+---
+
 # Generic Azure Resource
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v0.2-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-No-red.svg)

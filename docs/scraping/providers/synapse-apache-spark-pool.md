@@ -1,3 +1,11 @@
+---
+tags:
+  - Scraper
+  - Resource Discovery
+  - Data
+  - Synapse
+---
+
 # Azure Synapse (Apache Spark pool)
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.1-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
