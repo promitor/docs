@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://promitor.io/unreleased/walkthroughs/migrate-from-1.x-to-2.x/">
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -279,22 +279,6 @@
     <li class="md-tabs__item">
       <a href="../../deployment/" class="md-tabs__link">
         Deployment
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../configuration/v2.x/runtime/scraper/" class="md-tabs__link">
-        Configuration
       </a>
     </li>
   
@@ -2311,83 +2295,15 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_6">
-          Configuration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Configuration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/v2.x/runtime/scraper/" class="md-nav__link">
-        scraper
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/v2.x/runtime/resource-discovery/" class="md-nav__link">
-        resource-discovery
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_7">
           Security
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Security" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -2424,7 +2340,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -2450,14 +2366,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../operations/">Operations</a>
           
-            <label for="__nav_8">
+            <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Operations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Operations
         </label>
@@ -2486,7 +2402,7 @@
   
     <li class="md-nav__item">
       <a href="../../operations/discovery/" class="md-nav__link">
-        Discovery
+        Resource Discovery
       </a>
     </li>
   
@@ -2554,7 +2470,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -2567,13 +2483,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_8">
           Walkthroughs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Walkthroughs" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Walkthroughs
         </label>
@@ -2761,12 +2677,15 @@
   </a>
 
 
+  
+
+
 
 <h1 id="migrate-from-promitor-scraper-1x-to-2x">Migrate from Promitor Scraper 1.x to 2.x<a class="headerlink" href="#migrate-from-promitor-scraper-1x-to-2x" title="Permanent link">&para;</a></h1>
 <p>Here is a migration guide from Promitor Scraper v1.x to v2.x.</p>
 <p>For a complete overview of our changelog, we recommend going to <a href="https://changelog.promitor.io">changelog.promitor.io</a>.</p>
 <h2 id="migrate-to-new-metric-sink-concept">Migrate to new metric sink concept<a class="headerlink" href="#migrate-to-new-metric-sink-concept" title="Permanent link">&para;</a></h2>
-<p>As of Promitor Scraper v1.6 we have introduced the concept of <a href="https://docs.promitor.io/configuration/v2.x/runtime/scraper#metric-sinks">metric sinks</a>
+<p>As of Promitor Scraper v1.6 we have introduced the concept of <a href="../../scraping/runtime-configuration/#metric-sinks">metric sinks</a>
  allowing you to emit scraped Azure Monitor metrics to multiple systems.</p>
 <p>With Promitor v2.0, we are removing support for our legacy Prometheus configuration.</p>
 <p>When using the following configuration:</p>
@@ -2784,8 +2703,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">baseUriPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/metrics</span><span class="w"></span>
 </code></pre></div>
 <p>For more information, we recommend reading our
- <a href="https://docs.promitor.io/configuration/v2.x/runtime/scraper#prometheus-scraping-endpoint">documentation</a> concerning our Prometheus
-  Scraping endpoint.</p>
+ <a href="../../scraping/runtime-configuration/#prometheus-scraping-endpoint">documentation</a> concerning our Prometheus Scraping endpoint.</p>
 <h2 id="migrate-from-azure-service-bus-queue-scraper-to-our-new-azure-service-bus-namespace-scraper">Migrate from Azure Service Bus Queue scraper to our new Azure Service Bus Namespace scraper<a class="headerlink" href="#migrate-from-azure-service-bus-queue-scraper-to-our-new-azure-service-bus-namespace-scraper" title="Permanent link">&para;</a></h2>
 <p>Since Azure Service Bus Queue scraper allows you to report metrics for all entities we decided to change the resource
  type from <code>ServiceBusQueue</code> to <code>ServiceBusNamespace</code> since it will also report metrics for topics, and not only queues.</p>
@@ -2805,7 +2723,7 @@
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-bus-landscape</span><span class="w"></span>
 </code></pre></div>
 <p>For more information, we recommend reading our
- <a href="https://docs.promitor.io/configuration/v2.x/metrics/service-bus-namespace">documentation</a>
+ <a href="../../scraping/providers/service-bus-namespace/">documentation</a>
   concerning our Azure Service Bus Namespace scraper.</p>
 <h2 id="migrate-to-openapi-30-ui">Migrate to OpenAPI 3.0 &amp; UI<a class="headerlink" href="#migrate-to-openapi-30-ui" title="Permanent link">&para;</a></h2>
 <p>All Promitor APIs have been migrated from Swagger to OpenAPI 3.0 specification.</p>
@@ -2920,7 +2838,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
     
   </body>
