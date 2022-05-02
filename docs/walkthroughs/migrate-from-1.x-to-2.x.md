@@ -6,7 +6,7 @@ For a complete overview of our changelog, we recommend going to [changelog.promi
 
 ## Migrate to new metric sink concept
 
-As of Promitor Scraper v1.6 we have introduced the concept of [metric sinks](https://docs.promitor.io/configuration/v2.x/runtime/scraper#metric-sinks)
+As of Promitor Scraper v1.6 we have introduced the concept of [metric sinks](./../scraping/runtime-configuration.md#metric-sinks)
  allowing you to emit scraped Azure Monitor metrics to multiple systems.
 
 With Promitor v2.0, we are removing support for our legacy Prometheus configuration.
@@ -32,8 +32,7 @@ metricSinks:
 ```
 
 For more information, we recommend reading our
- [documentation](https://docs.promitor.io/configuration/v2.x/runtime/scraper#prometheus-scraping-endpoint) concerning our Prometheus
-  Scraping endpoint.
+ [documentation](./../scraping/runtime-configuration.md#prometheus-scraping-endpoint) concerning our Prometheus Scraping endpoint.
 
 ## Migrate from Azure Service Bus Queue scraper to our new Azure Service Bus Namespace scraper
 
@@ -59,7 +58,7 @@ resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent 
 ```
 
 For more information, we recommend reading our
- [documentation](https://docs.promitor.io/configuration/v2.x/metrics/service-bus-namespace)
+ [documentation](./../scraping/providers/service-bus-namespace.md)
   concerning our Azure Service Bus Namespace scraper.
 
 ## Migrate to OpenAPI 3.0 & UI
