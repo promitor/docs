@@ -75,6 +75,7 @@ plugins:
       raise_error: True
       validate_external_urls: True
       raise_error_excludes:
+        404: ['https://www.nuget.org/packages/NetEscapades.Configuration.Yaml'] # No idea why this is failing, but it is.
         405: ['*']
         520: ['*']
 
@@ -129,7 +130,9 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
+  - Home:
+    - Overview: index.md
+    - Thank You: thank-you.md
   - How It Works: how-it-works.md
   - Scraping:
     - Overview: scraping/overview.md
