@@ -31,7 +31,7 @@ Docker image is available on [GitHub Container Registry](https://github.com/tomk
  resource groups
 - Automatically pushes metrics to systems such as Atlassian Statuspage, Prometheus and StatsD
 - Easy to declare metrics to scrape via metrics-as-code or automatically discover resources
-- Built-in support for a variety of Azure services ([overview](configuration/v2.x/metrics#supported-azure-services))
+- Built-in support for a variety of Azure services ([overview](./scraping/overview.md))
 - Easily deployable via Docker & Kubernetes
 - Sends telemetry to container logs & Azure Application Insights
 - Available for Linux & Windows runtimes
