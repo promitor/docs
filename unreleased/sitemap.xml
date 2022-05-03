@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://promitor.io/unreleased/thank-you/</loc>
+         <lastmod>2022-05-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://promitor.io/unreleased/deployment/</loc>
          <lastmod>2022-05-03</lastmod>
          <changefreq>daily</changefreq>
