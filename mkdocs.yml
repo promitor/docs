@@ -154,6 +154,7 @@ nav:
       - Azure Cosmos DB: scraping/providers/cosmos-db.md
       - Azure Database for MariaDB: scraping/providers/maria-db.md
       - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Database for MySQL: scraping/providers/mysql.md
       - Azure Data Factory: scraping/providers/data-factory.md
       - Azure Data Share: scraping/providers/data-share.md
       - Azure Event Hubs: scraping/providers/event-hubs.md
@@ -202,6 +203,7 @@ nav:
       - Azure Cosmos DB: scraping/providers/cosmos-db.md
       - Azure Database for MariaDB: scraping/providers/maria-db.md
       - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+      - Azure Database for MySQL: scraping/providers/mysql.md
       - Azure Data Factory: scraping/providers/data-factory.md
       - Azure Data Share: scraping/providers/data-share.md
       - Azure Event Hubs: scraping/providers/event-hubs.md
