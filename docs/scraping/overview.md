@@ -34,6 +34,7 @@ We also provide a simplified way to scrape the following Azure resources:
 - [Azure Data Share](data-share)
 - [Azure Database for PostgreSQL](postgresql)
 - [Azure Database for MariaDB](maria-db)
+- [Azure Database for MySQL](mysql)
 - [Azure Event Hubs](event-hubs)
 - [Azure Express Route Circuit](express-route-circuit)
 - [Azure Front Door](front-door)
