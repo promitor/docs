@@ -9,7 +9,7 @@ tags:
 
 # Azure Database for MySQL
 
-![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
+![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.7.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
 You can declare to scrape an Azure Database for MySQL server via the `MySql`
 resource type.
@@ -23,7 +23,7 @@ When using declared resources, the following fields need to be provided:
 All supported metrics are documented in the official Azure Monitor documentation:
 
 - [Simple servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlservers)
-- [Flexible servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlflexibleservers)
+- [Flexible servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlflexibleservers)
 
 ## Limitations
 
