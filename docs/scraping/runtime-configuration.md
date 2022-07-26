@@ -23,6 +23,13 @@ authentication:
 server:
   httpPort: 80 # Optional. Default: 80
 metricSinks:
+  atlassianStatuspage:
+    pageId: XXX          # Mandatory
+    systemMetricMapping: # Mandatory to have at least one mapping
+    - id: ABC
+      promitorMetricName: promitor_demo_appplan_percentage_cpu
+  openTelemetryCollector:
+    collectorUri: http://<dns>:4317
   prometheusScrapingEndpoint:
     metricUnavailableValue: NaN # Optional. Default: NaN
     enableMetricTimestamps: false # Optional. Default: true
@@ -92,6 +99,7 @@ by providing the metric information to the configured sinks.
 As of today, we support the follow sinks:
 
 - **Atlassian Statuspage**
+- **OpenTelemetry Collector**
 - **Prometheus Scraping Endpoint**
 - **StatsD**
 
@@ -123,6 +131,19 @@ metricSinks:
 >  
 > This is because Promitor will report the different resource metrics to the same Atlassian metric which will mix metrics
 > which becomes confusing.
+
+### OpenTelemetry Collector
+
+![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.8-green.svg)
+
+In order to push metrics to an OpenTelemetry Collector, you'll need to configure the sink:
+
+- `openTelemetryCollector.collectorUri` - Uri of the OpenTelemetry Collector.
+
+```yaml
+openTelemetryCollector:
+  collectorUri: http://<dns>:4317
+```
 
 ### Prometheus Scraping Endpoint
 

@@ -45,6 +45,8 @@ runtime:
       systemMetricMapping:
       - id: nfkgnrwpn545
         promitorMetricName: promitor_demo_appplan_percentage_cpu
+    openTelemetryCollector:
+      collectorUri: http://<dns>:4317
     prometheusScrapingEndpoint:
       enabled: true
       baseUriPath: /metrics

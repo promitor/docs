@@ -6,7 +6,7 @@
 [![Donate](https://img.shields.io/badge/Donate%20via-GitHub-blue.svg?style=flat-square)](https://github.com/users/tomkerkhove/sponsorship)
 
 **Promitor** is an Azure Monitor scraper which makes the metrics available
-for metric systems such as Atlassian Statuspage, Prometheus and StatsD.
+for metric systems such as Atlassian Statuspage, OpenTelemetry, Prometheus and StatsD.
 
 ![Promitor](./media/logos/promitor.png){: .center}
 
@@ -29,7 +29,7 @@ Docker image is available on [GitHub Container Registry](https://github.com/tomk
 
 - Automatically scrapes Azure Monitor metrics (single and multi-dimensional) across various subscription &
  resource groups
-- Automatically pushes metrics to systems such as Atlassian Statuspage, Prometheus and StatsD
+- Automatically pushes metrics to systems such as Atlassian Statuspage, OpenTelemetry, Prometheus and StatsD
 - Easy to declare metrics to scrape via metrics-as-code or automatically discover resources
 - Built-in support for a variety of Azure services ([overview](./scraping/overview.md))
 - Easily deployable via Docker & Kubernetes
