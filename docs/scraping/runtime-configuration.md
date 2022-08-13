@@ -42,6 +42,13 @@ metricSinks:
     metricPrefix: promitor. # Optional. Default: None
 metricsConfiguration:
   absolutePath: /config/metrics-declaration.yaml # Optional. Default: /config/metrics-declaration.yaml
+azureMonitor:
+  logging:
+    informationLevel: Basic # Optional. Default: Basic
+    isEnabled: false # Optional. Default: false
+  integration:
+    history:
+      startingFromInHours: 24 # Optional. Default: 12
 telemetry:
   applicationInsights:
     instrumentationKey: ABC # Optional. Note: Required to be specified when turned on
