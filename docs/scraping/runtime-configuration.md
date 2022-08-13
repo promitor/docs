@@ -345,6 +345,8 @@ The behavior of this can be configured to fit your needs:
  options are `Basic`, `Headers`, `Body` & `BodyAndHeaders`. (Default: `Basic`)
 - `azureMonitor.logging.isEnabled` - Defines whether or not information concerning the integration with Azure Monitor
  API. (Default: `false`)
+- `azureMonitor.integration.history.startingFromInHours` - Defines the amount of hours Promitor will use to define the starting point of the time window used for metric queries.
+  - As an example, the default is 12 hours which means Promitor will fetch all metrics between now - 12 hours and now to find a matching metric. Typically this window can be very small but Promitor provides a margin by default to prevent problems for long aggregation periods. (Default: `12`)
 
 Example:
 
@@ -353,6 +355,9 @@ azureMonitor:
   logging:
     informationLevel: Basic # Optional. Default: Basic
     isEnabled: false # Optional. Default: false
+  integration:
+    history:
+      startingFromInHours: 24 # Optional. Default: 12
 ```
 
 _Note: All telemetry is emitted as `trace` so you have to make sure `telemetry` is configured correctly._
