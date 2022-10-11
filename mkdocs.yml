@@ -167,6 +167,7 @@ nav:
       - Azure Key Vault: scraping/providers/key-vault.md
       - Azure Kubernetes Service: scraping/providers/kubernetes.md
       - Azure Load Balancer: scraping/providers/load-balancer.md
+      - Azure Log Analytics: scraping/providers/log-analytics.md
       - Azure Logic Apps: scraping/providers/logic-apps.md
       - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
       - Azure Network Gateway: scraping/providers/network-gateway.md
