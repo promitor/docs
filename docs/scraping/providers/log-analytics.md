@@ -13,9 +13,9 @@ You can declare to scrape an Azure Log Analytics via the `LogAnalytics` resource
 The following fields need to be provided:
 
 - `name` - The name of the Azure Log Analytics
-- `workspaceId` - The workspaceId of the Log Analytics
+- `workspaceId` - The workspace ID of the Azure Log Analytics resource
 
-LogAnlaytics is different resource compare to others azure metric. So you need to replace azureMetricConfiguration field with logAnalyticsConfiguration field:
+The Azure Log Analytics scraper is configured differently compare to others Azure resources. Ensure that `logAnalyticsConfiguration` is configured instead of `azureMetricConfiguration`:
 
 - `logAnalyticsConfiguration.query` - The query used to query value from logAnalytics
     - the result of the query need to be 1 row only (use `take 1`)
