@@ -2874,18 +2874,18 @@
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <p>Here is an example configuration:</p>
-<p><code>`yaml
-name: promitor_demo_azureapimanagement_capacity
-description: "The amount of capacity used an Azure API Management instance."
-resourceType: ApiManagement
-azureMetricConfiguration:
-  metricName: Capacity
-  aggregation:
-    type: Average
-resources: # Optional, required when no resource discovery is configured
-- instanceName: promitor-api-gateway
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
-- name: api-management-landscape</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor_demo_azureapimanagement_capacity</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">capacity</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">instance.&quot;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ApiManagement</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capacity</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Average</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, required when no resource discovery is configured</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">instanceName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">promitor-api-gateway</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-management-landscape</span><span class="w"></span>
+</code></pre></div>
 
 
   
