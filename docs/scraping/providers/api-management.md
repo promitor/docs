@@ -51,4 +51,4 @@ resources: # Optional, required when no resource discovery is configured
 - instanceName: promitor-api-gateway
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: api-management-landscape
-``
+```
