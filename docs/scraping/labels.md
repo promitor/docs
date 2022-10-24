@@ -23,10 +23,10 @@ built-in labels:
 
 ## Metric dimension labels
 
-Metrics support specifying a dimension which will be scraped in Azure Monitor.
+Metrics support specifying dimensions which will be scraped in Azure Monitor.
 
-Every metric value will be reported under the configured metric name, but a
-label for the dimension and it's respective value will be added.
+Every metric value will be reported under the configured metric name, but
+labels for the dimensions and their respective values will be added.
 
 ## Scraper-specific labels
 
