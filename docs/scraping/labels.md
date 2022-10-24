@@ -41,7 +41,7 @@ Currently we support this for:
 - Azure Storage Queue
 - Azure Web App
 
-For more information, we recommend reading the [scraper-specific documentation](./../configuration/v1.x/metrics/#supported-azure-services).
+For more information, we recommend reading the [scraper-specific documentation](./../overview#supported-azure-services).
 
 ## Custom Labels
 
