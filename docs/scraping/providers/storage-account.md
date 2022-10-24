@@ -33,8 +33,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - accountName: promitor-1
 - accountName: promitor-2
-resourceDiscoveryGroups:
-- name: storage-accounts
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
 - name: storage-account-landscape
 ```
