@@ -15,7 +15,7 @@ Here are a list of questions you may have:
 Yes, every scraper supports scraping multi-dimensional metrics except for
 Azure Storage queues.
 
-You can configure the dimensions you are interested in via
+You can configure the dimension(s) you are interested in via
 `azureMetricConfiguration.dimensions`, for more information see
 our ['Metrics Declaration' page](/scraping/overview/#metrics).
 
