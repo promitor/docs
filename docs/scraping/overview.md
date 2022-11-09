@@ -119,10 +119,10 @@ All resources provide the capability to override the default Azure metadata:
 
 Additionally, the following fields are optional:
 
-- `azureMetricConfiguration.dimension.name` - The name of the dimension that should
+- `azureMetricConfiguration.dimensions` - A list of dimensions that should
    be used to scrape a multi-dimensional metric in Azure Monitor.
-  - ☝ *Promitor simply acts as a proxy and will not validate if it's supported or
-     not, we recommend verifying that the dimension is supported in the
+  - ☝ *Promitor simply acts as a proxy and will not validate if the given dimensions are supported or
+     not, we recommend verifying that they are in the
      [official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)*
 - `labels` - Defines a set of custom labels to include for a given metric.
 - `scraping.schedule` - A scraping schedule for the individual metric; overrides
@@ -164,8 +164,12 @@ metrics:
     azureMetricConfiguration:
       metricName: ActiveMessages
       limit: 5
+      # Deprecated, please use 'dimensions' instead
       dimension:
         name: <dimension-name>
+      dimensions:
+        - name: <first-dimension-name>
+        - name: <second-dimension-name>
       aggregation:
         type: Total
         interval: 00:15:00
