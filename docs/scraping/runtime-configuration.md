@@ -180,7 +180,7 @@ metricSinks:
 
 #### What happens when metrics are unavailable for multi-dimensional metrics?
 
-Promitor allows you to use one or more dimensions in metrics so that it will report all values.
+Promitor allows you to use one or more dimension(s) in metrics so that it will report all values.
 
 For example, when scraping an Azure Event Hub namespace you can report the same metric for every entity inside the namespace.
 

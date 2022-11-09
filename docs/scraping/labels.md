@@ -23,7 +23,7 @@ built-in labels:
 
 ## Metric dimension labels
 
-Metrics support specifying dimensions which will be scraped in Azure Monitor.
+Metrics support specifying one or more dimension(s) which will be scraped in Azure Monitor.
 
 Every metric value will be reported under the configured metric name, but
 labels for the dimensions and their respective values will be added.

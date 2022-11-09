@@ -164,6 +164,9 @@ metrics:
     azureMetricConfiguration:
       metricName: ActiveMessages
       limit: 5
+      # Deprecated, please use 'dimensions' instead
+      dimension:
+        name: <dimension-name>
       dimensions:
         - name: <first-dimension-name>
         - name: <second-dimension-name>
