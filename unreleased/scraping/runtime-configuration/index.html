@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://promitor.io/unreleased/scraping/runtime-configuration/">
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -135,6 +135,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -142,6 +143,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -3195,9 +3197,9 @@ which becomes confusing.</p>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nt">transformation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span><span class="w"> </span><span class="c1"># Optional. Default: None.</span><span class="w"></span>
 </code></pre></div>
 <h4 id="what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics">What happens when metrics are unavailable for multi-dimensional metrics?<a class="headerlink" href="#what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics" title="Permanent link">&para;</a></h4>
-<p>Promitor allows you to use dimension in metrics so that it will report all values.</p>
+<p>Promitor allows you to use one or more dimension(s) in metrics so that it will report all values.</p>
 <p>For example, when scraping an Azure Event Hub namespace you can report the same metric for every entity inside the namespace.</p>
-<p>When Promitor reports the metric it will always add a label which clarifies the subresource. However; when it cannot find
+<p>When Promitor reports the metric it will always add a label which clarifies the subresource. However, when it cannot find
  a metric for that dimension it will keep on reporting the metric, but with value <code>unknown</code> given it cannot determine
   the name of the dimension.</p>
 <h3 id="statsd">StatsD<a class="headerlink" href="#statsd" title="Permanent link">&para;</a></h3>
@@ -3473,7 +3475,7 @@ provided which specifies the new port.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
