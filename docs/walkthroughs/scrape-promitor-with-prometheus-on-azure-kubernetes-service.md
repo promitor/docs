@@ -344,7 +344,7 @@ Make sure to save your new dashboard before exiting the page.
 ### Creating a Kubernetes dashboard
 
 Now we'll import a pre-created dashboard that shows Kubernetes metrics. There are
-multiple available on Grafana Lab's dashboard site - try [6417](https://grafana.com/dashboards/6417).
+multiple available on [Grafana Lab's dashboard site](https://grafana.com/grafana/dashboards/).
 
 To import a dashboard, click the + button on the sidebar and choose "Import." From
 there, you can either load a JSON file or enter the dashbord ID: 6417.
