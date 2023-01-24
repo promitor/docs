@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://promitor.io/unreleased/walkthroughs/use-promitor-with-managed-identity/">
       
+      
+        <link rel="prev" href="../scrape-promitor-with-prometheus-on-azure-kubernetes-service/">
+      
+      
+        <link rel="next" href="../migrate-from-1.x-to-2.x/">
+      
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -134,8 +139,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -143,8 +146,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -189,7 +190,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -201,7 +202,7 @@
         <a href="https://github.com/promitor/docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     promitor/docs
@@ -394,7 +395,7 @@
       <a href="https://github.com/promitor/docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     promitor/docs
@@ -415,8 +416,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
         
@@ -494,8 +498,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
         
@@ -509,7 +516,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Scraping
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -574,108 +581,111 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
         
       
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
-        <label class="md-nav__link" for="__nav_3_4">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
           Available Providers
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1369,8 +1379,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
         
@@ -1384,7 +1397,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Resource Discovery
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1449,100 +1462,103 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
         
       
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
-        <label class="md-nav__link" for="__nav_4_4">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" tabindex="0" aria-expanded="false">
           Supported Providers
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -2180,8 +2196,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
         
@@ -2226,8 +2245,11 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       
         
@@ -2307,8 +2329,11 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
       
         
@@ -2394,8 +2419,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
         
@@ -2403,7 +2431,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
           Security
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -2446,8 +2474,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
         
@@ -2576,8 +2607,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
         
@@ -2589,7 +2621,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="true">
           Walkthroughs
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -3097,10 +3129,9 @@
 
 
 
-  <a href="https://github.com/promitor/docs/edit/main/docs/walkthroughs/use-promitor-with-managed-identity.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="using-managed-identity-with-promitor-on-azure-kubernetes-service">Using Managed Identity with Promitor on Azure Kubernetes Service<a class="headerlink" href="#using-managed-identity-with-promitor-on-azure-kubernetes-service" title="Permanent link">&para;</a></h1>
@@ -3162,42 +3193,42 @@ to be able to deploy resources through the command line.</li>
 it can be a good idea to parameterize everything.</p>
 <p>Let's start by <strong>exporting</strong> all the values we need:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># SUBSCRIPTION_ID represents the Azure subscription id you will use to access your Azure resources</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span> <span class="nv">SUBSCRIPTION_ID</span><span class="o">=</span>&lt;subscription-id&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SUBSCRIPTION_ID</span><span class="o">=</span>&lt;subscription-id&gt;
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># RG_NAME represents the resource group name where your cluster will be deployed</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">export</span> <span class="nv">RG_NAME</span><span class="o">=</span>PromitorWithManagedIdentityRG
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RG_NAME</span><span class="o">=</span>PromitorWithManagedIdentityRG
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># LOCATION represents the Azure region where your cluster will be deployed</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">export</span> <span class="nv">LOCATION</span><span class="o">=</span>northeurope
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LOCATION</span><span class="o">=</span>northeurope
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># CLUSTER_NAME represents the name of your Azure Kubernetes Service Cluster</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">export</span> <span class="nv">CLUSTER_NAME</span><span class="o">=</span>PromitorCluster
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CLUSTER_NAME</span><span class="o">=</span>PromitorCluster
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># AD_POD_IDENTITY_NAME represents the name of the Azure AD identity that will be assigned to Promitor.</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Be careful, should be lower case alphanumeric characters, &#39;-&#39; or &#39;.&#39;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_NAME</span><span class="o">=</span>promitor-identity
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">export</span><span class="w"> </span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="o">=</span>promitor-identity
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># As an example, we are going to use a service bus from where we want to grab some metrics, through Promitor</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># SERVICE_BUS_NAMESPACE represents the name of your Azure Service Bus namespace.</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># Be careful as Azure Service Bus Namespaces need to be globally unique.</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">export</span> <span class="nv">SERVICE_BUS_NAMESPACE</span><span class="o">=</span>PromitorUniqueNameServiceBus
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SERVICE_BUS_NAMESPACE</span><span class="o">=</span>PromitorUniqueNameServiceBus
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># SERVICE_BUS_QUEUE represents the name of you Azure Service Bus queue.</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">export</span> <span class="nv">SERVICE_BUS_QUEUE</span><span class="o">=</span>demo_queue
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SERVICE_BUS_QUEUE</span><span class="o">=</span>demo_queue
 </code></pre></div>
 <h3 id="creating-an-azure-resource-group">Creating an Azure Resource Group<a class="headerlink" href="#creating-an-azure-resource-group" title="Permanent link">&para;</a></h3>
 <p>First, let's create an Azure resource group in which we'll group all our resources:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ az group create --name <span class="nv">$RG_NAME</span> --location <span class="nv">$LOCATION</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>az<span class="w"> </span>group<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span>--location<span class="w"> </span><span class="nv">$LOCATION</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;&lt;location-id&gt;&quot;</span>,
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="s2">&quot;managedBy&quot;</span>: null,
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="s2">&quot;properties&quot;</span>: <span class="o">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="s2">&quot;provisioningState&quot;</span>: <span class="s2">&quot;Succeeded&quot;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  <span class="o">}</span>,
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  <span class="s2">&quot;tags&quot;</span>: null,
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;Microsoft.Resources/resourceGroups&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;&lt;location-id&gt;&quot;</span>,
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="s2">&quot;managedBy&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="s2">&quot;properties&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="s2">&quot;provisioningState&quot;</span>:<span class="w"> </span><span class="s2">&quot;Succeeded&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="o">}</span>,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="s2">&quot;tags&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="s2">&quot;type&quot;</span>:<span class="w"> </span><span class="s2">&quot;Microsoft.Resources/resourceGroups&quot;</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="o">}</span>
 </code></pre></div>
 <h3 id="creating-an-azure-service-bus-namespace-queue">Creating an Azure Service Bus Namespace &amp; Queue<a class="headerlink" href="#creating-an-azure-service-bus-namespace-queue" title="Permanent link">&para;</a></h3>
@@ -3207,29 +3238,29 @@ it can be a good idea to parameterize everything.</p>
 <p>💡 Consider this to be an example of metrics that you'd want to use in Prometheus, StatsD, ...</p>
 </blockquote>
 <p>Let's create the Azure Service Bus namespace:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ az servicebus namespace create <span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  --name <span class="nv">$SERVICE_BUS_NAMESPACE</span> <span class="se">\</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  --location <span class="nv">$LOCATION</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>az<span class="w"> </span>servicebus<span class="w"> </span>namespace<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>--resource-group<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>--name<span class="w"> </span><span class="nv">$SERVICE_BUS_NAMESPACE</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--location<span class="w"> </span><span class="nv">$LOCATION</span>
 </code></pre></div>
 <p>After that, we'll create a queue in that namespace:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ az servicebus queue create <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  --namespace-name <span class="nv">$SERVICE_BUS_NAMESPACE</span> <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  --name <span class="nv">$SERVICE_BUS_QUEUE</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>az<span class="w"> </span>servicebus<span class="w"> </span>queue<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--resource-group<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--namespace-name<span class="w"> </span><span class="nv">$SERVICE_BUS_NAMESPACE</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--name<span class="w"> </span><span class="nv">$SERVICE_BUS_QUEUE</span>
 </code></pre></div>
 <h3 id="creating-an-azure-kubernetes-service-cluster">Creating an Azure Kubernetes Service Cluster<a class="headerlink" href="#creating-an-azure-kubernetes-service-cluster" title="Permanent link">&para;</a></h3>
 <p>Create an Azure Kubernetes Service cluster that uses a system-assigned managed identity:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ az aks create --resource-group <span class="nv">$RG_NAME</span> <span class="se">\</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    --name <span class="nv">$CLUSTER_NAME</span> <span class="se">\</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    --generate-ssh-keys <span class="se">\</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    --node-count <span class="m">1</span> <span class="se">\</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    --enable-managed-identity
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>--name<span class="w"> </span><span class="nv">$CLUSTER_NAME</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--generate-ssh-keys<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>--node-count<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>--enable-managed-identity
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>...
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s2">&quot;servicePrincipalProfile&quot;</span>: <span class="o">{</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="s2">&quot;clientId&quot;</span>: <span class="s2">&quot;msi&quot;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  <span class="o">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s2">&quot;servicePrincipalProfile&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="s2">&quot;clientId&quot;</span>:<span class="w"> </span><span class="s2">&quot;msi&quot;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="o">}</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>...
 </code></pre></div>
 <p>Once created, the output will indicate that it is using managed identity.</p>
@@ -3237,28 +3268,28 @@ it can be a good idea to parameterize everything.</p>
 <h3 id="getting-the-cluster-credentials">Getting The Cluster Credentials<a class="headerlink" href="#getting-the-cluster-credentials" title="Permanent link">&para;</a></h3>
 <p>In order to interact with the cluster by using <code>kubectl</code>, we need to be able to authenticate to it.</p>
 <p>You can get the credentials for your Kubernetes cluster using this command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ az aks get-credentials --name <span class="nv">$CLUSTER_NAME</span> --resource-group <span class="nv">$RG_NAME</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Merged <span class="s2">&quot;&lt;cluster-name&gt;&quot;</span> as current context <span class="k">in</span> /home/tom/.kube/config
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>az<span class="w"> </span>aks<span class="w"> </span>get-credentials<span class="w"> </span>--name<span class="w"> </span><span class="nv">$CLUSTER_NAME</span><span class="w"> </span>--resource-group<span class="w"> </span><span class="nv">$RG_NAME</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Merged<span class="w"> </span><span class="s2">&quot;&lt;cluster-name&gt;&quot;</span><span class="w"> </span>as<span class="w"> </span>current<span class="w"> </span>context<span class="w"> </span><span class="k">in</span><span class="w"> </span>/home/tom/.kube/config
 </code></pre></div>
 <p>This saves the credentials in your kubeconfig file and uses it as your current context for all <code>kubectl</code> commands.</p>
 <p>Verify that you can connect and your cluster is up and running :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ kubectl get nodes
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>NAME                                STATUS   ROLES   AGE   VERSION
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>aks-agentpool-34594731-vmss000000   Ready    agent   15d   v1.19.7
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>aks-agentpool-34594731-vmss000001   Ready    agent   15d   v1.19.7
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>aks-agentpool-34594731-vmss000002   Ready    agent   15d   v1.19.7
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>NAME<span class="w">                                </span>STATUS<span class="w">   </span>ROLES<span class="w">   </span>AGE<span class="w">   </span>VERSION
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>aks-agentpool-34594731-vmss000000<span class="w">   </span>Ready<span class="w">    </span>agent<span class="w">   </span>15d<span class="w">   </span>v1.19.7
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>aks-agentpool-34594731-vmss000001<span class="w">   </span>Ready<span class="w">    </span>agent<span class="w">   </span>15d<span class="w">   </span>v1.19.7
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>aks-agentpool-34594731-vmss000002<span class="w">   </span>Ready<span class="w">    </span>agent<span class="w">   </span>15d<span class="w">   </span>v1.19.7
 </code></pre></div>
 <h3 id="get-azure-kubernetes-service-managed-identity-cluster-resource-group">Get Azure Kubernetes Service managed identity &amp; cluster resource group<a class="headerlink" href="#get-azure-kubernetes-service-managed-identity-cluster-resource-group" title="Permanent link">&para;</a></h3>
 <p>To be able to configure AAD Pod Identity component, we need information from our new Azure Kubernetes Service cluster:</p>
 <p>First, we need to get the <strong>name of the cluster resource group</strong> where the AKS internal resources have been deployed.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span> <span class="s2">&quot;Retrieving cluster resource group&quot;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span> <span class="nv">aks_rg_name</span><span class="o">=</span><span class="k">$(</span>az aks show -g <span class="nv">$RG_NAME</span> -n <span class="nv">$CLUSTER_NAME</span> --query nodeResourceGroup -otsv<span class="k">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Retrieving cluster resource group&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">aks_rg_name</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>aks<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$CLUSTER_NAME</span><span class="w"> </span>--query<span class="w"> </span>nodeResourceGroup<span class="w"> </span>-otsv<span class="k">)</span>
 </code></pre></div>
 <p>This is a generated resource group that typically uses <code>MC_{resource-group}_{cluster-name}_{region}</code>, for example <code>MC_promitor-landscape_promitor_westeurope</code>.</p>
 <p>Second, we need the <strong>identity of our cluster</strong>. This is the system-assigned identity of our cluster that is used to
  access Azure resources.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span> <span class="s2">&quot;Retrieving cluster identity ID, which will be used for role assignment&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span> <span class="nv">aks_mi_identity</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>az aks show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span> --query identityProfile.kubeletidentity.clientId -otsv<span class="k">)</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Retrieving cluster identity ID, which will be used for role assignment&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">aks_mi_identity</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>az<span class="w"> </span>aks<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">CLUSTER_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span>identityProfile.kubeletidentity.clientId<span class="w"> </span>-otsv<span class="k">)</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p>This identity is managed by Azure, since we have used the <code>--enable-managed-identity</code> option during cluster creation.</p>
 <h2 id="getting-our-cluster-ready-to-use-aad-pod-identity">Getting our cluster ready to use AAD Pod Identity<a class="headerlink" href="#getting-our-cluster-ready-to-use-aad-pod-identity" title="Permanent link">&para;</a></h2>
@@ -3275,28 +3306,28 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 <li>Manage the virtual machines that are part of the cluster, to use the assigned identity</li>
 </ul>
 <p>You can easily do this as following:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>az role assignment create --role <span class="s2">&quot;Managed Identity Operator&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--role<span class="w"> </span><span class="s2">&quot;Managed Identity Operator&quot;</span><span class="w"> </span>--assignee<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--scope<span class="w"> </span><span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Virtual Machine Contributor&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>az role assignment create --role <span class="s2">&quot;Virtual Machine Contributor&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Assigning &#39;Virtual Machine Contributor&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--role<span class="w"> </span><span class="s2">&quot;Virtual Machine Contributor&quot;</span><span class="w"> </span>--assignee<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--scope<span class="w"> </span><span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">aks_rg_name</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">echo</span> <span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>az role assignment create --role <span class="s2">&quot;Managed Identity Operator&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Assigning &#39;Managed Identity Operator&#39; role to </span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2"> on resource group </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--role<span class="w"> </span><span class="s2">&quot;Managed Identity Operator&quot;</span><span class="w"> </span>--assignee<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aks_mi_identity</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--scope<span class="w"> </span><span class="s2">&quot;/subscriptions/</span><span class="si">${</span><span class="nv">SUBSCRIPTION_ID</span><span class="si">}</span><span class="s2">/resourcegroups/</span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h3 id="installing-aad-pod-identity">Installing AAD Pod Identity<a class="headerlink" href="#installing-aad-pod-identity" title="Permanent link">&para;</a></h3>
 <p>To deploy AAD Pod Identity, we need to add the Helm chart repository:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="s2">&quot;aad-pod-identity&quot;</span> has been added to your repositories
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>aad-pod-identity<span class="w"> </span>https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="s2">&quot;aad-pod-identity&quot;</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>repositories
 </code></pre></div>
 <p>Update all your Helm repositories to use the latest and greatest:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$ helm repo update
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Hang tight <span class="k">while</span> we grab the latest from your chart repositories...
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>...Successfully got an update from the <span class="s2">&quot;aad-pod-identity&quot;</span> chart repository
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Update Complete. ⎈Happy Helming!⎈
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>helm<span class="w"> </span>repo<span class="w"> </span>update
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Hang<span class="w"> </span>tight<span class="w"> </span><span class="k">while</span><span class="w"> </span>we<span class="w"> </span>grab<span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>from<span class="w"> </span>your<span class="w"> </span>chart<span class="w"> </span>repositories...
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>...Successfully<span class="w"> </span>got<span class="w"> </span>an<span class="w"> </span>update<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span><span class="s2">&quot;aad-pod-identity&quot;</span><span class="w"> </span>chart<span class="w"> </span>repository
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Update<span class="w"> </span>Complete.<span class="w"> </span>⎈Happy<span class="w"> </span>Helming!⎈
 </code></pre></div>
 <p>Lastly, install the Helm chart into your cluster:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>helm install aad-pod-identity aad-pod-identity/aad-pod-identity --set nmi.allowNetworkPluginKubenet<span class="o">=</span><span class="nb">true</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>helm<span class="w"> </span>install<span class="w"> </span>aad-pod-identity<span class="w"> </span>aad-pod-identity/aad-pod-identity<span class="w"> </span>--set<span class="w"> </span>nmi.allowNetworkPluginKubenet<span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
 <h3 id="creating-a-user-assigned-managed-identity-for-promitor">Creating a user-assigned managed identity for Promitor<a class="headerlink" href="#creating-a-user-assigned-managed-identity-for-promitor" title="Permanent link">&para;</a></h3>
 <p>In order to let Promitor to authenticate to Azure, we have two options:</p>
@@ -3306,34 +3337,34 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 </ol>
 <p>In order to <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separate our concerns</a>, we will create a new
  identity for it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span> <span class="s2">&quot;Create identity </span><span class="nv">$AD_POD_IDENTITY_NAME</span><span class="s2"> in resource group </span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>az identity create -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Create identity </span><span class="nv">$AD_POD_IDENTITY_NAME</span><span class="s2"> in resource group </span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>az<span class="w"> </span>identity<span class="w"> </span>create<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span>
 </code></pre></div>
 <p>Our new identity will be used by <strong>Promitor</strong> to access <strong>Azure Monitor</strong> to get metrics by using its assigned
  <strong>RBAC roles assignements</strong>:</p>
 <p>First, we will get the client &amp; resource id of our identity:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="o">=</span><span class="k">$(</span>az identity show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span> --query <span class="s2">&quot;clientId&quot;</span> -o tsv<span class="k">)</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">export</span> <span class="nv">AD_POD_IDENTITY_RESOURCE_ID</span><span class="o">=</span><span class="k">$(</span>az identity show -g <span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span> --query <span class="s2">&quot;id&quot;</span> -o tsv<span class="k">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>identity<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;clientId&quot;</span><span class="w"> </span>-o<span class="w"> </span>tsv<span class="k">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">AD_POD_IDENTITY_RESOURCE_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>identity<span class="w"> </span>show<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">RG_NAME</span><span class="si">}</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_NAME</span><span class="si">}</span><span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;id&quot;</span><span class="w"> </span>-o<span class="w"> </span>tsv<span class="k">)</span>
 </code></pre></div>
 <p>Next, we will assign the <code>Monitoring Reader</code> role to our identity on our resource group to scrape our Azure Service Bus namespace:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ az role assignment create --role <span class="s2">&quot;Monitoring Reader&quot;</span> --scope <span class="s2">&quot;/subscriptions/</span><span class="nv">$SUBSCRIPTION_ID</span><span class="s2">/resourceGroups/</span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span> --assignee <span class="s2">&quot;</span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--role<span class="w"> </span><span class="s2">&quot;Monitoring Reader&quot;</span><span class="w"> </span>--scope<span class="w"> </span><span class="s2">&quot;/subscriptions/</span><span class="nv">$SUBSCRIPTION_ID</span><span class="s2">/resourceGroups/</span><span class="nv">$RG_NAME</span><span class="s2">&quot;</span><span class="w"> </span>--assignee<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">AD_POD_IDENTITY_CLIENT_ID</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">{</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  <span class="s2">&quot;canDelegate&quot;</span>: null,
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  <span class="s2">&quot;condition&quot;</span>: null,
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  <span class="s2">&quot;conditionVersion&quot;</span>: null,
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  <span class="s2">&quot;description&quot;</span>: null,
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.Authorization/roleAssignments/92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  <span class="s2">&quot;principalId&quot;</span>: <span class="s2">&quot;&lt;promitor-identity-id&gt;&quot;</span>,
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  <span class="s2">&quot;principalType&quot;</span>: <span class="s2">&quot;ServicePrincipal&quot;</span>,
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  <span class="s2">&quot;resourceGroup&quot;</span>: <span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  <span class="s2">&quot;roleDefinitionId&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05&quot;</span>,
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  <span class="s2">&quot;scope&quot;</span>: <span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;Microsoft.Authorization/roleAssignments&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="s2">&quot;canDelegate&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="s2">&quot;condition&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="s2">&quot;conditionVersion&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="s2">&quot;description&quot;</span>:<span class="w"> </span>null,
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">  </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.Authorization/roleAssignments/92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">  </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;92b1566a-2346-43f7-a093-1fd5871d4de8&quot;</span>,
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="s2">&quot;principalId&quot;</span>:<span class="w"> </span><span class="s2">&quot;&lt;promitor-identity-id&gt;&quot;</span>,
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="s2">&quot;principalType&quot;</span>:<span class="w"> </span><span class="s2">&quot;ServicePrincipal&quot;</span>,
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="s2">&quot;resourceGroup&quot;</span>:<span class="w"> </span><span class="s2">&quot;&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">  </span><span class="s2">&quot;roleDefinitionId&quot;</span>:<span class="w"> </span><span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05&quot;</span>,
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">  </span><span class="s2">&quot;scope&quot;</span>:<span class="w"> </span><span class="s2">&quot;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;&quot;</span>,
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">  </span><span class="s2">&quot;type&quot;</span>:<span class="w"> </span><span class="s2">&quot;Microsoft.Authorization/roleAssignments&quot;</span>
 <a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="o">}</span>
 </code></pre></div>
 <p>In order to verify our role assignement, you can use this command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>az role assignment list --assignee <span class="nv">$AD_POD_IDENTITY_CLIENT_ID</span> -g <span class="nv">$RG_NAME</span> <span class="p">|</span> jq -r <span class="s1">&#39;.[].roleDefinitionName&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>list<span class="w"> </span>--assignee<span class="w"> </span><span class="nv">$AD_POD_IDENTITY_CLIENT_ID</span><span class="w"> </span>-g<span class="w"> </span><span class="nv">$RG_NAME</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.[].roleDefinitionName&#39;</span>
 </code></pre></div>
 <blockquote>
 <p>💡 <em>It can take some times before the identity is correctly propagated in Azure Active Directory.</em>
@@ -3342,7 +3373,7 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 <h3 id="bind-your-managed-identity-to-our-pods-through-aad-pod-identity">Bind your Managed Identity to our Pods, through AAD Pod Identity<a class="headerlink" href="#bind-your-managed-identity-to-our-pods-through-aad-pod-identity" title="Permanent link">&para;</a></h3>
 <p>Now that our identity is created, we can tell AAD Pod Identity that we want to bind our Azure AD identity to our pods:</p>
 <p>First, we will define the identity that we want to assign:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>cat <span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>cat<span class="w"> </span><span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="s">apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="s">kind: AzureIdentity</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s">metadata:</span>
@@ -3354,7 +3385,7 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 <a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>Next, we want to define to what pods we want to link it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cat <span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cat<span class="w"> </span><span class="s">&lt;&lt;EOF | kubectl apply -f -</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="s">apiVersion: &quot;aadpodidentity.k8s.io/v1&quot;</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="s">kind: AzureIdentityBinding</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="s">metadata:</span>
@@ -3365,13 +3396,13 @@ or have a general overview in the <a href="https://azure.github.io/aad-pod-ident
 <a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>You can verify that the resources were created successfully as following:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl get azureidentity
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>kubectl get azureidentitybinding
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>azureidentity
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>azureidentitybinding
 </code></pre></div>
 <h3 id="verifying-the-aad-pod-identity-installation">Verifying the AAD Pod Identity installation<a class="headerlink" href="#verifying-the-aad-pod-identity-installation" title="Permanent link">&para;</a></h3>
 <p>Before going further, we will check if our AAD Pod Identity is deployed &amp; configured correctly.</p>
 <p>We will spin up a pod and use the Azure CLI to authenticate:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl run azure-cli -it --image<span class="o">=</span>mcr.microsoft.com/azure-cli --labels<span class="o">=</span><span class="nv">aadpodidbinding</span><span class="o">=</span><span class="nv">$AD_POD_IDENTITY_NAME</span> /bin/bash
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl<span class="w"> </span>run<span class="w"> </span>azure-cli<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>mcr.microsoft.com/azure-cli<span class="w"> </span>--labels<span class="o">=</span><span class="nv">aadpodidbinding</span><span class="o">=</span><span class="nv">$AD_POD_IDENTITY_NAME</span><span class="w"> </span>/bin/bash
 </code></pre></div>
 <p>Note that we are adding <code>aadpodidbinding</code> as a label, which is linking the pod to the AAD Pod Identity binding
  that we have just created.</p>
@@ -3382,88 +3413,88 @@ If you encountered an error, relaunch the <code>az login -i --debug</code> comma
 <p>Next, we will run <code>az login -i --debug</code> to see the different steps it takes:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Once you are log in the container, and have the bash command line available, try to login using the Managed Identity:</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1"># If you don&#39;t see a command prompt, try pressing enter.</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>$ bash-5.0# az login -i --debug
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>msrestazure.azure_active_directory: MSI: Retrieving a token from http://169.254.169.254/metadata/identity/oauth2/token, with payload <span class="o">{</span><span class="s1">&#39;resource&#39;</span>: <span class="s1">&#39;https://management.core.windows.net/&#39;</span>, <span class="s1">&#39;api-version&#39;</span>: <span class="s1">&#39;2018-02-01&#39;</span><span class="o">}</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>msrestazure.azure_active_directory: MSI: Token retrieved
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>cli.azure.cli.core._profile: MSI: token was retrieved. Now trying to initialize <span class="nb">local</span> accounts...
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>$<span class="w"> </span>bash-5.0#<span class="w"> </span>az<span class="w"> </span>login<span class="w"> </span>-i<span class="w"> </span>--debug
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>msrestazure.azure_active_directory:<span class="w"> </span>MSI:<span class="w"> </span>Retrieving<span class="w"> </span>a<span class="w"> </span>token<span class="w"> </span>from<span class="w"> </span>http://169.254.169.254/metadata/identity/oauth2/token,<span class="w"> </span>with<span class="w"> </span>payload<span class="w"> </span><span class="o">{</span><span class="s1">&#39;resource&#39;</span>:<span class="w"> </span><span class="s1">&#39;https://management.core.windows.net/&#39;</span>,<span class="w"> </span><span class="s1">&#39;api-version&#39;</span>:<span class="w"> </span><span class="s1">&#39;2018-02-01&#39;</span><span class="o">}</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>msrestazure.azure_active_directory:<span class="w"> </span>MSI:<span class="w"> </span>Token<span class="w"> </span>retrieved
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>cli.azure.cli.core._profile:<span class="w"> </span>MSI:<span class="w"> </span>token<span class="w"> </span>was<span class="w"> </span>retrieved.<span class="w"> </span>Now<span class="w"> </span>trying<span class="w"> </span>to<span class="w"> </span>initialize<span class="w"> </span><span class="nb">local</span><span class="w"> </span>accounts...
 <a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>...
 <a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="o">[</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  <span class="o">{</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="s2">&quot;environmentName&quot;</span>: <span class="s2">&quot;AzureCloud&quot;</span>,
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="s2">&quot;homeTenantId&quot;</span>: <span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;</span>,
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    <span class="s2">&quot;isDefault&quot;</span>: true,
-<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="s2">&quot;managedByTenants&quot;</span>: <span class="o">[</span>
-<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>      <span class="o">{</span>
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;2f4a9838-26b7-47ee-be60-ccc1fdec5953&quot;</span>
-<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>      <span class="o">}</span>
-<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    <span class="o">]</span>,
-<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visual Studio Enterprise&quot;</span>,
-<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>    <span class="s2">&quot;state&quot;</span>: <span class="s2">&quot;Enabled&quot;</span>,
-<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
-<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>    <span class="s2">&quot;user&quot;</span>: <span class="o">{</span>
-<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>      <span class="s2">&quot;assignedIdentityInfo&quot;</span>: <span class="s2">&quot;MSI&quot;</span>,
-<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;systemAssignedIdentity&quot;</span>,
-<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>      <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;servicePrincipal&quot;</span>
-<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>    <span class="o">}</span>
-<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>  <span class="o">}</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">  </span><span class="o">{</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span><span class="s2">&quot;environmentName&quot;</span>:<span class="w"> </span><span class="s2">&quot;AzureCloud&quot;</span>,
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">    </span><span class="s2">&quot;homeTenantId&quot;</span>:<span class="w"> </span><span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="s2">&quot;0f9d7fea-99e8-4768-8672-06a28514f77e&quot;</span>,
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">    </span><span class="s2">&quot;isDefault&quot;</span>:<span class="w"> </span>true,
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">    </span><span class="s2">&quot;managedByTenants&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">      </span><span class="o">{</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">        </span><span class="s2">&quot;tenantId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2f4a9838-26b7-47ee-be60-ccc1fdec5953&quot;</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w">      </span><span class="o">}</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">    </span><span class="o">]</span>,
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="w">    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Visual Studio Enterprise&quot;</span>,
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="w">    </span><span class="s2">&quot;state&quot;</span>:<span class="w"> </span><span class="s2">&quot;Enabled&quot;</span>,
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="w">    </span><span class="s2">&quot;tenantId&quot;</span>:<span class="w"> </span><span class="s2">&quot;e0372f7f-a362-47fb-9631-74a5c4ba8bbf&quot;</span>,
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="w">    </span><span class="s2">&quot;user&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="w">      </span><span class="s2">&quot;assignedIdentityInfo&quot;</span>:<span class="w"> </span><span class="s2">&quot;MSI&quot;</span>,
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="w">      </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;systemAssignedIdentity&quot;</span>,
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="w">      </span><span class="s2">&quot;type&quot;</span>:<span class="w"> </span><span class="s2">&quot;servicePrincipal&quot;</span>
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="w">  </span><span class="o">}</span>
 <a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a><span class="o">]</span>
 </code></pre></div>
 <p>If your Azure CLI container is able to retrieve some information from Azure
 without having to log in with your credentials,
 it means the CLI is using your Managed Identity, through the Pod Identity Binding.</p>
 <p>You may have a result indicating you are log in, using a <strong>System Assigned Identity</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="nt">&quot;assignedIdentityInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MSI&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemAssignedIdentity&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="nt">&quot;assignedIdentityInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MSI&quot;</span><span class="p">,</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemAssignedIdentity&quot;</span><span class="p">,</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="deploying-promitor-with-managed-identity">Deploying Promitor with Managed Identity<a class="headerlink" href="#deploying-promitor-with-managed-identity" title="Permanent link">&para;</a></h2>
 <h3 id="create-a-metrics-declaration-for-promitor">Create a metrics declaration for Promitor<a class="headerlink" href="#create-a-metrics-declaration-for-promitor" title="Permanent link">&para;</a></h3>
 <p>Before deploying Promitor, we will create a values file for our Helm deployment.</p>
 <p>In the configuration, we define what Azure resource that we want to scrape and that we want to use managed identity.</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">azureAuthentication</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssignedManagedIdentity</span><span class="w"></span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="nt">binding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;aad-pod-identity-name&gt;</span><span class="w">              </span><span class="c1"># &lt;- This is the value of AD_POD_IDENTITY_NAME environment variable</span><span class="w"></span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nt">azureMetadata</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;tenant-id&gt;</span><span class="w"></span>
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;subscription-id&gt;</span><span class="w">               </span><span class="c1"># &lt;- This is the value of SUBSCRIPTION_ID environment variable</span><span class="w"></span>
-<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;promitor-resource-group-id&gt;</span><span class="w"> </span><span class="c1"># &lt;- This is the value of RG_NAME environment variable</span><span class="w"></span>
-<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="nt">metricDefaults</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00:05:00</span><span class="w"></span>
-<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">  </span><span class="nt">scraping</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
-<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">demo_queue_size</span><span class="w"></span>
-<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">messages</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&#39;demo_queue&#39;</span><span class="nv"> </span><span class="s">queue&quot;</span><span class="w"></span>
-<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">    </span><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusNamespace</span><span class="w"></span>
-<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">    </span><span class="nt">azureMetricConfiguration</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">      </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActiveMessages</span><span class="w"></span>
-<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">      </span><span class="nt">aggregation</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total</span><span class="w"></span>
-<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-namespace&gt;</span><span class="w">        </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_NAMESPACE environment variable</span><span class="w"></span>
-<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">        </span><span class="nt">queueName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-queue&gt;</span><span class="w">            </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_QUEUE_NAME environment variable</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">azureAuthentication</span><span class="p">:</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssignedManagedIdentity</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">identity</span><span class="p">:</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="nt">binding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;aad-pod-identity-name&gt;</span><span class="w">              </span><span class="c1"># &lt;- This is the value of AD_POD_IDENTITY_NAME environment variable</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nt">azureMetadata</span><span class="p">:</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;tenant-id&gt;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="nt">subscriptionId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;subscription-id&gt;</span><span class="w">               </span><span class="c1"># &lt;- This is the value of SUBSCRIPTION_ID environment variable</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;promitor-resource-group-id&gt;</span><span class="w"> </span><span class="c1"># &lt;- This is the value of RG_NAME environment variable</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="nt">metricDefaults</span><span class="p">:</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00:05:00</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">  </span><span class="nt">scraping</span><span class="p">:</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="nt">metrics</span><span class="p">:</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">demo_queue_size</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">messages</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&#39;demo_queue&#39;</span><span class="nv"> </span><span class="s">queue&quot;</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">    </span><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceBusNamespace</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">    </span><span class="nt">azureMetricConfiguration</span><span class="p">:</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">      </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActiveMessages</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">      </span><span class="nt">aggregation</span><span class="p">:</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-namespace&gt;</span><span class="w">        </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_NAMESPACE environment variable</span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">        </span><span class="nt">queueName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;service-bus-queue&gt;</span><span class="w">            </span><span class="c1"># &lt;- This is the value of SERVICE_BUS_QUEUE_NAME environment variable</span>
 </code></pre></div>
 <h3 id="deploy-promitor-to-your-cluster-using-helm">Deploy Promitor to your cluster using Helm<a class="headerlink" href="#deploy-promitor-to-your-cluster-using-helm" title="Permanent link">&para;</a></h3>
 <p>To deploy, we'll first add the Promitor chart repository to helm:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>helm repo add promitor https://charts.promitor.io/
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>helm repo update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>promitor<span class="w"> </span>https://charts.promitor.io/
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>helm<span class="w"> </span>repo<span class="w"> </span>update
 </code></pre></div>
 <p>With this repository added, we can deploy Promitor:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>helm install promitor-agent-scraper promitor/promitor-agent-scraper --values your/path/to/metric-declaration.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>helm<span class="w"> </span>install<span class="w"> </span>promitor-agent-scraper<span class="w"> </span>promitor/promitor-agent-scraper<span class="w"> </span>--values<span class="w"> </span>your/path/to/metric-declaration.yaml
 </code></pre></div>
 <h3 id="verifying-the-scraped-output-in-promitor">Verifying the scraped output in Promitor<a class="headerlink" href="#verifying-the-scraped-output-in-promitor" title="Permanent link">&para;</a></h3>
 <p>You can check that Promitor is getting insights from you Azure Service Bus queue, using the managed identity, with this commands.</p>
 <p>First, we get the name of the Promitor Scraper pod:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Get promitor pod</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nb">export</span> <span class="nv">POD_NAME</span><span class="o">=</span><span class="k">$(</span>kubectl get pods --namespace default -l <span class="s2">&quot;app.kubernetes.io/instance=promitor-agent-scraper&quot;</span> -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="k">)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">POD_NAME</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>default<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;app.kubernetes.io/instance=promitor-agent-scraper&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="k">)</span>
 </code></pre></div>
 <p>Next, we add port forwarding from our pod to our local machine:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl port-forward --namespace default <span class="nv">$POD_NAME</span> <span class="m">8080</span>:88
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>--namespace<span class="w"> </span>default<span class="w"> </span><span class="nv">$POD_NAME</span><span class="w"> </span><span class="m">8080</span>:88
 </code></pre></div>
 <p>Now browse to the address <a href="http://127.0.0.1:8080/metrics">http://127.0.0.1:8080/metrics</a> and check your metrics are scrapped:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a># HELP demo_queue_size Amount of active messages of the &#39;demo_queue&#39; queue
@@ -3498,42 +3529,6 @@ it means the CLI is using your Managed Identity, through the Pod Identity Bindin
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deploying Promitor, Prometheus, and Grafana on an AKS Cluster" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Deploying Promitor, Prometheus, and Grafana on an AKS Cluster
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../migrate-from-1.x-to-2.x/" class="md-footer__link md-footer__link--next" aria-label="Next: Migrate from Promitor Scraper 1.x to 2.x" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Migrate from Promitor Scraper 1.x to 2.x
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -3550,25 +3545,25 @@ it means the CLI is using your Managed Identity, through the Pod Identity Bindin
     
     
     <a href="https://github.com/tomkerkhove?tab=packages&repo_name=promitor" target="_blank" rel="noopener" title="Container Registry" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
     </a>
   
     
     
     <a href="https://github.com/promitor/docs" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
     
     <a href="https://twitter.com/promitorio" target="_blank" rel="noopener" title="Follow us on Twitter" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
     
     
     <a href="https://github.com/sponsors/promitor" target="_blank" rel="noopener" title="Sponsor Promitor" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m47.6 300.4 180.7 168.7c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l180.7-168.7c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141-45.6-7.6-92 7.3-124.6 39.9l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
     </a>
   
 </div>
@@ -3582,10 +3577,10 @@ it means the CLI is using your Managed Identity, through the Pod Identity Bindin
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>
