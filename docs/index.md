@@ -59,6 +59,7 @@ We are proud to have the following end-users(s) running Promitor in production:
 ![Adobe](./media/logos/end-users/adobe.png)
 ![Albert Heijn](./media/logos/end-users/albert-heijn.png)
 ![Bryte Blue](./media/logos/end-users/bryte-blue.png)
+![Grafana Labs](./media/logos/end-users/grafana-labs.png)
 ![ResDiary](./media/logos/end-users/resdiary.png)
 ![The Trade Desk](./media/logos/end-users/the-trade-desk.png)
 ![Trynz](./media/logos/end-users/trynz.png)
