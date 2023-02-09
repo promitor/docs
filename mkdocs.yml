@@ -166,10 +166,12 @@ nav:
       - Azure IoT Hub: scraping/providers/iot-hub.md
       - Azure Key Vault: scraping/providers/key-vault.md
       - Azure Kubernetes Service: scraping/providers/kubernetes.md
+      - Azure Kusto Cluster: scraping/providers/kusto-clusters.md
       - Azure Load Balancer: scraping/providers/load-balancer.md
       - Azure Log Analytics: scraping/providers/log-analytics.md
       - Azure Logic Apps: scraping/providers/logic-apps.md
       - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+      - Azure Nat Gateways: scraping/providers/nat-gateway.md
       - Azure Network Gateway: scraping/providers/network-gateway.md
       - Azure Network Interface: scraping/providers/network-interface.md
       - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
@@ -216,9 +218,11 @@ nav:
       - Azure IoT Hub: scraping/providers/iot-hub.md
       - Azure Key Vault: scraping/providers/key-vault.md
       - Azure Kubernetes Service: scraping/providers/kubernetes.md
+      - Azure Kusto Cluster: scraping/providers/kusto-clusters.md
       - Azure Load Balancer: scraping/providers/load-balancer.md
       - Azure Logic Apps: scraping/providers/logic-apps.md
       - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+      - Azure Nat Gateways: scraping/providers/nat-gateway.md
       - Azure Network Gateway: scraping/providers/network-gateway.md
       - Azure Network Interface: scraping/providers/network-interface.md
       - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
