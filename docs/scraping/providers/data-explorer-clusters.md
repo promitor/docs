@@ -5,16 +5,16 @@ tags:
   - Data
 ---
 
-# Azure Kusto Clusters
+# Azure Data Explorer Clusters
 
-![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.9-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
+![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
-You can declare to scrape an Azure Kusto Cluster via the `KustoCluster` resource
+You can declare to scrape an Azure Data Explorer Cluster via the `DataExplorerCluster` resource
 type.
 
 When using declared resources, the following fields need to be provided:
 
-- `kustoClusterName` - The name of the Azure Kusto Cluster
+- `clusterName` - The name of the Azure Data Explorer Cluster
 
 All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftkustoclusters).
 
@@ -23,16 +23,16 @@ All supported metrics are documented in the official [Azure Monitor documentatio
 Here is an example configuration:
 
 ```yaml
-name: azure_kusto_cluster
-description: "CPU usage of Azure kusto cluster"
-resourceType: KustoCluster
+name: azure_data_explorer_cluster
+description: "CPU usage of Azure Data Explorer cluster"
+resourceType: DataExplorerCluster
 azureMetricConfiguration:
   metricName: CPU
   aggregation:
     type: Average
 resources: # Optional, required when no resource discovery is configured
-- kustoClusterName: promitor-kusto-cluster-1
-- kustoClusterName: promitor-kusto-cluster-2
+- clusterName: promitor-data-explorer-cluster-1
+- clusterName: promitor-data-explorer-cluster-2
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
-- name: kusto-cluster-landscape
+- name: data-explorer-cluster-landscape
 ```
