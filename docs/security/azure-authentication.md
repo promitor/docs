@@ -33,7 +33,7 @@ Every agent needs to be configured with the following environment variables:
 
 - **PROMITOR_AUTH_APPKEY** - Secret of the Azure AD entity to authenticate with
 
-The app key can be read from a file by specifying the file's location:
+The app key can also be read from a file by specifying the file's location:
 
 ```yaml
 azureAuthentication:
