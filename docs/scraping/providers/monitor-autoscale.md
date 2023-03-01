@@ -16,7 +16,7 @@ When using declared resources, the following fields need to be provided:
 
 - `autoscaleSettingsName` - The name of the Azure Monitor Autoscale settings
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftinsightsautoscalesettings).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftinsightsautoscalesettings).
 
 ## Example
 
@@ -34,6 +34,6 @@ Here is an example configuration:
       type: Average
   resources: # Optional, required when no resource discovery is configured
   - autoscaleSettingsName: app-service-autoscaling-rules
-  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
   - name: autoscaling-rules
 ```

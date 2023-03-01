@@ -18,7 +18,7 @@ When using declared resources, the following fields need to be provided:
 
 - `appPlanName` - The name of the Azure App Plan
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftwebserverfarms).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftwebserverfarms).
 
 ## Example
 
@@ -34,6 +34,6 @@ azureMetricConfiguration:
     type: Average
 resources: # Optional, required when no resource discovery is configured
 - appPlanName: promitor-app-plan
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: app-plans-landscape
 ```

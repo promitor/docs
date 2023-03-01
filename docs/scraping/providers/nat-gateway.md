@@ -33,6 +33,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - natGatewayName: promitor-nat-gateway-1
 - natGatewayName: promitor-nat-gateway-2
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: nat-gateway-landscape
 ```

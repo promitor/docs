@@ -18,7 +18,7 @@ When using declared resources, the following fields need to be provided:
 
 - `cacheName` - The name of the Azure Cache for Redis Enterprise resource
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftcacheredisenterprise).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftcacheredisenterprise).
 
 ## Example
 
@@ -35,6 +35,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - cacheName: promitor-redis-enterprise-cache-1
 - cacheName: promitor-redis-enterprise-cache-2
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: redis-enterprise-cache-landscape
 ```

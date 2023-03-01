@@ -17,7 +17,7 @@ When using declared resources, the following fields need to be provided:
 
 - `instanceName` - The name of the SQL Server instance.
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftsqlmanagedinstances).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances).
 
 ## Example
 
@@ -33,8 +33,6 @@ azureMetricConfiguration:
     type: Average
 resources: # Optional, required when no resource discovery is configured
 - instanceName: promitor-sql-managed-instance
-resourceDiscoveryGroups:
-- name: sql-managed-instances
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: sql-managed-instances-landscape
 ```

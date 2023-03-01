@@ -17,7 +17,7 @@ When using declared resources, the following fields need to be provided:
 - `workspaceName` - The name of the Azure Synapse workspace.
 - `poolName` - The name of the Apache Spark pool.
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftsynapseworkspacesbigdatapools).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftsynapseworkspacesbigdatapools).
 
 The following scraper-specific metric labels will be added:
 
@@ -39,6 +39,6 @@ Here is an example configuration:
   resources: # Optional, required when no resource discovery is configured
   - workspaceName: promitor-synapse
     poolName: sparkpool
-  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
   - name: synapse-apache-spark-pools
 ```

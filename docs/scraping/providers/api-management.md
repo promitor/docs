@@ -19,7 +19,7 @@ When using declared resources, the following fields need to be provided:
 - `instanceName` - The name of the Azure API Management instance.
 - `locationName` - The name of the regional deployment of the gateway. *(optional)*
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftapimanagementservice).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftapimanagementservice).
 
 ## Multi-region support
 
@@ -49,6 +49,6 @@ azureMetricConfiguration:
     type: Average
 resources: # Optional, required when no resource discovery is configured
 - instanceName: promitor-api-gateway
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: api-management-landscape
 ```

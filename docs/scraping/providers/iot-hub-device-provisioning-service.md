@@ -17,7 +17,7 @@ When using declared resources, the following fields need to be provided:
 
 - `deviceProvisioningServiceName` - The name of the Azure IoT Hub Device Provisioning Service (DPS)
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftdevicesprovisioningservices).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdevicesprovisioningservices).
 
 ## Example
 
@@ -34,6 +34,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - deviceProvisioningServiceName: promitor-1
 - deviceProvisioningServiceName: promitor-2
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: iot-hub-dps-landscape
 ```

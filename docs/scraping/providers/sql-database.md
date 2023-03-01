@@ -18,7 +18,7 @@ When using declared resources, the following fields need to be provided:
 - `serverName` - The name of the SQL Server instance.
 - `databaseName` - The name of the database.
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftsqlserversdatabases).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases).
 
 The following scraper-specific metric labels will be added:
 
@@ -40,6 +40,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - serverName: promitor-sql-server
   databaseName: promitor-db
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: sql-database-landscape
 ```
