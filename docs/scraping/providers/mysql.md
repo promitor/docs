@@ -22,8 +22,8 @@ When using declared resources, the following fields need to be provided:
 
 All supported metrics are documented in the official Azure Monitor documentation:
 
-- [Simple servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlservers)
-- [Flexible servers](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlflexibleservers)
+- [Simple servers](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlservers)
+- [Flexible servers](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbformysqlflexibleservers)
 
 ## Limitations
 
@@ -49,6 +49,6 @@ resources: # Optional, required when no resource discovery is configured
 - serverName: Promitor-1
 - serverName: Promitor-2
   type: Flexible
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: mysql-database-landscape
 ```

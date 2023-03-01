@@ -25,7 +25,7 @@ Supported metrics:
 - `dtu_used` - Amount of consumed DTU across all databases.
   - *Requires `dimension.name` to be set to `DatabaseResourceId`*
 
-> The official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftsqlservers)
+> The official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftsqlservers)
 > lists more metrics but these are not surfaced externally. However, you can still give them a try but we don't
 > support them for now.
 

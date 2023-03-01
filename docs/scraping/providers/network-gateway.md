@@ -16,7 +16,7 @@ When using declared resources, the following fields need to be provided:
 
 - `networkGatewayName` - The name of the Azure Network Gateway
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftnetworkvirtualnetworkgateways).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftnetworkvirtualnetworkgateways).
 
 ## Example
 
@@ -33,8 +33,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - networkGatewayName: promitor-network-gateway-1
 - networkGatewayName: promitor-network-gateway-2
-resourceDiscoveryGroups:
-- name: network-gateway-group
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: network-gateway-landscape
 ```

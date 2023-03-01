@@ -19,7 +19,7 @@ When using declared resources, the following fields need to be provided:
 - `factoryName` - The name of the Azure Data Factory resource
 - `pipelineName` - The name of the data pipeline *(optional)*
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdatafactoryfactories).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdatafactoryfactories).
 
 The following scraper-specific metric label will be added:
 
@@ -40,6 +40,6 @@ Here is an example configuration:
   resources: # Optional, required when no resource discovery is configured
   - factoryName: promitor-data-factory
     pipelineName: data-pipeline-example
-  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+  resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
   - name: data-factory-landscape
 ```

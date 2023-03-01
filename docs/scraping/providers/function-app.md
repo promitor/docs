@@ -18,7 +18,7 @@ When using declared resources, the following fields need to be provided:
 - `functionAppName` - The name of the Azure Function App
 - `slotName` - The name of the deployment slot *(optional)*
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftwebsites-functions).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftwebsites-functions).
 
 The following scraper-specific metric label will be added:
 
@@ -38,6 +38,6 @@ azureMetricConfiguration:
     type: Total
 resources: # Optional, required when no resource discovery is configured
 - functionAppName: promitor-function-app
-resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
 - name: function-app-landscape
 ```

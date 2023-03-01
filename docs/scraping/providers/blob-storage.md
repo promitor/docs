@@ -15,7 +15,7 @@ The following fields need to be provided:
 
 - `accountName` - The name of the Azure Storage account
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftstoragestorageaccountsblobservices).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftstoragestorageaccountsblobservices).
 
 ## Example
 
