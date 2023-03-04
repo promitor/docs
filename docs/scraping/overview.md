@@ -10,7 +10,7 @@ Every metric describes the Azure Monitor metric that it represents and what Azur
 
 ## Supported Azure Services
 
-[Generic Azure Resource](providers/generic-azure-resource) allows you to scrape every Azure
+[Generic Azure Resource](providers/generic-azure-resource.md) allows you to scrape every Azure
 service supported by Azure Monitor.
 
 We also provide a simplified way to scrape the following Azure resources:

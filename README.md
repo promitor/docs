@@ -25,7 +25,7 @@ you can do a small donation.
 ## Thank you
 
 We'd like to thank all the services, tooling & NuGet packages that support us -
- [Thank you](https://promitor.io/thank-you)!
+ [Thank you](https://docs.promitor.io/latest/thank-you/)!
 
 ## License Information
 

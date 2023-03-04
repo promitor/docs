@@ -41,10 +41,10 @@ Currently we support this for:
 - Azure Storage Queue
 - Azure Web App
 
-For more information, we recommend reading the [scraper-specific documentation](./../overview#supported-azure-services).
+For more information, we recommend reading the [scraper-specific documentation](overview.md#supported-azure-services).
 
 ## Custom Labels
 
 As of v1.0, you can define your own labels by configuring them for a specific metric.
 
-For more information, see ["Metrics"](./../configuration/v1.x/metrics/#metrics).
+For more information, see ["Metrics"](overview.md#metrics).
