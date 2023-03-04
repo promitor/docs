@@ -64,9 +64,6 @@ resourceDiscovery:
   port: 88 # Optional. Port of Promitor Resource Discovery agent
 ```
 
-_Note: Using Promitor v0.x? [Use environment variables](./../v0.x/) to configure
-the runtime._
-
 ## Authentication
 
 The Promitor runtime allows you to use various ways to authenticate to Azure:
@@ -230,7 +227,7 @@ resourceDiscovery:
   port: 88 # Optional. Default: 80
 ```
 
-To learn more about how Promitor Scraper and Promitor Resource Discovery work together, read [our documentation](./../../concepts/how-it-works).
+To learn more about how Promitor Scraper and Promitor Resource Discovery work together, read [our documentation](../../how-it-works.md).
 
 ## Metric Configuration
 
