@@ -227,7 +227,7 @@ resourceDiscovery:
   port: 88 # Optional. Default: 80
 ```
 
-To learn more about how Promitor Scraper and Promitor Resource Discovery work together, read [our documentation](../../how-it-works.md).
+To learn more about how Promitor Scraper and Promitor Resource Discovery work together, read [our documentation](../how-it-works.md).
 
 ## Metric Configuration
 
