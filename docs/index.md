@@ -89,7 +89,7 @@ We'd like to thank the following service(s) for supporting our open-source initi
 But they are not the only one we'd like to thank!
 
 For a full list of services, tooling & NuGet packages that support us -
- Have a look at our [Thank you](thank-you) page!
+ Have a look at our [Thank you](thank-you.md) page!
 
 ## License Information
 
