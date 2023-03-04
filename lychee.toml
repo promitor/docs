@@ -1,1 +1,1 @@
-exclude_path = ["//127.0.0.1*", "*//localhost*"]
+exclude_path = ["*127.0.0.1*", "*//localhost*"]

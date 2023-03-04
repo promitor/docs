@@ -13,7 +13,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.6.1
         with:
-          args: --verbose --no-progress 'docs/**/*.md' 'docs/**/*.html'
+          args: --verbose --no-progress --include 'docs/**/*.md' 'docs/**/*.html' --exclude *127.0.0.1*
           format: markdown
           jobSummary: true
           fail: true
