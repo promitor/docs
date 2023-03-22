@@ -185,6 +185,7 @@ nav:
       - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
       - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
       - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+      - Azure Traffic Manager: scraping/providers/traffic-manager.md
       - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
       - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
       - Azure Virtual Network: scraping/providers/virtual-network.md
@@ -236,6 +237,7 @@ nav:
       - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
       - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
       - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+      - Azure Traffic Manager: scraping/providers/traffic-manager.md
       - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
       - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
       - Azure Virtual Network: scraping/providers/virtual-network.md
