@@ -34,5 +34,5 @@ resources: # Optional, required when no resource discovery is configured
 - publicIpAddressName: promitor-load-balancer-public-ip
 - publicIpAddressName: promitor-nat-gateway-public-ip
 resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
-- name: public-ip-address-landscape
+- name: public-ip-addresses
 ```
