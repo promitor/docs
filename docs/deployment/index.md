@@ -25,6 +25,6 @@ _(Alternative could be to use [image digest pinning](https://docs.docker.com/eng
 
 You can also pin to a specific digest of an image to ensure that you are running
 the same image across your infrastructure. However, you will not receive security
-patches unless you use a tool like [Renovate to keep them up-to-date](https://renovatebot.com/blog/docker-mutable-tags).
+patches unless you use a tool like [Renovate to keep them up-to-date](https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/).
 
 [&larr; back](/)
