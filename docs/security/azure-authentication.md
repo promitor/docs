@@ -36,11 +36,12 @@ Every agent needs to be configured with the following environment variables:
 The app key can also be read from a file by specifying the file's location:
 
 ```yaml
-azureAuthentication:
-  identity: 
-    id: # [app id]
-    secretFilePath: # [the name of the folder containing the secret file]
-    secretFileName: # [the name of the file containing the app key]
+authentication:
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  mode: ServicePrincipal # Optional. Default: ServicePrincipal.
+  identityid: # [app id]
+  secretFilePath: # [the name of the folder containing the secret file]
+  secretFileName: # [the name of the file containing the app key]  
 ```
 
 ### Managed Identity Authentication
