@@ -2,7 +2,7 @@
 tags:
   - Scraper
   - Resource Discovery
-  - Networking
+  - PowerBi
 ---
 
 # Azure PowerBi Embedded
