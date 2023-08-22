@@ -7,7 +7,7 @@ tags:
 
 # Azure PowerBi Embedded
 
-![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.9-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
+![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.11-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
 You can declare to scrape a PowerBi Embedded capacity via the `PowerBiEmbedded` resource-type.
 
