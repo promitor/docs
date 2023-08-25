@@ -2,7 +2,8 @@
 tags:
   - Scraper
   - Resource Discovery
-  - PowerBi
+  - PowerBI
+  - PowerBI Embedded
 ---
 
 # Azure PowerBI Dedicated
