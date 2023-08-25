@@ -174,7 +174,7 @@ nav:
       - Azure Nat Gateways: scraping/providers/nat-gateway.md
       - Azure Network Gateway: scraping/providers/network-gateway.md
       - Azure Network Interface: scraping/providers/network-interface.md
-      - Azure PowerBi Dedicated: scraping/providers/powerbi-dedicated.md
+      - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
       - Azure Public IP Address: scraping/providers/public-ip-address.md
       - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
       - Azure SQL Database: scraping/providers/sql-database.md
