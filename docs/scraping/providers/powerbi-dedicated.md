@@ -25,7 +25,7 @@ Here is an example configuration:
 ```yaml
   - name: azure_powerbi_dedicated_cpu_usage
     description: percentage of cpu used by powerbi dedicated
-    resourceType: PowerBidedicated
+    resourceType: PowerBiEmbedded
     azureMetricConfiguration:
         metricName: cpu_metric
         aggregation:
