@@ -10,7 +10,7 @@ tags:
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v2.11-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
-You can declare to scrape a PowerBi Dedicated capacity via the `PowerBiDedicated` resource-type.
+You can declare to scrape a Azure PowerBI Dedicated capacity via the `PowerBiDedicated` resource type.
 
 When using declared resources, the following fields need to be provided:
 
