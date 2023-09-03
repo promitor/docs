@@ -2,402 +2,407 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://promitor.io/unreleased/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/faq/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/how-it-works/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/tags/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/thank-you/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/docker/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/resource-discovery/kubernetes/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/docker/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/deployment/scraper/kubernetes/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/discovery/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/health/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/integrations/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/performance/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/operations/system/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/resource-discovery/declaring-resource-discovery-groups/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/resource-discovery/overview/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/resource-discovery/runtime-configuration/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/labels/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/overview/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/runtime-configuration/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/api-management/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/app-plan/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/application-gateway/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/application-insights/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/automation-account/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/blob-storage/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/cdn/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/container-instances/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/container-registry/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/cosmos-db/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/data-explorer-clusters/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/data-factory/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/data-share/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/event-hubs/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/express-route-circuit/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/file-storage/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/front-door/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/function-app/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/generic-azure-resource/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/iot-hub-device-provisioning-service/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/iot-hub/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/key-vault/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/kubernetes/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/load-balancer/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/log-analytics/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/logic-apps/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/maria-db/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/monitor-autoscale/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/mysql/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/nat-gateway/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/network-gateway/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/network-interface/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/postgresql/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://promitor.io/unreleased/scraping/providers/powerbi-dedicated/</loc>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/public-ip-address/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/redis-cache/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/redis-enterprise-cache/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/service-bus-namespace/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/sql-database/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/sql-elastic-pool/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/sql-managed-instance/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/sql-server/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/storage-account/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/storage-queue/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/synapse-apache-spark-pool/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/synapse-sql-pool/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/synapse-workspace/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/traffic-manager/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/virtual-machine-scale-set/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/virtual-machine/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/virtual-network/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/scraping/providers/web-app/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/security/azure-authentication/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/migrate-from-1.x-to-2.x/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/walkthroughs/use-promitor-with-managed-identity/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://promitor.io/unreleased/tags/</loc>
-         <lastmod>2023-05-15</lastmod>
+         <lastmod>2023-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
