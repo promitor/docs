@@ -18,7 +18,10 @@ When using declared resources, the following fields need to be provided:
 - `functionAppName` - The name of the Azure Function App
 - `slotName` - The name of the deployment slot *(optional)*
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftwebsites-functions).
+All supported metrics are documented in the official Azure Monitor documentation:
+
+- [Microsoft.Web/sites](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-web-sites-metrics)
+- [Microsoft.Web/sites/slots](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-web-sites-slots-metrics)
 
 The following scraper-specific metric label will be added:
 
