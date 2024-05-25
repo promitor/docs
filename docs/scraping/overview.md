@@ -77,6 +77,12 @@ values are `v1`. *(Required)*
 - `azureMetadata.cloud` - The name of the Azure cloud to use. Options are `Global`
  (default), `China`, `UsGov` & `Germany`.
 
+### Azure Monitor Integration
+
+In the newest release of Promitor, integration with Azure Monitor will use [Azure.Monitor](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/monitor/Azure.Monitor.Query) package under Azure SDK for .NET by default. This migration was needed because the [original SDK](https://github.com/Azure/azure-libraries-for-net) has been deprecated since 2022. 
+
+Since the refactoring may not be completely stable, setting feature flag `useAzureMonitorSdk: false` will revert back to using the legacy SDK for scraping.
+
 ### Metric Defaults
 
 - `metricDefaults.aggregation.interval` - The default interval which defines over
