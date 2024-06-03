@@ -176,7 +176,7 @@ metricSinks:
       transformation: None # Optional. Default: None.
 ```
 
-#### What happens when metrics are unavailable for multi-dimensional metrics?
+### What happens when metrics are unavailable for multi-dimensional metrics?
 
 Promitor allows you to use one or more dimension(s) in metrics so that it will report all values.
 
