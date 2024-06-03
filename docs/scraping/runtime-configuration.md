@@ -354,7 +354,6 @@ The behavior of this can be configured to fit your needs:
   - As an example, the default is 12 hours which means Promitor will fetch all metrics between now - 12 hours and now to find a matching metric. Typically this window can be very small but Promitor provides a margin by default to prevent problems for long aggregation periods. (Default: `12`)
 - `azureMonitor.integration.useAzureMonitorSdk` - In the newest release of Promitor, integration with Azure Monitor will use [Azure.Monitor](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/monitor/Azure.Monitor.Query) package under Azure SDK for .NET by default. This migration was needed because the [original SDK](https://github.com/Azure/azure-libraries-for-net) has been deprecated since 2022. 
 
-Since the refactoring may not be completely stable, setting feature flag to false will revert back to using the legacy SDK for scraping.
 Example:
 
 ```yaml
