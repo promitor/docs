@@ -26,7 +26,7 @@ for a complete overview we recommend reading the
 ## How does Promitor handle deleted resources?
 
 The approach depends if you are using declarative metrics or resource discovery but we highly recommend to
- **enable Prometheus metric timestamps** in [our runtime configuration](/scraping/runtime-configuration.md#prometheus-scraping-endpoint)
+ **enable Prometheus metric timestamps** in [our runtime configuration](scraping/runtime-configuration.md#prometheus-scraping-endpoint)
   to indicate how old the metric is.
 
 ### When using declarative metrics
