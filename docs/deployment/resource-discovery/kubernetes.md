@@ -98,4 +98,4 @@ telemetry:
 
 You can easily deploy it by passing the file through `--values` during installation.
 
-[&larr; back](/)
+[&larr; back](../../index.md)
