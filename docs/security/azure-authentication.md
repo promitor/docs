@@ -75,4 +75,4 @@ subscription, resource group and/or resources that will be queried.
 
 More information can be found [here](https://docs.microsoft.com/en-us/azure/governance/resource-graph/overview#permissions-in-azure-resource-graph).
 
-[&larr; back](/)
+[&larr; back](../index.md)
