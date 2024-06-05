@@ -2,8 +2,8 @@
 
 Here is an overview of the Promitor agents you can deploy:
 
-- [Deploying Promitor Scraper](scraper/)
-- [Deploying Promitor Resource Discovery](resource-discovery/)
+- [Deploying Promitor Scraper](scraper/index.md)
+- [Deploying Promitor Resource Discovery](resource-discovery/index.md)
 
 ## Image Tagging Strategy
 
@@ -27,4 +27,4 @@ You can also pin to a specific digest of an image to ensure that you are running
 the same image across your infrastructure. However, you will not receive security
 patches unless you use a tool like [Renovate to keep them up-to-date](https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/).
 
-[&larr; back](/)
+[&larr; back](../index.md)
