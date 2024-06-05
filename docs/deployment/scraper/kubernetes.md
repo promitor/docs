@@ -86,4 +86,4 @@ with this command:
                --values /path/to/helm-configuration.yaml
 ```
 
-[&larr; back](/)
+[&larr; back](../../index.md)
