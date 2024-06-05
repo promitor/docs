@@ -17,7 +17,7 @@ Azure Storage queues.
 
 You can configure the dimension(s) you are interested in via
 `azureMetricConfiguration.dimensions`, for more information see
-our ['Metrics Declaration' page](/scraping/overview/#metrics).
+our ['Metrics Declaration' page](scraping/overview.md#metrics).
 
 However, you can only use it with metrics in Azure Monitor that support this,
 for a complete overview we recommend reading the
@@ -26,7 +26,7 @@ for a complete overview we recommend reading the
 ## How does Promitor handle deleted resources?
 
 The approach depends if you are using declarative metrics or resource discovery but we highly recommend to
- **enable Prometheus metric timestamps** in [our runtime configuration](/configuration/v2.x/runtime/scraper/#prometheus-scraping-endpoint)
+ **enable Prometheus metric timestamps** in [our runtime configuration](/scraping/runtime-configuration.md#prometheus-scraping-endpoint)
   to indicate how old the metric is.
 
 ### When using declarative metrics
@@ -58,7 +58,7 @@ We support `Global` (default), `China`, `UsGov` & `Germany` Azure clouds.
 
 This can be configured in the metric configuration under `azureMetadata`.
 
-For more information see our ['Metric Configuration' page](/scraping/overview).
+For more information see our ['Metric Configuration' page](scraping/overview.md).
 
 ## Why does Azure Blob & File Storage only report account-level information?
 
@@ -72,7 +72,7 @@ As part of [#450](https://github.com/tomkerkhove/promitor/issues/450) &
 When Promitor is unable to find a metric for a multi-dimensional metric, it will report `unknown` for the dimension
  label given it was not able to determine what the dimension value is due to the lack of metrics.
 
-You can read more about it in our [Prometheus sink documentation](/scraping/runtime-configuration#what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics).
+You can read more about it in our [Prometheus sink documentation](scraping/runtime-configuration.md#what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics).
 
 ## What operating systems are supported?
 
