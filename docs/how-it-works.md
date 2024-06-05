@@ -53,4 +53,4 @@ Here's a detailed overview:
 
 _(*) Resources are still discovered synchronously but this will be implemented in Promitor Resource Discovery v0.2._
 
-[&larr; back](/)
+[&larr; back](index.md)
