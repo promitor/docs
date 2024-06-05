@@ -58,7 +58,7 @@ We support `Global` (default), `China`, `UsGov` & `Germany` Azure clouds.
 
 This can be configured in the metric configuration under `azureMetadata`.
 
-For more information see our ['Metric Configuration' page](/configuration/v1.x/metrics/#metrics).
+For more information see our ['Metric Configuration' page](/scraping/overview).
 
 ## Why does Azure Blob & File Storage only report account-level information?
 
@@ -72,7 +72,7 @@ As part of [#450](https://github.com/tomkerkhove/promitor/issues/450) &
 When Promitor is unable to find a metric for a multi-dimensional metric, it will report `unknown` for the dimension
  label given it was not able to determine what the dimension value is due to the lack of metrics.
 
-You can read more about it in our [Prometheus sink documentation](/configuration/v2.x/runtime/scraper/#what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics).
+You can read more about it in our [Prometheus sink documentation](/scraping/runtime-configuration#what-happens-when-metrics-are-unavailable-for-multi-dimensional-metrics).
 
 ## What operating systems are supported?
 
