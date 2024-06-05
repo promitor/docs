@@ -44,7 +44,7 @@ promitor_runtime_http_request_duration_seconds_count{status_code="200",method="G
 Every Promitor agent supports exposing Prometheus metrics:
 
 - **Resource Discovery agent** - Exposed on `/metrics` endpoint
-- **Scraper agent** - Exposed through Prometheus metric sink ([docs](/configuration/v2.x/runtime/scraper#prometheus-scraping-endpoint))
+- **Scraper agent** - Exposed through Prometheus metric sink ([docs](./../scraping/runtime-configuration.md#prometheus-scraping-endpoint))
 
 ## Scraping Azure Monitor
 

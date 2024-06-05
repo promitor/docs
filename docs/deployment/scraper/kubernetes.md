@@ -30,7 +30,7 @@ https://hub.helm.sh/charts/promitor/promitor-ag...      1.6.0           1.6.1   
 To use this, you will need to provide parameters [via `--set` or `--values`](https://helm.sh/docs/using_helm/#customizing-the-chart-before-installing).
 Included here are the values that correspond with the local environment variables.
 In addition to these, you will need a metric declaration file as described in
-[Metric Declaration](/configuration/metrics).
+[Metric Declaration](./../../scraping/overview.md).
 
 ```yaml
 azureMetadata:
@@ -86,4 +86,4 @@ with this command:
                --values /path/to/helm-configuration.yaml
 ```
 
-[&larr; back](/)
+[&larr; back](../../index.md)

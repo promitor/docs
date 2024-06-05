@@ -39,7 +39,7 @@ You can easily start discovering resources automatically:
 
 1. Declare resource discovery groups ([link](resource-discovery/declaring-resource-discovery-groups.md))
 2. Deploy Promitor Resource Discovery ([link](deployment/resource-discovery/index.md))
-3. Configure Promitor Scraper to use resource discovery ([link](scraping/overview.md#using-resource-discovery))
+3. Configure Promitor Scraper to use resource discovery ([link](https://promitor.io/concepts/#using-resource-discovery))
 4. Deploy Promitor Scraper ([link](deployment/scraper/index.md))
 
 ## What components do agents provide?
@@ -53,4 +53,4 @@ Here's a detailed overview:
 
 _(*) Resources are still discovered synchronously but this will be implemented in Promitor Resource Discovery v0.2._
 
-[&larr; back](/)
+[&larr; back](index.md)
