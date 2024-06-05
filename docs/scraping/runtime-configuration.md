@@ -393,4 +393,4 @@ server:
 An environment variable called `PROMITOR_YAML_OVERRIDE_server__httpPort` can be
 provided which specifies the new port.
 
-[&larr; back](/)
+[&larr; back](../index.md)

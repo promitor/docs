@@ -357,4 +357,4 @@ create the dashboard and view metrics about your AKS cluster.
 
 To delete all the resources used in this tutorial, run `az group delete --name PromitorRG`.
 
-[&larr; back](/)
+[&larr; back](../index.md)

@@ -483,4 +483,4 @@ demo_queue_size{resource_group="ammdocs",subscription_id="xxxxx-xxxxx-xxxxx-xxxx
 
 To delete all the resources used in this tutorial, run `az group delete --name $RG_NAME`.
 
-[&larr; back](/)
+[&larr; back](../index.md)

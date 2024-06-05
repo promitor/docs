@@ -183,4 +183,4 @@ metrics:
     - name: service-bus-landscape
 ```
 
-[&larr; back](/)
+[&larr; back](../index.md)
