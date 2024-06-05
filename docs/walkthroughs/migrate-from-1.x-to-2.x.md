@@ -75,4 +75,4 @@ Our OpenAPI 3.0 docs are available on:
 - Swagger UI on `/api/docs`
 - Raw documentation on `/api/v1/docs.json`
 
-[&larr; back](/)
+[&larr; back](../index.md)
