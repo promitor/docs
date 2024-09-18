@@ -145,6 +145,7 @@ nav:
       - Azure Application Gateway: scraping/providers/application-gateway.md
       - Azure Application Insights: scraping/providers/application-insights.md
       - Azure Automation account: scraping/providers/automation-account.md
+      - Azure Firewall: scraping/providers/azure-firewall.md
       - Azure Blob Storage: scraping/providers/blob-storage.md
       - Azure Cache for Redis: scraping/providers/redis-cache.md
       - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
@@ -201,6 +202,7 @@ nav:
       - Azure Application Gateway: scraping/providers/application-gateway.md
       - Azure Application Insights: scraping/providers/application-insights.md
       - Azure Automation account: scraping/providers/automation-account.md
+      - Azure Firewall: scraping/providers/azure-firewall.md
       - Azure Cache for Redis: scraping/providers/redis-cache.md
       - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
       - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
