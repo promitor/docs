@@ -136,6 +136,7 @@ nav:
   - How It Works: how-it-works.md
   - Scraping:
     - Overview: scraping/overview.md
+    - (Experimental) Batch Scraping Mode: scraping/batch-scraping.md
     - Metric Labelling: scraping/labels.md
     - Runtime Configuration: scraping/runtime-configuration.md
     - Available Providers:
