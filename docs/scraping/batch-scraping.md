@@ -23,7 +23,7 @@ suppor status.
 Query Costs for metrics and logs are laid out [here](https://azure.microsoft.com/en-us/pricing/details/monitor/#pricing). To estimate amount of requests a Promitor deployment will make for a length of time L, one can use the formula 
 
 $$
-\text{\# of requests} = \text{number of resources} \times \text{number of metrics} \times \left(\frac{L}{\text{scrape interval}}\right)
+text{\# of requests} = \text{number of resources} \times \text{number of metrics} \times \left(\frac{L}{\text{scrape interval}}\right)
 $$
 
 Consider an example deployment that monitors 10 metrics across the same set of 100 resources, with a scrape interval of 5 minutes. In a given day
