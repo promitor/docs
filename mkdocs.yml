@@ -142,9 +142,9 @@ nav:
   - How It Works: how-it-works.md
   - Scraping:
     - Overview: scraping/overview.md
-    - (Experimental) Batch Scraping Mode: scraping/batch-scraping.md
     - Metric Labelling: scraping/labels.md
     - Runtime Configuration: scraping/runtime-configuration.md
+    - Use Batch Scraping (Experimental): scraping/batch-scraping.md
     - Available Providers:
       - Generic: scraping/providers/generic-azure-resource.md
       - Azure API Management: scraping/providers/api-management.md
