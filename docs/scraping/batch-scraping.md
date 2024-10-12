@@ -1,6 +1,8 @@
 # Using Batch Scraping with Azure Monitor API (Experimental)
 
-Under batch scraping mode, Promitor will fetch resource metrics in batches, through dedicated Azure Monitor APIs. 
+Using batch scraping mode, Promitor will fetch resource metrics in batches by using the Azure Monitor data-plane API instead of Azure Resource Manager (ARM) to remove throttling.
+
+> ⚠️ **The Azure Monitor data-plane API is not free, learn more [in the official pricing documentation](https://azure.microsoft.com/pricing/details/monitor/)**.
 
 Promitor deployments are able to monitor a greater set of unique resources and metrics, in part because its requests 
 go through dedicated APIs that allow for much greater throughput. However, there are important factors to consider(like cost) when
