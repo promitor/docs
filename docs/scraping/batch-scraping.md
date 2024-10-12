@@ -1,4 +1,4 @@
-# (Experimental Feature) Batch Scraping Through Dedicated Azure Monitor API
+# Using Batch Scraping with Azure Monitor API (Experimental)
 
 Under batch scraping mode, Promitor will fetch resource metrics in batches, through dedicated Azure Monitor APIs. 
 
