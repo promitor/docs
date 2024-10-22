@@ -22,7 +22,12 @@ Additionally, batch scraping does not work for LogAnalytics resources. Follow th
 suppor status. 
  
 ## Cost Considerations 
-Query Costs for metrics and logs are laid out [here](https://azure.microsoft.com/pricing/details/monitor/#pricing). To estimate amount of Azure Monitor API requests(queries) a Promitor deployment will make for a length of time `L`, one can use the formula 
+Under batch scraping mode, metrics will be fetched through requests to
+[Azure Monitor API](https://learn.microsoft.com/en-us/rest/api/monitor/metrics-batch/batch?view=rest-monitor-2023-10-01). Billing for the API is calculated based on the number of requests.  
+
+Query Costs for metrics and logs are laid out [here](https://azure.microsoft.com/pricing/details/monitor/#pricing), under `Platform and custom metric queries (preview)` section. 
+
+To estimate amount of Azure Monitor API requests(queries) a Promitor deployment will make for a length of time `L`, one can use the formula 
 
 $$
 \small {\# of requests} = \text{number of resources} \times \text{number of metrics} \times \left(\frac{L}{\text{scrape interval * batch size}}\right)
