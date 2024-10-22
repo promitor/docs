@@ -22,7 +22,7 @@ Additionally, batch scraping does not work for LogAnalytics resources. Follow th
 suppor status. 
  
 ## Cost Considerations 
-Under batch scraping mode, metrics will be fetched through requests to
+Under batch scraping mode, all declared metrics will be fetched through requests to
 [Azure Monitor API](https://learn.microsoft.com/en-us/rest/api/monitor/metrics-batch/batch?view=rest-monitor-2023-10-01). Billing for the API is calculated based on the number of requests.  
 
 Query Costs for metrics and logs are laid out [here](https://azure.microsoft.com/pricing/details/monitor/#pricing), under `Platform and custom metric queries (preview)` section. 
