@@ -12,28 +12,28 @@
         <meta name="author" content="Tom Kerkhove">
       
       
-        <link rel="canonical" href="https://promitor.io/unreleased/scraping/providers/postgresql/">
+        <link rel="canonical" href="https://promitor.io/unreleased/scraping/batch-scraping/">
       
       
-        <link rel="prev" href="../maria-db/">
+        <link rel="prev" href="../runtime-configuration/">
       
       
-        <link rel="next" href="../mysql/">
+        <link rel="next" href="../providers/generic-azure-resource/">
       
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Azure Database for PostgreSQL - Promitor - Documentation</title>
+        <title>Use Batch Scraping (Experimental) - Promitor - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#azure-database-for-postgresql" class="md-skip">
+        <a href="#using-batch-scraping-with-azure-monitor-api-experimental" class="md-skip">
           Skip to content
         </a>
       
@@ -110,9 +110,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Promitor - Documentation" class="md-header__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
+    <a href="../.." title="Promitor - Documentation" class="md-header__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
       
-  <img src="../../../media/logos/promitor-logo.svg" alt="logo">
+  <img src="../../media/logos/promitor-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure Database for PostgreSQL
+              Use Batch Scraping (Experimental)
             
           </span>
         </div>
@@ -239,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -257,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../how-it-works/" class="md-tabs__link">
+      <a href="../../how-it-works/" class="md-tabs__link">
         
   
     
@@ -272,11 +272,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
     
@@ -292,13 +294,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../resource-discovery/overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../resource-discovery/overview/" class="md-tabs__link">
           
   
     
@@ -318,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../deployment/" class="md-tabs__link">
+        <a href="../../deployment/" class="md-tabs__link">
           
   
     
@@ -338,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../security/azure-authentication/" class="md-tabs__link">
+        <a href="../../security/azure-authentication/" class="md-tabs__link">
           
   
     
@@ -358,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../operations/" class="md-tabs__link">
+        <a href="../../operations/" class="md-tabs__link">
           
   
     
@@ -378,7 +378,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-tabs__link">
+        <a href="../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-tabs__link">
           
   
     
@@ -396,7 +396,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../faq/" class="md-tabs__link">
+      <a href="../../faq/" class="md-tabs__link">
         
   
     
@@ -436,9 +436,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Promitor - Documentation" class="md-nav__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
+    <a href="../.." title="Promitor - Documentation" class="md-nav__button md-logo" aria-label="Promitor - Documentation" data-md-component="logo">
       
-  <img src="../../../media/logos/promitor-logo.svg" alt="logo">
+  <img src="../../media/logos/promitor-logo.svg" alt="logo">
 
     </a>
     Promitor - Documentation
@@ -492,7 +492,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../thank-you/" class="md-nav__link">
+      <a href="../../thank-you/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-it-works/" class="md-nav__link">
+      <a href="../../how-it-works/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,8 +570,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -588,21 +590,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -613,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Scraping
@@ -627,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labels/" class="md-nav__link">
+      <a href="../labels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,474 +672,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../runtime-configuration/" class="md-nav__link">
+      <a href="../runtime-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Runtime Configuration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../batch-scraping/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Use Batch Scraping (Experimental)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Available Providers
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
-            <span class="md-nav__icon md-icon"></span>
-            Available Providers
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../generic-azure-resource/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generic
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api-management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../app-plan/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure App Plan
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application-gateway/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Application Gateway
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application-insights/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Application Insights
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automation-account/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Automation account
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../blob-storage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Blob Storage
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../redis-cache/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Cache for Redis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../redis-enterprise-cache/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Cache for Redis Enterprise
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cdn/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Content Delivery Network (CDN)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../container-instances/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Container Instances
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../container-registry/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Container Registry
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cosmos-db/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Cosmos DB
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../maria-db/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Azure Database for MariaDB
   </span>
   
 
@@ -1166,7 +706,7 @@
           
   
   <span class="md-ellipsis">
-    Azure Database for PostgreSQL
+    Use Batch Scraping (Experimental)
   </span>
   
 
@@ -1177,7 +717,7 @@
         
   
   <span class="md-ellipsis">
-    Azure Database for PostgreSQL
+    Use Batch Scraping (Experimental)
   </span>
   
 
@@ -1199,6 +739,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-do-batch-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Do Batch Scraping?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitations
@@ -1208,9 +757,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#cost-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Cost Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-are-batches-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Are Batches Built
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Configuration
     </span>
   </a>
   
@@ -1231,8 +798,474 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Available Providers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Available Providers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../mysql/" class="md-nav__link">
+      <a href="../providers/generic-azure-resource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/api-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/app-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure App Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/application-gateway/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Application Gateway
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/application-insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Application Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/automation-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Automation account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/blob-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Blob Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/redis-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Cache for Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/redis-enterprise-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Cache for Redis Enterprise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/cdn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Content Delivery Network (CDN)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/container-instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Container Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/container-registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Container Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/cosmos-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Cosmos DB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/maria-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Database for MariaDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/postgresql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Database for PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../providers/mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-factory/" class="md-nav__link">
+      <a href="../providers/data-factory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-share/" class="md-nav__link">
+      <a href="../providers/data-share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../event-hubs/" class="md-nav__link">
+      <a href="../providers/event-hubs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../express-route-circuit/" class="md-nav__link">
+      <a href="../providers/express-route-circuit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1337,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-storage/" class="md-nav__link">
+      <a href="../providers/file-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../front-door/" class="md-nav__link">
+      <a href="../providers/front-door/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function-app/" class="md-nav__link">
+      <a href="../providers/function-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub-device-provisioning-service/" class="md-nav__link">
+      <a href="../providers/iot-hub-device-provisioning-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub/" class="md-nav__link">
+      <a href="../providers/iot-hub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../key-vault/" class="md-nav__link">
+      <a href="../providers/key-vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../providers/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-explorer-clusters/" class="md-nav__link">
+      <a href="../providers/data-explorer-clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../load-balancer/" class="md-nav__link">
+      <a href="../providers/load-balancer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../log-analytics/" class="md-nav__link">
+      <a href="../providers/log-analytics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1547,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic-apps/" class="md-nav__link">
+      <a href="../providers/logic-apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1568,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitor-autoscale/" class="md-nav__link">
+      <a href="../providers/monitor-autoscale/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1589,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nat-gateway/" class="md-nav__link">
+      <a href="../providers/nat-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1610,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-gateway/" class="md-nav__link">
+      <a href="../providers/network-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-interface/" class="md-nav__link">
+      <a href="../providers/network-interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1652,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../powerbi-dedicated/" class="md-nav__link">
+      <a href="../providers/powerbi-dedicated/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1673,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../public-ip-address/" class="md-nav__link">
+      <a href="../providers/public-ip-address/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1694,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../service-bus-namespace/" class="md-nav__link">
+      <a href="../providers/service-bus-namespace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1715,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-database/" class="md-nav__link">
+      <a href="../providers/sql-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1736,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-elastic-pool/" class="md-nav__link">
+      <a href="../providers/sql-elastic-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../providers/sql-managed-instance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1778,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-server/" class="md-nav__link">
+      <a href="../providers/sql-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1799,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-account/" class="md-nav__link">
+      <a href="../providers/storage-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1820,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-queue/" class="md-nav__link">
+      <a href="../providers/storage-queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1841,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-apache-spark-pool/" class="md-nav__link">
+      <a href="../providers/synapse-apache-spark-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1862,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-sql-pool/" class="md-nav__link">
+      <a href="../providers/synapse-sql-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1883,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-workspace/" class="md-nav__link">
+      <a href="../providers/synapse-workspace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1904,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic-manager/" class="md-nav__link">
+      <a href="../providers/traffic-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine-scale-set/" class="md-nav__link">
+      <a href="../providers/virtual-machine-scale-set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1946,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine/" class="md-nav__link">
+      <a href="../providers/virtual-machine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1967,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-network/" class="md-nav__link">
+      <a href="../providers/virtual-network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1988,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web-app/" class="md-nav__link">
+      <a href="../providers/web-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,10 +2054,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -2039,22 +2070,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2065,7 +2095,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Resource Discovery
@@ -2079,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resource-discovery/overview/" class="md-nav__link">
+      <a href="../../resource-discovery/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2100,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resource-discovery/declaring-resource-discovery-groups/" class="md-nav__link">
+      <a href="../../resource-discovery/declaring-resource-discovery-groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resource-discovery/runtime-configuration/" class="md-nav__link">
+      <a href="../../resource-discovery/runtime-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2139,10 +2169,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2246,21 +2274,20 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2271,7 +2298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Supported Providers
@@ -2285,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-management/" class="md-nav__link">
+      <a href="../providers/api-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-plan/" class="md-nav__link">
+      <a href="../providers/app-plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2327,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-gateway/" class="md-nav__link">
+      <a href="../providers/application-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2348,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application-insights/" class="md-nav__link">
+      <a href="../providers/application-insights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2369,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation-account/" class="md-nav__link">
+      <a href="../providers/automation-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2390,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-cache/" class="md-nav__link">
+      <a href="../providers/redis-cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2411,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis-enterprise-cache/" class="md-nav__link">
+      <a href="../providers/redis-enterprise-cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2432,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cdn/" class="md-nav__link">
+      <a href="../providers/cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-instances/" class="md-nav__link">
+      <a href="../providers/container-instances/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2474,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-registry/" class="md-nav__link">
+      <a href="../providers/container-registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2495,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cosmos-db/" class="md-nav__link">
+      <a href="../providers/cosmos-db/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maria-db/" class="md-nav__link">
+      <a href="../providers/maria-db/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2534,30 +2561,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Azure Database for PostgreSQL
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../providers/postgresql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2566,44 +2573,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2616,7 +2585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mysql/" class="md-nav__link">
+      <a href="../providers/mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2637,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-factory/" class="md-nav__link">
+      <a href="../providers/data-factory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2658,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-share/" class="md-nav__link">
+      <a href="../providers/data-share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2679,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../event-hubs/" class="md-nav__link">
+      <a href="../providers/event-hubs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2700,7 +2669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../express-route-circuit/" class="md-nav__link">
+      <a href="../providers/express-route-circuit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2721,7 +2690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-storage/" class="md-nav__link">
+      <a href="../providers/file-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2742,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../front-door/" class="md-nav__link">
+      <a href="../providers/front-door/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2763,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function-app/" class="md-nav__link">
+      <a href="../providers/function-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2784,7 +2753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub-device-provisioning-service/" class="md-nav__link">
+      <a href="../providers/iot-hub-device-provisioning-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2805,7 +2774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iot-hub/" class="md-nav__link">
+      <a href="../providers/iot-hub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2826,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../key-vault/" class="md-nav__link">
+      <a href="../providers/key-vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2847,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../providers/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2868,7 +2837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-explorer-clusters/" class="md-nav__link">
+      <a href="../providers/data-explorer-clusters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2889,7 +2858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../load-balancer/" class="md-nav__link">
+      <a href="../providers/load-balancer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2910,7 +2879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic-apps/" class="md-nav__link">
+      <a href="../providers/logic-apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2931,7 +2900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitor-autoscale/" class="md-nav__link">
+      <a href="../providers/monitor-autoscale/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2952,7 +2921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nat-gateway/" class="md-nav__link">
+      <a href="../providers/nat-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2973,7 +2942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-gateway/" class="md-nav__link">
+      <a href="../providers/network-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2994,7 +2963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-interface/" class="md-nav__link">
+      <a href="../providers/network-interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3015,7 +2984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../powerbi-dedicated/" class="md-nav__link">
+      <a href="../providers/powerbi-dedicated/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3036,7 +3005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../public-ip-address/" class="md-nav__link">
+      <a href="../providers/public-ip-address/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3057,7 +3026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../service-bus-namespace/" class="md-nav__link">
+      <a href="../providers/service-bus-namespace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3078,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-database/" class="md-nav__link">
+      <a href="../providers/sql-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3099,7 +3068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-elastic-pool/" class="md-nav__link">
+      <a href="../providers/sql-elastic-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3120,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../providers/sql-managed-instance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3141,7 +3110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql-managed-instance/" class="md-nav__link">
+      <a href="../providers/sql-managed-instance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3162,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-account/" class="md-nav__link">
+      <a href="../providers/storage-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3183,7 +3152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-apache-spark-pool/" class="md-nav__link">
+      <a href="../providers/synapse-apache-spark-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3204,7 +3173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-sql-pool/" class="md-nav__link">
+      <a href="../providers/synapse-sql-pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3225,7 +3194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synapse-workspace/" class="md-nav__link">
+      <a href="../providers/synapse-workspace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3246,7 +3215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic-manager/" class="md-nav__link">
+      <a href="../providers/traffic-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3267,7 +3236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine-scale-set/" class="md-nav__link">
+      <a href="../providers/virtual-machine-scale-set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3288,7 +3257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-machine/" class="md-nav__link">
+      <a href="../providers/virtual-machine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3309,7 +3278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../virtual-network/" class="md-nav__link">
+      <a href="../providers/virtual-network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3330,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web-app/" class="md-nav__link">
+      <a href="../providers/web-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3395,7 +3364,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../deployment/" class="md-nav__link ">
+            <a href="../../deployment/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3457,7 +3426,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../deployment/scraper/" class="md-nav__link ">
+            <a href="../../deployment/scraper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3490,7 +3459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/scraper/docker/" class="md-nav__link">
+      <a href="../../deployment/scraper/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3511,7 +3480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/scraper/kubernetes/" class="md-nav__link">
+      <a href="../../deployment/scraper/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3569,7 +3538,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../deployment/resource-discovery/" class="md-nav__link ">
+            <a href="../../deployment/resource-discovery/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3602,7 +3571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/resource-discovery/docker/" class="md-nav__link">
+      <a href="../../deployment/resource-discovery/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3623,7 +3592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../deployment/resource-discovery/kubernetes/" class="md-nav__link">
+      <a href="../../deployment/resource-discovery/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3705,7 +3674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../security/azure-authentication/" class="md-nav__link">
+      <a href="../../security/azure-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3768,7 +3737,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../operations/" class="md-nav__link ">
+            <a href="../../operations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3801,7 +3770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/health/" class="md-nav__link">
+      <a href="../../operations/health/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3822,7 +3791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/discovery/" class="md-nav__link">
+      <a href="../../operations/discovery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3843,7 +3812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/performance/" class="md-nav__link">
+      <a href="../../operations/performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3864,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/system/" class="md-nav__link">
+      <a href="../../operations/system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3885,7 +3854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/integrations/" class="md-nav__link">
+      <a href="../../operations/integrations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3963,7 +3932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-nav__link">
+      <a href="../../walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3984,7 +3953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/use-promitor-with-managed-identity/" class="md-nav__link">
+      <a href="../../walkthroughs/use-promitor-with-managed-identity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4005,7 +3974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walkthroughs/migrate-from-1.x-to-2.x/" class="md-nav__link">
+      <a href="../../walkthroughs/migrate-from-1.x-to-2.x/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4033,7 +4002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4073,6 +4042,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-do-batch-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Do Batch Scraping?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitations
@@ -4082,9 +4060,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#cost-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Cost Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-are-batches-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Are Batches Built
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Configuration
     </span>
   </a>
   
@@ -4103,95 +4099,47 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <a href="../../../tags/#scraper" class="md-tag">Scraper</a>
-    
-  
-    
-    
-    
-      <a href="../../../tags/#resource-discovery" class="md-tag">Resource Discovery</a>
-    
-  
-    
-    
-    
-      <a href="../../../tags/#sql" class="md-tag">SQL</a>
-    
-  
-    
-    
-    
-      <a href="../../../tags/#data" class="md-tag">Data</a>
-    
-  
-    
-    
-    
-      <a href="../../../tags/#open-source" class="md-tag">Open Source</a>
-    
-  
-</nav>
-
 
   
   
 
 
-<h1 id="azure-database-for-postgresql">Azure Database for PostgreSQL<a class="headerlink" href="#azure-database-for-postgresql" title="Permanent link">&para;</a></h1>
-<p><img alt="Availability Badge" src="https://img.shields.io/badge/Available%20Starting-v1.0-green.svg" /><img alt="Resource Discovery Support Badge" src="https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg" /></p>
-<p>You can declare to scrape an Azure Database for PostgreSQL server via the <code>PostgreSql</code>
-resource type.</p>
-<p>When using declared resources, the following fields need to be provided:</p>
-<ul>
-<li><code>serverName</code> - The name of the PostgreSQL server</li>
-<li><code>type</code> - The type of PostgreSQL server. <em>(optional)</em></li>
-<li>Allowed values are <code>Simple</code> (default), <code>Flexible</code> &amp; <code>Hyperscale</code>.</li>
-</ul>
-<p>All supported metrics are documented in the official Azure Monitor documentation:</p>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlservers">Simple servers</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlflexibleservers">Flexible servers</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftdbforpostgresqlservergroupsv2">Hyperscale servers</a></li>
-</ul>
+<h1 id="using-batch-scraping-with-azure-monitor-api-experimental">Using Batch Scraping with Azure Monitor API (Experimental)<a class="headerlink" href="#using-batch-scraping-with-azure-monitor-api-experimental" title="Permanent link">&para;</a></h1>
+<p>Using batch scraping mode, Promitor will fetch resource metrics in batches by using the Azure Monitor data-plane API instead of Azure Resource Manager (ARM) to remove throttling.</p>
+<blockquote>
+<p>⚠️ <strong>The Azure Monitor data-plane API is not free, learn more <a href="https://azure.microsoft.com/pricing/details/monitor/">in the official pricing documentation</a></strong>.</p>
+</blockquote>
+<p>Promitor deployments are able to monitor a greater set of unique resources and metrics, in part because its requests 
+go through dedicated APIs that allow for much greater throughput. However, there are important factors to consider(like cost) when
+deploying Promitor this way. </p>
+<p><img alt="Promitor Scraper with resource discovery" src="../../media/concepts/scraper-batch-scraping-mode.png" /></p>
+<h2 id="why-do-batch-scraping">Why Do Batch Scraping?<a class="headerlink" href="#why-do-batch-scraping" title="Permanent link">&para;</a></h2>
+<p>The "traditional" scraping path goes through Azure Resource Management API, which enforces strict <a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/request-limits-and-throttling">rate limits</a> unsuitable for the throughput needed to monitor large number of resources or metrics. Dedicated APIs for batch scraping aren't subject to the same ARM rate limiting mechanis, and thus allow for much greater throughput. </p>
+<p>Additionally, there may be performance benefits associated with an overall lower number of networks requests. Though this benefit is only hypothetical for now.</p>
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Resource discovery will discover all types of servers and thus the used metrics should match all of the types.</li>
-<li>You can use tags to define which resources to include, if you need filtering capabilities.</li>
-</ul>
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<p>Here is an example configuration:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure_postgre_sql_cpu_percent</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">CPU</span><span class="nv"> </span><span class="s">percentage</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PostgreSql</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">scraping</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">*/2</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">?</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">azureMetricConfiguration</span><span class="p">:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">metricName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu_percent</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">aggregation</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Average</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00:01:00</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, required when no resource discovery is configured</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">serverName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Promitor-1</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">serverName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Promitor-2</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Flexible</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">resourceDiscoveryGroups</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-database-landscape</span>
-</code></pre></div>
+<p>At the present moment, batch scraping can only target resources within the same region. Follow this <a href="https://github.com/tomkerkhove/promitor/issues/2555">issue</a> for support across multiple regions</p>
+<p>Additionally, batch scraping does not work for LogAnalytics resources. Follow this <a href="https://github.com/tomkerkhove/promitor/issues/2556">issue</a> for 
+suppor status. </p>
+<h2 id="cost-considerations">Cost Considerations<a class="headerlink" href="#cost-considerations" title="Permanent link">&para;</a></h2>
+<p>Under batch scraping mode, all declared metrics will be fetched through requests to
+<a href="https://learn.microsoft.com/en-us/rest/api/monitor/metrics-batch/batch?view=rest-monitor-2023-10-01">Azure Monitor API</a>. Billing for the API is calculated based on the number of requests.  </p>
+<p>Query Costs for metrics and logs are laid out <a href="https://azure.microsoft.com/pricing/details/monitor/#pricing">here</a>, under <code>Platform and custom metric queries (preview)</code> section. </p>
+<p>To estimate amount of Azure Monitor API requests(queries) a Promitor deployment will make for a length of time <code>L</code>, one can use the formula </p>
+<div class="arithmatex">\[
+\small {\# of requests} = \text{number of resources} \times \text{number of metrics} \times \left(\frac{L}{\text{scrape interval * batch size}}\right)
+\]</div>
+<p>Consider an example deployment that monitors 10 metrics across the same set of 100 resources, with a scrape interval of 5 minutes and configured max batch size of 20. In a given day roughly
+100 * 10 * (1440/(5 * 20)) = 14400 requests will be made. The cost for that deployment can then be calculated using Azure Monitor's pricing chart</p>
+<h2 id="how-are-batches-built">How Are Batches Built<a class="headerlink" href="#how-are-batches-built" title="Permanent link">&para;</a></h2>
+<p>Batches are constructed using multiple constraints, such as the Azure Monitor metric within a batch must be the same. An important and configurable parameter is the max batch size. Azure Monitor currently(as of Oct 2024) imposes a max batch size of 50 per request, but users are free to impose an even lower limit. </p>
+<h2 id="runtime-configuration">Runtime Configuration<a class="headerlink" href="#runtime-configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="../runtime-configuration/">Runtime Configuration</a> page</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -4277,12 +4225,12 @@ resource type.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs.sticky", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.annotate", "content.tabs.link", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
