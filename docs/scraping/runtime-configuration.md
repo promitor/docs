@@ -176,7 +176,7 @@ metricSinks:
       transformation: None # Optional. Default: None.
 ```
 
-#### What happens when metrics are unavailable for multi-dimensional metrics?
+### What happens when metrics are unavailable for multi-dimensional metrics?
 
 Promitor allows you to use one or more dimension(s) in metrics so that it will report all values.
 
@@ -353,7 +353,10 @@ The behavior of this can be configured to fit your needs:
 - `azureMonitor.integration.history.startingFromInHours` - Defines the amount of hours Promitor will use to define the starting point of the time window used for metric queries.
   - As an example, the default is 12 hours which means Promitor will fetch all metrics between now - 12 hours and now to find a matching metric. Typically this window can be very small but Promitor provides a margin by default to prevent problems for long aggregation periods. (Default: `12`)
 - `azureMonitor.integration.useAzureMonitorSdk` - In the newest release of Promitor, integration with Azure Monitor will use [Azure.Monitor](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/monitor/Azure.Monitor.Query) package under Azure SDK for .NET by default. This migration was needed because the [original SDK](https://github.com/Azure/azure-libraries-for-net) has been deprecated since 2022. 
-
+- `azureMonitor.integration.metricsBatching.enabled` - whether to scrape metrics batch scraping mode (Default: `False`) 
+- `azureMonitor.integration.metricsBatching.azureRegion` - Azure region of batch scrape resource targets. This is required for batch scraping to work
+- `azureMonitor.integration.metricsBatching.maxBatchSize` - Max number of resources allowed in a batch. Azure's limit is 50 but user can set it lower(Default: `50`) 
+  
 Example:
 
 ```yaml
@@ -362,6 +365,10 @@ azureMonitor:
     informationLevel: Basic # Optional. Default: Basic
     isEnabled: false # Optional. Default: false
   integration:
+    metricsBatching:
+      enabled: true 
+      maxBatchSize: 25 
+      azureRegion: eastus
     useAzureMonitorSdk: true # Optional. Default: true
     history:
       startingFromInHours: 24 # Optional. Default: 12
