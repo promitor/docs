@@ -167,6 +167,7 @@ nav:
       - Azure Event Hubs: scraping/providers/event-hubs.md
       - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
       - Azure File Storage: scraping/providers/file-storage.md
+      - Azure Firewall: scraping/providers/azure-firewall.md
       - Azure Front Door: scraping/providers/front-door.md
       - Azure Function App: scraping/providers/function-app.md
       - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
@@ -222,6 +223,7 @@ nav:
       - Azure Event Hubs: scraping/providers/event-hubs.md
       - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
       - Azure File Storage: scraping/providers/file-storage.md
+      - Azure Firewall: scraping/providers/azure-firewall.md
       - Azure Front Door: scraping/providers/front-door.md
       - Azure Function App: scraping/providers/function-app.md
       - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
