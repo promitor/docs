@@ -17,7 +17,7 @@ Here is a complete example of the runtime YAML:
 
 ```yaml
 authentication:
-  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity, SdkDefault.
   mode: ServicePrincipal # Optional. Default: ServicePrincipal.
   identityId: xxxx-xxxx-xxxx # Optional.
 server:
@@ -49,7 +49,7 @@ Example:
 
 ```yaml
 authentication:
-  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity, SdkDefault.
   mode: ServicePrincipal # Optional. Default: ServicePrincipal.
   identityId: xxxx-xxxx-xxxx # Optional.
 ```

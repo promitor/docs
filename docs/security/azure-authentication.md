@@ -37,7 +37,7 @@ The app key can also be read from a file by specifying the file's location:
 
 ```yaml
 authentication:
-  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity, SdkDefault.
   mode: ServicePrincipal # Optional. Default: ServicePrincipal.
   identityid: # [app id]
   secretFilePath: # [the name of the folder containing the secret file]
