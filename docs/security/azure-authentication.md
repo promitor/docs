@@ -53,6 +53,7 @@ When using Managed Identity, you can use one of the following scenarios:
 - **System-assigned Managed Identity** - Use the identity of the Azure resource on which it runs and let Azure handle
  the authentication.
 - **User-assigned Managed Identity** - Use a pre-created Azure AD identity but let Azure handle the authentication for you
+- **SdkDefault** - Use credentials from both Azure hosting environments and local development, letting [Azure manage authentication seamlessly](https://learn.microsoft.com/en-us/dotnet/azure/sdk/authentication/credential-chains?tabs=dac#defaultazurecredential-overview). 
 
 > ⚠ In order to use managed identity, your Kubernetes cluster must be hosted on Microsoft Azure to leverage this.
 
