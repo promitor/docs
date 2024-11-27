@@ -17,7 +17,7 @@ Here is a complete example of the runtime YAML:
 
 ```yaml
 authentication:
-  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity, SdkDefault.
   mode: ServicePrincipal # Optional. Default: ServicePrincipal.
   identityId: xxxx-xxxx-xxxx # Optional.
 server:
@@ -70,7 +70,7 @@ resourceDiscovery:
 The Promitor runtime allows you to use various ways to authenticate to Azure:
 
 - `authentication.mode` - Defines authentication mode to use. Options are `ServicePrincipal`,
- `SystemAssignedManagedIdentity`, `UserAssignedManagedIdentity`. _(defaults to service principle)_
+ `SystemAssignedManagedIdentity`, `UserAssignedManagedIdentity`, `SdkDefault`. _(defaults to service principle)_
 - `authentication.identityId` - Id of the Azure AD entity to authenticate with when integrating with Microsoft Azure.
  Required when using `ServicePrincipal`.
 
@@ -78,7 +78,7 @@ Example:
 
 ```yaml
 authentication:
-  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity.
+  # Options are ServicePrincipal, SystemAssignedManagedIdentity, UserAssignedManagedIdentity, SdkDefault.
   mode: ServicePrincipal # Optional. Default: ServicePrincipal.
   identityId: xxxx-xxxx-xxxx # Optional.
 ```
