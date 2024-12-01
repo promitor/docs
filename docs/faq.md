@@ -21,7 +21,7 @@ our ['Metrics Declaration' page](scraping/overview.md#metrics).
 
 However, you can only use it with metrics in Azure Monitor that support this,
 for a complete overview we recommend reading the
-[official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported).
+[official documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported).
 
 ## How does Promitor handle deleted resources?
 

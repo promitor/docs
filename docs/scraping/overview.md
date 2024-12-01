@@ -123,7 +123,7 @@ Additionally, the following fields are optional:
    be used to scrape a multi-dimensional metric in Azure Monitor.
   - ☝ *Promitor simply acts as a proxy and will not validate if the given dimensions are supported or
      not, we recommend verifying that they are in the
-     [official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)*
+     [official documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)*
 - `labels` - Defines a set of custom labels to include for a given metric.
 - `scraping.schedule` - A scraping schedule for the individual metric; overrides
   the the one specified in `metricDefaults`

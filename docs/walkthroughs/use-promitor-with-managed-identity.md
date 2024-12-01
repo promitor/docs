@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This walkthrough will allow you to deploy Promitor that uses [Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+This walkthrough will allow you to deploy Promitor that uses [Managed Identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
  on an Azure Kubernetes Service cluster to scrape Azure Service Bus metrics, using no-password authentication.
 
 In order to achieve this, we will use the [AAD Pod Identity project](https://github.com/Azure/aad-pod-identity) to
  manage the identities and authentication.
 
-> ⚠ This only works with Azure Kubernetes Service - Learn more about [Managed Identity in Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/use-managed-identity)
+> ⚠ This only works with Azure Kubernetes Service - Learn more about [Managed Identity in Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/aks/use-managed-identity)
 > in the official Microsoft documentation.
 
 ## Table of Contents
@@ -38,13 +38,13 @@ In order to achieve this, we will use the [AAD Pod Identity project](https://git
 
 ## Prerequisites
 
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest),
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest),
 to be able to deploy resources through the command line.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), the Kubernetes
   command-line tool. It can also be installed via the Azure CLI with `az aks install-cli`.
 - [Helm](https://helm.sh/docs/using_helm/#installing-the-helm-client), a Kubernetes
   deployment manager.
-- [WSL](https://docs.microsoft.com/en-us/windows/wsl/), if you are using a Windows machine to deploy your whole solution.
+- [WSL](https://learn.microsoft.com/en-us/windows/wsl/), if you are using a Windows machine to deploy your whole solution.
 
 ## Deploying the Azure Infrastructure
 
