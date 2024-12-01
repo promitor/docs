@@ -14,14 +14,14 @@ Here is an overview of our Promitor agents and their integrations:
 
 Each agent needs an Azure AD identity to authenticate with to Microsoft Azure.
 
-In order to achieve this, you'll need to [create an Azure AD Application](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#create-an-azure-active-directory-application),
+In order to achieve this, you'll need to [create an Azure AD Application](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#create-an-azure-active-directory-application),
 
 ## Supported Authentication Mechanisms
 
 Our agents provide the following authentication mechanisms:
 
 - **Service principle** - Use application id & secret of the Azure AD entity that has been pre-created to authenticate with
-- **Managed Identity** - Use zero-secret authentication by letting Microsoft handle the authentication for you ([docs](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview))
+- **Managed Identity** - Use zero-secret authentication by letting Microsoft handle the authentication for you ([docs](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview))
 
 For details how to configure the authentication, we recommend reading our agent configuration documentation.
 
@@ -63,7 +63,7 @@ When using Managed Identity, you can use one of the following scenarios:
 Identities that are used to integrate with Azure Monitor need to have `Monitoring Reader` permission on the
 subscription, resource group and/or resources that will be queried.
 
-More information can be found [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-roles-permissions-security).
+More information can be found [here](https://learn.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-roles-permissions-security).
 
 ### Required permissions for Azure Resource Graph
 
@@ -73,6 +73,6 @@ subscription, resource group and/or resources that will be queried.
 > ⚠ If you are re-using this identity to integrate with Azure Monitor, make sure to grant the required permissions
  to reflect that as well.
 
-More information can be found [here](https://docs.microsoft.com/en-us/azure/governance/resource-graph/overview#permissions-in-azure-resource-graph).
+More information can be found [here](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview#permissions-in-azure-resource-graph).
 
 [&larr; back](../index.md)
