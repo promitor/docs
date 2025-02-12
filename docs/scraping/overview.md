@@ -75,7 +75,17 @@ values are `v1`. *(Required)*
 - `azureMetadata.subscriptionId` - The id of the default subscription to query.
 - `azureMetadata.resourceGroupName` - The name of the default resource group to query.
 - `azureMetadata.cloud` - The name of the Azure cloud to use. Options are `Global`
- (default), `China`, `UsGov` & `Germany`.
+ (default), `China`, `UsGov`, `Germany`, & `Custom`.
+- `azureMetadata.endpoints` - Required when `azureMetadata.cloud` is set to `Custom`. Defines the custom endpoints to use:
+    - `authenticationEndpoint` - The custom authentication endpoint.
+    - `managementEndpoint` - The custom service management endpoint.
+    - `resourceManagerEndpoint` - The custom Azure ARM resource management endpoint.
+    - `graphEndpoint` - The custom Active Directory graph endpoint.
+    - `storageEndpointSuffix` - The custom storage service url suffix.
+    - `keyVaultSuffix` - The custom Key Vault service url suffix.
+    - `metricsQueryAudience` - The custom audiences available for metrics query.
+    - `metricsClientAudience` - The custom audiences available for metrics client.
+    - `logAnalyticsEndpoint` - The custom log analytics endpoint. *(Required only if Azure Log Analytics resource is configured for scraping)*
 
 ### Metric Defaults
 

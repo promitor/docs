@@ -54,11 +54,11 @@ We have it on [our backlog](https://github.com/tomkerkhove/promitor/issues/761) 
 
 ## What Azure clouds are supported?
 
-We support `Global` (default), `China`, `UsGov` & `Germany` Azure clouds.
+We support `Global` (default), `China`, `UsGov`, `Germany` & `Custom` Azure clouds.
 
-This can be configured in the metric configuration under `azureMetadata`.
+This can be configured in the metric configuration under `azureMetadata` and in resource discovery configuration under `azureLandscape`
 
-For more information see our ['Metric Configuration' page](scraping/overview.md).
+For more information see our ['Metric Configuration' page](scraping/overview.md) and [`Resource Discovery` page](resource-discovery/declaring-resource-discovery-groups.md).
 
 ## Why does Azure Blob & File Storage only report account-level information?
 
