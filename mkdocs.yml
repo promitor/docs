@@ -68,8 +68,7 @@ plugins:
   - mike:
       version_selector: true   # set to false to leave out the version selector
   - search
-  - tags:
-      tags_file: tags.md
+  - tags
   - htmlproofer:
       enabled: True
       raise_error: True
