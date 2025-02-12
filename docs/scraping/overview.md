@@ -140,9 +140,9 @@ Additionally, the following fields are optional:
 
 ### Example
 
-Here is an example of how you can scrape two Azure Service Bus queues  in different
+Here is an example of how you can scrape two Azure Service Bus queues in different
 resource groups, one in the `promitor` resource group and one on the `promitor-dev`
-resource group:
+resource group. This example also shows custom cloud endpoints configuration:
 
 ```yaml
 version: v1
@@ -150,7 +150,16 @@ azureMetadata:
   tenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   subscriptionId: yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
   resourceGroupName: promitor
-  cloud: China
+  cloud: Cloud
+  endpoints:
+    authenticationEndpoint: https://custom.auth.endpoint.com
+    managementEndpoint: https://custom.svc.management.endpoint.com
+    resourceManagerEndpoint: https://custom.resource.management.endpoint.com
+    graphEndpoint: https://custom.graph.endpoint.com
+    storageEndpointSuffix: custom.windows.net
+    keyVaultSuffix: custom.vault.azure.net
+    metricsQueryAudience: https://custom.metric.query.endpoint.com
+    metricsClientAudience: https://custom.metric.client.endpoint.com
 metricDefaults:
   aggregation:
     interval: 00:05:00
