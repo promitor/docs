@@ -150,7 +150,7 @@ azureMetadata:
   tenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   subscriptionId: yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
   resourceGroupName: promitor
-  cloud: Cloud
+  cloud: Custom
   endpoints:
     authenticationEndpoint: https://custom.auth.endpoint.com
     managementEndpoint: https://custom.svc.management.endpoint.com
