@@ -15,7 +15,7 @@ As part of the resource discovery group declaration, you can choose to filter re
  with which the resources have to be annotated.
 - **Regions** - Defines a list of Azure regions in which the regions the resources are located.
 
-Here is an example of a full declaration:
+Here is an example of a full declaration using a custom cloud:
 
 ```yaml
 version: v1
@@ -25,7 +25,14 @@ azureLandscape:
   - SUBSCRIPTON-ID-ABC
   - SUBSCRIPTON-ID-DEF
   - SUBSCRIPTON-ID-GHI
-  cloud: China
+  cloud: Custom
+  endpoints:
+    authenticationEndpoint: https://custom-authentication-endpoint
+    managementEndpoint: https://custom-management-endpoint
+    resourceManagerEndpoint: https://custom-resource-manager-endpoint
+    graphEndpoint: https://custom-graph-endpoint
+    storageEndpointSuffix: custom-storage-endpoint-suffix
+    keyVaultSuffix: custom-key-vault-suffix
 resourceDiscoveryGroups:
 - name: container-registry-landscape
   type: ContainerRegistry
