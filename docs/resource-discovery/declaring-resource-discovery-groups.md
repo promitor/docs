@@ -15,7 +15,7 @@ As part of the resource discovery group declaration, you can choose to filter re
  with which the resources have to be annotated.
 - **Regions** - Defines a list of Azure regions in which the regions the resources are located.
 
-Here is an example of a full declaration:
+Here is an example of a full declaration using a custom cloud:
 
 ```yaml
 version: v1
@@ -25,7 +25,14 @@ azureLandscape:
   - SUBSCRIPTON-ID-ABC
   - SUBSCRIPTON-ID-DEF
   - SUBSCRIPTON-ID-GHI
-  cloud: China
+  cloud: Custom
+  endpoints:
+    authenticationEndpoint: https://custom-authentication-endpoint
+    managementEndpoint: https://custom-management-endpoint
+    resourceManagerEndpoint: https://custom-resource-manager-endpoint
+    graphEndpoint: https://custom-graph-endpoint
+    storageEndpointSuffix: custom-storage-endpoint-suffix
+    keyVaultSuffix: custom-key-vault-suffix
 resourceDiscoveryGroups:
 - name: container-registry-landscape
   type: ContainerRegistry
@@ -58,7 +65,15 @@ values are `v1`. *(Required)*
 
 - `azureLandscape.tenantId` - The id of the Azure tenant that will be queried. *(Required)*
 - `azureLandscape.subscriptions` - List of Azure subscriptions in the Azure tenant to discover resources in. *(Required)*
-- `azureLandscape.cloud` - The name of the Azure cloud to use. Options are `Global` (default), `China`, `UsGov` & `Germany`.
+- `azureLandscape.cloud` - The name of the Azure cloud to use. Options are `Global`
+ (default), `China`, `UsGov`, `Germany`, & `Custom`.
+- `azureLandscape.endpoints` - Required when `azureLandscape.cloud` is set to `Custom`. Defines the custom endpoints to use:
+    - `authenticationEndpoint` - The custom authentication endpoint.
+    - `managementEndpoint` - The custom service management endpoint.
+    - `resourceManagerEndpoint` - The custom Azure ARM resource management endpoint.
+    - `graphEndpoint` - The custom Active Directory graph endpoint.
+    - `storageEndpointSuffix` - The custom storage service url suffix.
+    - `keyVaultSuffix` - The custom Key Vault service url suffix.
 
 ### Resource Discovery Groups
 

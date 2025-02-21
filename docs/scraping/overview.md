@@ -75,7 +75,17 @@ values are `v1`. *(Required)*
 - `azureMetadata.subscriptionId` - The id of the default subscription to query.
 - `azureMetadata.resourceGroupName` - The name of the default resource group to query.
 - `azureMetadata.cloud` - The name of the Azure cloud to use. Options are `Global`
- (default), `China`, `UsGov` & `Germany`.
+ (default), `China`, `UsGov`, `Germany`, & `Custom`.
+- `azureMetadata.endpoints` - Required when `azureMetadata.cloud` is set to `Custom`. Defines the custom endpoints to use:
+    - `authenticationEndpoint` - The custom authentication endpoint.
+    - `managementEndpoint` - The custom service management endpoint.
+    - `resourceManagerEndpoint` - The custom Azure ARM resource management endpoint.
+    - `graphEndpoint` - The custom Active Directory graph endpoint.
+    - `storageEndpointSuffix` - The custom storage service url suffix.
+    - `keyVaultSuffix` - The custom Key Vault service url suffix.
+    - `metricsQueryAudience` - The custom audiences available for metrics query.
+    - `metricsClientAudience` - The custom audiences available for metrics client.
+    - `logAnalyticsEndpoint` - The custom log analytics endpoint. *(Required only if Azure Log Analytics resource is configured for scraping)*
 
 ### Metric Defaults
 
@@ -130,9 +140,9 @@ Additionally, the following fields are optional:
 
 ### Example
 
-Here is an example of how you can scrape two Azure Service Bus queues  in different
+Here is an example of how you can scrape two Azure Service Bus queues in different
 resource groups, one in the `promitor` resource group and one on the `promitor-dev`
-resource group:
+resource group. This example also shows custom cloud endpoints configuration:
 
 ```yaml
 version: v1
@@ -140,7 +150,16 @@ azureMetadata:
   tenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   subscriptionId: yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
   resourceGroupName: promitor
-  cloud: China
+  cloud: Custom
+  endpoints:
+    authenticationEndpoint: https://custom.auth.endpoint.com
+    managementEndpoint: https://custom.svc.management.endpoint.com
+    resourceManagerEndpoint: https://custom.resource.management.endpoint.com
+    graphEndpoint: https://custom.graph.endpoint.com
+    storageEndpointSuffix: custom.windows.net
+    keyVaultSuffix: custom.vault.azure.net
+    metricsQueryAudience: https://custom.metric.query.endpoint.com
+    metricsClientAudience: https://custom.metric.client.endpoint.com
 metricDefaults:
   aggregation:
     interval: 00:05:00

@@ -68,8 +68,7 @@ plugins:
   - mike:
       version_selector: true   # set to false to leave out the version selector
   - search
-  - tags:
-      tags_file: tags.md
+  - tags
   - htmlproofer:
       enabled: True
       raise_error: True
@@ -78,6 +77,7 @@ plugins:
         404: ['https://www.nuget.org/packages/NetEscapades.Configuration.Yaml'] # No idea why this is failing, but it is.
         405: ['*']
         520: ['*']
+        403: ['https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/']
 
 # Customization
 extra:
