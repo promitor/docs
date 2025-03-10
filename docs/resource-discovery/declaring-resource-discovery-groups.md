@@ -11,7 +11,7 @@ As part of the resource discovery group declaration, you can choose to filter re
 
 - **Subscription** - Defines a subset of subscriptions defined in the Azure landscape
 - **Resource Group** - Defines a list of resource groups which contains the resources.
-- **Tags** - Defines a list of [Azure tags](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
+- **Tags** - Defines a list of [Azure tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
  with which the resources have to be annotated.
 - **Regions** - Defines a list of Azure regions in which the regions the resources are located.
 
@@ -90,6 +90,6 @@ As of now, we only allow to define criteria that resources have to meet before t
 
 - `subscriptions` - A list of subscription(s) in which the resource is allowed to be located.
 - `resourceGroups` - A list of resource group(s) in which the resource is allowed to be located.
-- `tags` - A list of [Azure tags](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
+- `tags` - A list of [Azure tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
  and the expected values (exact or regular expression) with which the resources have to be annotated. (Uses `or`)
 - `regions` - A list of Azure region(s) in which the resource is allowed to be located.

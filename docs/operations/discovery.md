@@ -17,7 +17,7 @@ It provides the following tags with more information:
 - `tenant_id` - Id of the Azure tenant
 - `subscription_name` - Name of the Azure subscription
 - `subscription_id` - Id of the Azure subscription
-- `state` - Indication of the state of the subscription ([docs](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/subscription-states))
+- `state` - Indication of the state of the subscription ([docs](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/subscription-states))
 - `spending_limit` - Indication whether or not there is a spending limit
 - `quota_id` - Id of the Azure subscription used to manage quotas
 - `authorization` - Type of authorization that is being used

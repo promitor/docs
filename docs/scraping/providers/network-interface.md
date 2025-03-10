@@ -9,7 +9,7 @@ tags:
 
 ![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.0-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
-You can declare to scrape an [Azure Network Interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface)
+You can declare to scrape an [Azure Network Interface](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface)
 via the `NetworkInterface` resource type.
 
 When using declared resources, the following fields need to be provided:
