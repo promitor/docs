@@ -39,7 +39,7 @@ we're monitoring.
 
 ## Prerequisites
 
-- The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+- The [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), the Kubernetes
   command-line tool. It can also be installed via the Azure CLI with `az aks install-cli`.
 - [Helm](https://helm.sh/docs/using_helm/#installing-the-helm-client), a Kubernetes

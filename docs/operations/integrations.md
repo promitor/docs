@@ -31,7 +31,7 @@ promitor_ratelimit_arm_throttled{tenant_id="e0372f7f-a362-47fb-9631-74a5c4ba8bbf
 promitor_ratelimit_arm_throttled{tenant_id="e0372f7f-a362-47fb-9631-74a5c4ba8bbf",subscription_id="0f9d7fea-99e8-4768-8672-06a28514f77e",app_id="ceb249a3-44ce-4c90-8863-6776336f5b7e"} 0 1629719532626
 ```
 
-You can read more about the Azure Resource Manager limitations on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-request-limits).
+You can read more about the Azure Resource Manager limitations on [docs.microsoft.com](https://learn.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-request-limits).
 
 ## Azure Resource Graph
 
@@ -64,7 +64,7 @@ promitor_ratelimit_resource_graph_remaining{tenant_id="e0372f7f-a362-47fb-9631-7
 promitor_ratelimit_resource_graph_throttled{tenant_id="e0372f7f-a362-47fb-9631-74a5c4ba8bbf",cloud="Global",auth_mode="ServicePrincipal",app_id="67882a00-21d3-4ee7-b32a-430ea0768cd3"} 0 1629719863738
 ```
 
-You can read more about the Azure Resource Graph throttling on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/governance/resource-graph/overview#throttling).
+You can read more about the Azure Resource Graph throttling on [docs.microsoft.com](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview#throttling).
 
 ## Azure Monitor
 

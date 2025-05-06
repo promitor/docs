@@ -21,7 +21,7 @@ When using declared resources, the following fields need to be provided:
 All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftcacheredis).
 
 You can find more documentation on each metric in the Azure Cache for Redis
-[monitoring documentation](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-how-to-monitor#available-metrics-and-reporting-intervals).
+[monitoring documentation](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-how-to-monitor#available-metrics-and-reporting-intervals).
 
 ## Example
 

@@ -21,7 +21,7 @@ Optional fields :
 - `resourceGroupName` - the resource group for this resource. It overrides the one defined in `azureMetadata`.
 - `subscriptionId` - the subscription ID for this resource. It overrides the one defined in `azureMetadata`.
 - `filter` - The filter to use to have fine-grained metrics. Example: `EntityName eq 'orders'`.
-   See [Azure Monitor REST API Filter Syntax](https://docs.microsoft.com/en-us/rest/api/monitor/filter-syntax).
+   See [Azure Monitor REST API Filter Syntax](https://learn.microsoft.com/en-us/rest/api/monitor/filter-syntax).
 
 ## Example
 
