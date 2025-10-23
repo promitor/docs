@@ -16,7 +16,7 @@ When using declared resources, the following fields need to be provided:
 
 - `zoneName` - The name of the DNS zone
 
-All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported#microsoftnetworkdnszones).
+All supported metrics are documented in the official [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-network-dnszones-metrics).
 
 ## Example
 
