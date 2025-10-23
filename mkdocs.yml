@@ -21,7 +21,6 @@ theme:
   # Static files
   static_templates:
   - 404.html
-
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
@@ -73,7 +72,13 @@ plugins:
     raise_error: True
     validate_external_urls: True
     raise_error_excludes:
-      404: [ 'https://www.nuget.org/packages/NetEscapades.Configuration.Yaml' ] # No idea why this is failing, but it is.
+      404:
+        [
+          'https://www.nuget.org/packages/NetEscapades.Configuration.Yaml', # No idea why this is failing, but it is.
+          'https://github.com/apps/yamburger', # Archived August 2025
+          'https://github.com/apps/triage-new-issues', # No longer available
+          'https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/monitor/Azure.Monitor.Query' # Broken Azure SDK link
+        ]
       405: [ '*' ]
       520: [ '*' ]
       403: [ 'https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/' ]
