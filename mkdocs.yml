@@ -3,8 +3,7 @@ site_name: Promitor - Documentation
 site_url: https://promitor.io
 site_author: Tom Kerkhove
 site_description: >-
-  Bringing Azure Monitor metrics
-  where you need them
+  Bringing Azure Monitor metrics where you need them
 
 # Repository
 repo_name: promitor/docs
@@ -21,7 +20,7 @@ theme:
 
   # Static files
   static_templates:
-    - 404.html
+  - 404.html
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -30,32 +29,32 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   features:
-    - navigation.expand
-    - navigation.sections
-    - navigation.tabs.sticky
-    - navigation.tabs
-    - navigation.indexes
-    - navigation.top
-    - navigation.tracking
-    - toc.follow
-    - content.code.annotate
-    - content.tabs.link
-    - search.highlight
-    - search.share
-    - search.suggest
+  - navigation.expand
+  - navigation.sections
+  - navigation.tabs.sticky
+  - navigation.tabs
+  - navigation.indexes
+  - navigation.top
+  - navigation.tracking
+  - toc.follow
+  - content.code.annotate
+  - content.tabs.link
+  - search.highlight
+  - search.share
+  - search.suggest
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/lightbulb
-        name: Switch to light mode
+  - scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  - scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -65,19 +64,19 @@ theme:
 
 # Plugins
 plugins:
-  - mike:
-      version_selector: true   # set to false to leave out the version selector
-  - search
-  - tags
-  - htmlproofer:
-      enabled: True
-      raise_error: True
-      validate_external_urls: True
-      raise_error_excludes:
-        404: ['https://www.nuget.org/packages/NetEscapades.Configuration.Yaml'] # No idea why this is failing, but it is.
-        405: ['*']
-        520: ['*']
-        403: ['https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/']
+- mike:
+    version_selector: true # set to false to leave out the version selector
+- search
+- tags
+- htmlproofer:
+    enabled: True
+    raise_error: True
+    validate_external_urls: True
+    raise_error_excludes:
+      404: [ 'https://www.nuget.org/packages/NetEscapades.Configuration.Yaml' ] # No idea why this is failing, but it is.
+      405: [ '*' ]
+      520: [ '*' ]
+      403: [ 'https://www.mend.io/free-developer-tools/blog/overcoming-dockers-mutable-image-tags/' ]
 
 # Customization
 extra:
@@ -85,18 +84,18 @@ extra:
     provider: google
     property: G-Q2ZZ6S7ZPW
   social:
-    - icon: fontawesome/brands/docker
-      link: https://github.com/tomkerkhove?tab=packages&repo_name=promitor
-      name: Container Registry
-    - icon: fontawesome/brands/github
-      link: https://github.com/promitor/docs
-      name: GitHub
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/promitorio
-      name: Follow us on Twitter
-    - icon: fontawesome/solid/heart
-      link: https://github.com/sponsors/promitor
-      name: Sponsor Promitor
+  - icon: fontawesome/brands/docker
+    link: https://github.com/tomkerkhove?tab=packages&repo_name=promitor
+    name: Container Registry
+  - icon: fontawesome/brands/github
+    link: https://github.com/promitor/docs
+    name: GitHub
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/promitorio
+    name: Follow us on Twitter
+  - icon: fontawesome/solid/heart
+    link: https://github.com/sponsors/promitor
+    name: Sponsor Promitor
   # Remove generated link to theme as we are sponsoring
   # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#generator-notice
   generator: false
@@ -109,177 +108,179 @@ extra_css:
 - stylesheets/extra.css
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+- javascripts/mathjax.js
+- https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - abbr
-  - attr_list # enables HTML elements
-  - def_list
-  - footnotes
-  - meta
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
+- admonition
+- abbr
+- attr_list # enables HTML elements
+- def_list
+- footnotes
+- meta
+- md_in_html
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
+- toc:
+    permalink: true
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
 
 # Page tree
 nav:
-  - Home:
-    - Overview: index.md
-    - Thank You: thank-you.md
-  - How It Works: how-it-works.md
-  - Scraping:
-    - Overview: scraping/overview.md
-    - Metric Labelling: scraping/labels.md
-    - Runtime Configuration: scraping/runtime-configuration.md
-    - Use Batch Scraping (Experimental): scraping/batch-scraping.md
-    - Available Providers:
-      - Generic: scraping/providers/generic-azure-resource.md
-      - Azure API Management: scraping/providers/api-management.md
-      - Azure App Plan: scraping/providers/app-plan.md
-      - Azure Application Gateway: scraping/providers/application-gateway.md
-      - Azure Application Insights: scraping/providers/application-insights.md
-      - Azure Automation account: scraping/providers/automation-account.md
-      - Azure Blob Storage: scraping/providers/blob-storage.md
-      - Azure Cache for Redis: scraping/providers/redis-cache.md
-      - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
-      - Azure Cognitive Services Account: scraping/providers/cognitive-services-account.md
-      - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
-      - Azure Container Instances: scraping/providers/container-instances.md
-      - Azure Container Registry: scraping/providers/container-registry.md
-      - Azure Cosmos DB: scraping/providers/cosmos-db.md
-      - Azure Database for MariaDB: scraping/providers/maria-db.md
-      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
-      - Azure Database for MySQL: scraping/providers/mysql.md
-      - Azure Data Factory: scraping/providers/data-factory.md
-      - Azure Data Share: scraping/providers/data-share.md
-      - Azure Event Hubs: scraping/providers/event-hubs.md
-      - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
-      - Azure File Storage: scraping/providers/file-storage.md
-      - Azure Firewall: scraping/providers/azure-firewall.md
-      - Azure Front Door: scraping/providers/front-door.md
-      - Azure Function App: scraping/providers/function-app.md
-      - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
-      - Azure IoT Hub: scraping/providers/iot-hub.md
-      - Azure Key Vault: scraping/providers/key-vault.md
-      - Azure Kubernetes Service: scraping/providers/kubernetes.md
-      - Azure Data Explorer Cluster: scraping/providers/data-explorer-clusters.md
-      - Azure Load Balancer: scraping/providers/load-balancer.md
-      - Azure Log Analytics: scraping/providers/log-analytics.md
-      - Azure Logic Apps: scraping/providers/logic-apps.md
-      - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
-      - Azure Nat Gateways: scraping/providers/nat-gateway.md
-      - Azure Network Gateway: scraping/providers/network-gateway.md
-      - Azure Network Interface: scraping/providers/network-interface.md
-      - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
-      - Azure Public IP Address: scraping/providers/public-ip-address.md
-      - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
-      - Azure SQL Database: scraping/providers/sql-database.md
-      - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
-      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
-      - Azure SQL Server: scraping/providers/sql-server.md
-      - Azure Storage Account: scraping/providers/storage-account.md
-      - Azure Storage Queue: scraping/providers/storage-queue.md
-      - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
-      - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
-      - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
-      - Azure Traffic Manager: scraping/providers/traffic-manager.md
-      - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
-      - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
-      - Azure Virtual Network: scraping/providers/virtual-network.md
-      - Azure Web App: scraping/providers/web-app.md
+- Home:
+  - Overview: index.md
+  - Thank You: thank-you.md
+- How It Works: how-it-works.md
+- Scraping:
+  - Overview: scraping/overview.md
+  - Metric Labelling: scraping/labels.md
+  - Runtime Configuration: scraping/runtime-configuration.md
+  - Use Batch Scraping (Experimental): scraping/batch-scraping.md
+  - Available Providers:
+    - Generic: scraping/providers/generic-azure-resource.md
+    - Azure API Management: scraping/providers/api-management.md
+    - Azure App Plan: scraping/providers/app-plan.md
+    - Azure Application Gateway: scraping/providers/application-gateway.md
+    - Azure Application Insights: scraping/providers/application-insights.md
+    - Azure Automation account: scraping/providers/automation-account.md
+    - Azure Blob Storage: scraping/providers/blob-storage.md
+    - Azure Cache for Redis: scraping/providers/redis-cache.md
+    - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+    - Azure Cognitive Services Account: scraping/providers/cognitive-services-account.md
+    - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
+    - Azure Container Instances: scraping/providers/container-instances.md
+    - Azure Container Registry: scraping/providers/container-registry.md
+    - Azure Cosmos DB: scraping/providers/cosmos-db.md
+    - Azure Database for MariaDB: scraping/providers/maria-db.md
+    - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+    - Azure Database for MySQL: scraping/providers/mysql.md
+    - Azure DNS Zone: scraping/providers/dns-zone.md
+    - Azure Data Factory: scraping/providers/data-factory.md
+    - Azure Data Share: scraping/providers/data-share.md
+    - Azure Event Hubs: scraping/providers/event-hubs.md
+    - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
+    - Azure File Storage: scraping/providers/file-storage.md
+    - Azure Firewall: scraping/providers/azure-firewall.md
+    - Azure Front Door: scraping/providers/front-door.md
+    - Azure Function App: scraping/providers/function-app.md
+    - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
+    - Azure IoT Hub: scraping/providers/iot-hub.md
+    - Azure Key Vault: scraping/providers/key-vault.md
+    - Azure Kubernetes Service: scraping/providers/kubernetes.md
+    - Azure Data Explorer Cluster: scraping/providers/data-explorer-clusters.md
+    - Azure Load Balancer: scraping/providers/load-balancer.md
+    - Azure Log Analytics: scraping/providers/log-analytics.md
+    - Azure Logic Apps: scraping/providers/logic-apps.md
+    - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+    - Azure Nat Gateways: scraping/providers/nat-gateway.md
+    - Azure Network Gateway: scraping/providers/network-gateway.md
+    - Azure Network Interface: scraping/providers/network-interface.md
+    - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
+    - Azure Public IP Address: scraping/providers/public-ip-address.md
+    - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
+    - Azure SQL Database: scraping/providers/sql-database.md
+    - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
+    - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+    - Azure SQL Server: scraping/providers/sql-server.md
+    - Azure Storage Account: scraping/providers/storage-account.md
+    - Azure Storage Queue: scraping/providers/storage-queue.md
+    - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
+    - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
+    - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+    - Azure Traffic Manager: scraping/providers/traffic-manager.md
+    - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
+    - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
+    - Azure Virtual Network: scraping/providers/virtual-network.md
+    - Azure Web App: scraping/providers/web-app.md
+- Resource Discovery:
+  - Overview: resource-discovery/overview.md
+  - Declaring resource discovery groups: resource-discovery/declaring-resource-discovery-groups.md
+  - Runtime Configuration: resource-discovery/runtime-configuration.md
+  - Supported Providers:
+    - Azure API Management: scraping/providers/api-management.md
+    - Azure App Plan: scraping/providers/app-plan.md
+    - Azure Application Gateway: scraping/providers/application-gateway.md
+    - Azure Application Insights: scraping/providers/application-insights.md
+    - Azure Automation account: scraping/providers/automation-account.md
+    - Azure Cache for Redis: scraping/providers/redis-cache.md
+    - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
+    - Azure Cognitive Services Account: scraping/providers/cognitive-services-account.md
+    - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
+    - Azure Container Instances: scraping/providers/container-instances.md
+    - Azure Container Registry: scraping/providers/container-registry.md
+    - Azure Cosmos DB: scraping/providers/cosmos-db.md
+    - Azure Database for MariaDB: scraping/providers/maria-db.md
+    - Azure Database for PostgreSQL: scraping/providers/postgresql.md
+    - Azure Database for MySQL: scraping/providers/mysql.md
+    - Azure DNS Zone: scraping/providers/dns-zone.md
+    - Azure Data Factory: scraping/providers/data-factory.md
+    - Azure Data Share: scraping/providers/data-share.md
+    - Azure Event Hubs: scraping/providers/event-hubs.md
+    - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
+    - Azure File Storage: scraping/providers/file-storage.md
+    - Azure Firewall: scraping/providers/azure-firewall.md
+    - Azure Front Door: scraping/providers/front-door.md
+    - Azure Function App: scraping/providers/function-app.md
+    - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
+    - Azure IoT Hub: scraping/providers/iot-hub.md
+    - Azure Key Vault: scraping/providers/key-vault.md
+    - Azure Kubernetes Service: scraping/providers/kubernetes.md
+    - Azure Data Explorer Cluster: scraping/providers/data-explorer-clusters.md
+    - Azure Load Balancer: scraping/providers/load-balancer.md
+    - Azure Logic Apps: scraping/providers/logic-apps.md
+    - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
+    - Azure Nat Gateways: scraping/providers/nat-gateway.md
+    - Azure Network Gateway: scraping/providers/network-gateway.md
+    - Azure Network Interface: scraping/providers/network-interface.md
+    - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
+    - Azure Public IP Address: scraping/providers/public-ip-address.md
+    - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
+    - Azure SQL Database: scraping/providers/sql-database.md
+    - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
+    - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+    - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
+    - Azure Storage Account: scraping/providers/storage-account.md
+    - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
+    - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
+    - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
+    - Azure Traffic Manager: scraping/providers/traffic-manager.md
+    - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
+    - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
+    - Azure Virtual Network: scraping/providers/virtual-network.md
+    - Azure Web App: scraping/providers/web-app.md
+- Deployment:
+  - Overview: deployment/index.md
+  - Scraper:
+    - Overview: deployment/scraper/index.md
+    - Docker: deployment/scraper/docker.md
+    - Kubernetes: deployment/scraper/kubernetes.md
   - Resource Discovery:
-    - Overview: resource-discovery/overview.md
-    - Declaring resource discovery groups: resource-discovery/declaring-resource-discovery-groups.md
-    - Runtime Configuration: resource-discovery/runtime-configuration.md
-    - Supported Providers:
-      - Azure API Management: scraping/providers/api-management.md
-      - Azure App Plan: scraping/providers/app-plan.md
-      - Azure Application Gateway: scraping/providers/application-gateway.md
-      - Azure Application Insights: scraping/providers/application-insights.md
-      - Azure Automation account: scraping/providers/automation-account.md
-      - Azure Cache for Redis: scraping/providers/redis-cache.md
-      - Azure Cache for Redis Enterprise: scraping/providers/redis-enterprise-cache.md
-      - Azure Cognitive Services Account: scraping/providers/cognitive-services-account.md
-      - Azure Content Delivery Network (CDN): scraping/providers/cdn.md
-      - Azure Container Instances: scraping/providers/container-instances.md
-      - Azure Container Registry: scraping/providers/container-registry.md
-      - Azure Cosmos DB: scraping/providers/cosmos-db.md
-      - Azure Database for MariaDB: scraping/providers/maria-db.md
-      - Azure Database for PostgreSQL: scraping/providers/postgresql.md
-      - Azure Database for MySQL: scraping/providers/mysql.md
-      - Azure Data Factory: scraping/providers/data-factory.md
-      - Azure Data Share: scraping/providers/data-share.md
-      - Azure Event Hubs: scraping/providers/event-hubs.md
-      - Azure Express Route Circuit: scraping/providers/express-route-circuit.md
-      - Azure File Storage: scraping/providers/file-storage.md
-      - Azure Firewall: scraping/providers/azure-firewall.md
-      - Azure Front Door: scraping/providers/front-door.md
-      - Azure Function App: scraping/providers/function-app.md
-      - Azure IoT Hub Device Provisioning Service (DPS): scraping/providers/iot-hub-device-provisioning-service.md
-      - Azure IoT Hub: scraping/providers/iot-hub.md
-      - Azure Key Vault: scraping/providers/key-vault.md
-      - Azure Kubernetes Service: scraping/providers/kubernetes.md
-      - Azure Data Explorer Cluster: scraping/providers/data-explorer-clusters.md
-      - Azure Load Balancer: scraping/providers/load-balancer.md
-      - Azure Logic Apps: scraping/providers/logic-apps.md
-      - Azure Monitor Autoscale: scraping/providers/monitor-autoscale.md
-      - Azure Nat Gateways: scraping/providers/nat-gateway.md
-      - Azure Network Gateway: scraping/providers/network-gateway.md
-      - Azure Network Interface: scraping/providers/network-interface.md
-      - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
-      - Azure Public IP Address: scraping/providers/public-ip-address.md
-      - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
-      - Azure SQL Database: scraping/providers/sql-database.md
-      - Azure SQL Elastic Pool: scraping/providers/sql-elastic-pool.md
-      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
-      - Azure SQL Managed Instance: scraping/providers/sql-managed-instance.md
-      - Azure Storage Account: scraping/providers/storage-account.md
-      - Azure Synapse (Apache Spark pool): scraping/providers/synapse-apache-spark-pool.md
-      - Azure Synapse (SQL pool): scraping/providers/synapse-sql-pool.md
-      - Azure Synapse (Workspace): scraping/providers/synapse-workspace.md
-      - Azure Traffic Manager: scraping/providers/traffic-manager.md
-      - Azure Virtual Machine Scale Set (VMSS): scraping/providers/virtual-machine-scale-set.md
-      - Azure Virtual Machine (VM): scraping/providers/virtual-machine.md
-      - Azure Virtual Network: scraping/providers/virtual-network.md
-      - Azure Web App: scraping/providers/web-app.md
-  - Deployment:
-    - Overview: deployment/index.md
-    - Scraper: 
-      - Overview: deployment/scraper/index.md
-      - Docker: deployment/scraper/docker.md
-      - Kubernetes: deployment/scraper/kubernetes.md
-    - Resource Discovery:
-      - Overview: deployment/resource-discovery/index.md
-      - Docker: deployment/resource-discovery/docker.md
-      - Kubernetes: deployment/resource-discovery/kubernetes.md
-  - Security:
-    - Authentication with Microsoft Azure: security/azure-authentication.md
-  - Operations:
-    - Overview: operations/index.md
-    - Health: operations/health.md
-    - Resource Discovery: operations/discovery.md
-    - Performance: operations/performance.md
-    - System: operations/system.md
-    - Integrations: operations/integrations.md
-    # - Configuration REST APIs: not found
-  - Walkthroughs:
-    - Deploying Promitor, Prometheus, and Grafana on an AKS Cluster: walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service.md
-    - Using Managed Identity with Promitor on an AKS Cluster: walkthroughs/use-promitor-with-managed-identity.md
-    - Migrate from Promitor Scraper 1.x to 2.x: walkthroughs/migrate-from-1.x-to-2.x.md
-  - FAQ: faq.md
+    - Overview: deployment/resource-discovery/index.md
+    - Docker: deployment/resource-discovery/docker.md
+    - Kubernetes: deployment/resource-discovery/kubernetes.md
+- Security:
+  - Authentication with Microsoft Azure: security/azure-authentication.md
+- Operations:
+  - Overview: operations/index.md
+  - Health: operations/health.md
+  - Resource Discovery: operations/discovery.md
+  - Performance: operations/performance.md
+  - System: operations/system.md
+  - Integrations: operations/integrations.md
+  # - Configuration REST APIs: not found
+- Walkthroughs:
+  - Deploying Promitor, Prometheus, and Grafana on an AKS Cluster: walkthroughs/scrape-promitor-with-prometheus-on-azure-kubernetes-service.md
+  - Using Managed Identity with Promitor on an AKS Cluster: walkthroughs/use-promitor-with-managed-identity.md
+  - Migrate from Promitor Scraper 1.x to 2.x: walkthroughs/migrate-from-1.x-to-2.x.md
+- FAQ: faq.md
 
 # Tweaks
 strict: true
