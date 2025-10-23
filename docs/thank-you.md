@@ -54,14 +54,14 @@ Here is an overview of the services that are so kind to support us:
 We are using the following GitHub Apps:
 
 - [Semantic Pull Requests](https://github.com/apps/semantic-pull-requests) - Ensure PRs are using a
-consistent approach.
+  consistent approach.
 - [Task list completed](https://github.com/marketplace/task-list-completed) -
   Ensures all task lists in our PRs are completed.
 - [Triage New Issues](https://github.com/apps/triage-new-issues) - Automatically
   tag new issues & PRs with `triage` label.
 - [Request Info](https://github.com/apps/request-info) - Requests more info from
   newly opened Pull Requests and Issues.
-- [YAMBURGER](https://github.com/apps/yamburger) - Finds YAML syntax errors.
+- **YAMBURGER** - Finds YAML syntax errors. _(Archived as of August 2025)_
 - [Reminders](https://github.com/apps/reminders) - Set reminders on Issues and
   Pull Requests.
 - [Check TODO](https://github.com/marketplace/check-todo) - Check TODO allows you
@@ -85,9 +85,9 @@ Here is an overview of the NuGet packages that we rely on:
 - [Prometheus.Client](https://github.com/PrometheusClientNet/Prometheus.Client)
   - .NET client for prometheus.io
 - [spectre.console](https://github.com/spectresystems/spectre.console) - A library that makes it easier to create
- beautiful console applications.
+  beautiful console applications.
 - [Humanizer](https://github.com/Humanizr/Humanizer) - Humanizer meets all your .NET needs for manipulating and
- displaying strings, enums, dates, times, timespans, numbers and quantities
+  displaying strings, enums, dates, times, timespans, numbers and quantities
 - [YamlDotNet](https://github.com/aaubry/YamlDotNet) - .NET library for YAML
 - [Guard.NET](https://github.com/george-pancescu/Guard) - Library that facilitates
   runtime checks of code and allows to define preconditions and invariants within
