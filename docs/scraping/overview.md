@@ -6,7 +6,7 @@ file which is referred to as the metric declaration.
 This declaration defines the overall Azure metadata and all the metrics you want to expose.
 
 Every metric describes the Azure Monitor metric that it represents and what Azure resources that should be scraped.
- It allows you to statically declaring the resources to scrape and/or use [automatic resource discovery](https://promitor.io/concepts/#using-resource-discovery).
+It allows you to statically declaring the resources to scrape and/or use [automatic resource discovery](https://promitor.io/concepts/#using-resource-discovery).
 
 ## Supported Azure Services
 
@@ -28,6 +28,7 @@ We also provide a simplified way to scrape the following Azure resources:
 - [Azure Data Factory](providers/data-factory.md)
 - [Azure Data Share](providers/data-share.md)
 - [Azure Database for PostgreSQL](providers/postgresql.md)
+- [Azure DNS Zone](providers/dns-zone.md)
 - [Azure Database for MariaDB](providers/maria-db.md)
 - [Azure Database for MySQL](providers/mysql.md)
 - [Azure Event Hubs](providers/event-hubs.md)
@@ -67,7 +68,7 @@ Want to help out? Create an issue and [contribute a new scraper](https://github.
 As Promitor evolves we need to change the structure of our metrics declaration.
 
 `version: {version}` - Version of declaration that is used. Allowed
-values are `v1`. *(Required)*
+values are `v1`. _(Required)_
 
 ### Azure
 
@@ -75,17 +76,17 @@ values are `v1`. *(Required)*
 - `azureMetadata.subscriptionId` - The id of the default subscription to query.
 - `azureMetadata.resourceGroupName` - The name of the default resource group to query.
 - `azureMetadata.cloud` - The name of the Azure cloud to use. Options are `Global`
- (default), `China`, `UsGov`, `Germany`, & `Custom`.
+  (default), `China`, `UsGov`, `Germany`, & `Custom`.
 - `azureMetadata.endpoints` - Required when `azureMetadata.cloud` is set to `Custom`. Defines the custom endpoints to use:
-    - `authenticationEndpoint` - The custom authentication endpoint.
-    - `managementEndpoint` - The custom service management endpoint.
-    - `resourceManagerEndpoint` - The custom Azure ARM resource management endpoint.
-    - `graphEndpoint` - The custom Active Directory graph endpoint.
-    - `storageEndpointSuffix` - The custom storage service url suffix.
-    - `keyVaultSuffix` - The custom Key Vault service url suffix.
-    - `metricsQueryAudience` - The custom audiences available for metrics query.
-    - `metricsClientAudience` - The custom audiences available for metrics client.
-    - `logAnalyticsEndpoint` - The custom log analytics endpoint. *(Required only if Azure Log Analytics resource is configured for scraping)*
+  - `authenticationEndpoint` - The custom authentication endpoint.
+  - `managementEndpoint` - The custom service management endpoint.
+  - `resourceManagerEndpoint` - The custom Azure ARM resource management endpoint.
+  - `graphEndpoint` - The custom Active Directory graph endpoint.
+  - `storageEndpointSuffix` - The custom storage service url suffix.
+  - `keyVaultSuffix` - The custom Key Vault service url suffix.
+  - `metricsQueryAudience` - The custom audiences available for metrics query.
+  - `metricsClientAudience` - The custom audiences available for metrics client.
+  - `logAnalyticsEndpoint` - The custom log analytics endpoint. _(Required only if Azure Log Analytics resource is configured for scraping)_
 
 ### Metric Defaults
 
@@ -98,7 +99,7 @@ values are `v1`. *(Required)*
 - `metricDefaults.scraping.schedule` - A cron expression that controls
   the frequency of which all the configured metrics will be scraped from Azure Monitor.
   You can use [crontab-generator.org](https://crontab-generator.org/) to generate
-  a cron that fits your needs. *(Required)*
+  a cron that fits your needs. _(Required)_
 
 ### Metrics
 
@@ -119,7 +120,7 @@ Every metric that is being declared needs to define the following fields:
 - `azureMetricConfiguration.limit` - The maximum amount of resources to scrape when using dimensions
   or filters.
 - `resourceDiscoveryGroups` An array of one or more resource discovery groups that will be used to automatically
- discover all resources through Promitor Resource Discovery. For every found resource, it will get the metrics and
+  discover all resources through Promitor Resource Discovery. For every found resource, it will get the metrics and
   report them. Learn more on resource discovery, in [our documentation](https://promitor.io/concepts#using-resource-discovery)
 
 All resources provide the capability to override the default Azure metadata:
@@ -130,10 +131,10 @@ All resources provide the capability to override the default Azure metadata:
 Additionally, the following fields are optional:
 
 - `azureMetricConfiguration.dimensions` - A list of dimensions that should
-   be used to scrape a multi-dimensional metric in Azure Monitor.
-  - ☝ *Promitor simply acts as a proxy and will not validate if the given dimensions are supported or
-     not, we recommend verifying that they are in the
-     [official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)*
+  be used to scrape a multi-dimensional metric in Azure Monitor.
+  - ☝ _Promitor simply acts as a proxy and will not validate if the given dimensions are supported or
+    not, we recommend verifying that they are in the
+    [official documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported)_
 - `labels` - Defines a set of custom labels to include for a given metric.
 - `scraping.schedule` - A scraping schedule for the individual metric; overrides
   the the one specified in `metricDefaults`
@@ -199,7 +200,7 @@ metrics:
         resourceGroupName: promitor-dev
         subscriptionId: ABC
     resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://promitor.io/concepts/how-it-works#using-resource-discovery)
-    - name: service-bus-landscape
+      - name: service-bus-landscape
 ```
 
 [&larr; back](../index.md)
