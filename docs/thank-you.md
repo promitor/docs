@@ -57,8 +57,7 @@ We are using the following GitHub Apps:
   consistent approach.
 - [Task list completed](https://github.com/marketplace/task-list-completed) -
   Ensures all task lists in our PRs are completed.
-- [Triage New Issues](https://github.com/apps/triage-new-issues) - Automatically
-  tag new issues & PRs with `triage` label.
+- **Triage New Issues** - Automatically tag new issues & PRs with `triage` label. _(No longer available)_
 - [Request Info](https://github.com/apps/request-info) - Requests more info from
   newly opened Pull Requests and Issues.
 - **YAMBURGER** - Finds YAML syntax errors. _(Archived as of August 2025)_
