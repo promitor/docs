@@ -161,6 +161,7 @@ nav:
     - Azure Database for MariaDB: scraping/providers/maria-db.md
     - Azure Database for PostgreSQL: scraping/providers/postgresql.md
     - Azure Database for MySQL: scraping/providers/mysql.md
+    - Azure DocumentDB MongoCluster: scraping/providers/mongo-cluster.md
     - Azure DNS Zone: scraping/providers/dns-zone.md
     - Azure Data Factory: scraping/providers/data-factory.md
     - Azure Data Share: scraping/providers/data-share.md
@@ -219,6 +220,7 @@ nav:
     - Azure Database for MariaDB: scraping/providers/maria-db.md
     - Azure Database for PostgreSQL: scraping/providers/postgresql.md
     - Azure Database for MySQL: scraping/providers/mysql.md
+    - Azure DocumentDB MongoCluster: scraping/providers/mongo-cluster.md
     - Azure DNS Zone: scraping/providers/dns-zone.md
     - Azure Data Factory: scraping/providers/data-factory.md
     - Azure Data Share: scraping/providers/data-share.md
