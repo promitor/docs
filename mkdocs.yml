@@ -183,6 +183,7 @@ nav:
     - Azure Network Gateway: scraping/providers/network-gateway.md
     - Azure Network Interface: scraping/providers/network-interface.md
     - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
+    - Azure Private Link Service: scraping/providers/private-link-service.md
     - Azure Public IP Address: scraping/providers/public-ip-address.md
     - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
     - Azure SQL Database: scraping/providers/sql-database.md
@@ -240,6 +241,7 @@ nav:
     - Azure Network Gateway: scraping/providers/network-gateway.md
     - Azure Network Interface: scraping/providers/network-interface.md
     - Azure PowerBI Dedicated: scraping/providers/powerbi-dedicated.md
+    - Azure Private Link Service: scraping/providers/private-link-service.md
     - Azure Public IP Address: scraping/providers/public-ip-address.md
     - Azure Service Bus Namespace: scraping/providers/service-bus-namespace.md
     - Azure SQL Database: scraping/providers/sql-database.md
