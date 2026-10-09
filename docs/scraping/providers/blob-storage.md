@@ -7,7 +7,7 @@ tags:
 
 # Azure Blob Storage
 
-![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.3-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-No-red.svg)
+![Availability Badge](https://img.shields.io/badge/Available%20Starting-v1.3-green.svg)![Resource Discovery Support Badge](https://img.shields.io/badge/Support%20for%20Resource%20Discovery-Yes-green.svg)
 
 You can declare to scrape an Azure Queue via the `BlobStorage` resource type.
 
@@ -32,4 +32,6 @@ azureMetricConfiguration:
 resources: # Optional, required when no resource discovery is configured
 - accountName: promitor-1
 - accountName: promitor-2
+resourceDiscoveryGroups: # Optional, requires Promitor Resource Discovery agent (https://docs.promitor.io/latest/how-it-works#using-resource-discovery)
+- name: blob-storage-landscape
 ```
